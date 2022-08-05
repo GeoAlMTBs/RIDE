@@ -1,0 +1,1251 @@
+2022-08-04 22:05:17,477 - train - INFO - ResNet32Model(
+  (backbone): ResNet_s(
+    (conv1): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (layer1): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (2): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (3): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (4): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+    )
+    (layer2s): ModuleList(
+      (0): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(16, 24, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): LambdaLayer()
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (2): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (3): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (4): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+      )
+      (1): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(16, 24, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): LambdaLayer()
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (2): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (3): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (4): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+      )
+      (2): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(16, 24, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): LambdaLayer()
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (2): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (3): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (4): BasicBlock(
+          (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+      )
+    )
+    (layer3s): ModuleList(
+      (0): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): LambdaLayer()
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (2): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (3): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (4): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+      )
+      (1): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): LambdaLayer()
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (2): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (3): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (4): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+      )
+      (2): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): LambdaLayer()
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (2): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (3): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+        (4): BasicBlock(
+          (conv1): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (conv2): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (shortcut): Sequential()
+        )
+      )
+    )
+    (linears): ModuleList(
+      (0): NormedLinear()
+      (1): NormedLinear()
+      (2): NormedLinear()
+    )
+  )
+)
+2022-08-04 22:05:42,429 - trainer - INFO -     epoch          : 1
+2022-08-04 22:05:42,429 - trainer - INFO -     loss           : 30.606025628482595
+2022-08-04 22:05:42,429 - trainer - INFO -     accuracy       : 0.12685535171015028
+2022-08-04 22:05:42,429 - trainer - INFO -     val_loss       : 5.779976114442077
+2022-08-04 22:05:42,429 - trainer - INFO -     val_accuracy   : 0.0576
+2022-08-04 22:05:42,481 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:06:01,048 - trainer - INFO -     epoch          : 2
+2022-08-04 22:06:01,048 - trainer - INFO -     loss           : 28.937345190609204
+2022-08-04 22:06:01,048 - trainer - INFO -     accuracy       : 0.1889923481146861
+2022-08-04 22:06:01,048 - trainer - INFO -     val_loss       : 5.303360751912564
+2022-08-04 22:06:01,048 - trainer - INFO -     val_accuracy   : 0.0862
+2022-08-04 22:06:01,105 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:06:20,304 - trainer - INFO -     epoch          : 3
+2022-08-04 22:06:20,305 - trainer - INFO -     loss           : 28.08904030743767
+2022-08-04 22:06:20,305 - trainer - INFO -     accuracy       : 0.22586890384438094
+2022-08-04 22:06:20,305 - trainer - INFO -     val_loss       : 5.210740578325489
+2022-08-04 22:06:20,306 - trainer - INFO -     val_accuracy   : 0.0902
+2022-08-04 22:06:20,384 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:06:40,721 - trainer - INFO -     epoch          : 4
+2022-08-04 22:06:40,722 - trainer - INFO -     loss           : 27.13561226339901
+2022-08-04 22:06:40,722 - trainer - INFO -     accuracy       : 0.2681847515442058
+2022-08-04 22:06:40,723 - trainer - INFO -     val_loss       : 5.491087285778191
+2022-08-04 22:06:40,723 - trainer - INFO -     val_accuracy   : 0.1049
+2022-08-04 22:06:40,800 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:06:59,311 - trainer - INFO -     epoch          : 5
+2022-08-04 22:06:59,312 - trainer - INFO -     loss           : 26.56350221072926
+2022-08-04 22:06:59,312 - trainer - INFO -     accuracy       : 0.2839494791186503
+2022-08-04 22:06:59,312 - trainer - INFO -     val_loss       : 5.495149377026135
+2022-08-04 22:06:59,312 - trainer - INFO -     val_accuracy   : 0.1051
+2022-08-04 22:06:59,390 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:07:18,856 - trainer - INFO -     epoch          : 6
+2022-08-04 22:07:18,856 - trainer - INFO -     loss           : 25.66584607292624
+2022-08-04 22:07:18,857 - trainer - INFO -     accuracy       : 0.3295842168341477
+2022-08-04 22:07:18,857 - trainer - INFO -     val_loss       : 5.058905870099611
+2022-08-04 22:07:18,857 - trainer - INFO -     val_accuracy   : 0.136
+2022-08-04 22:07:18,933 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:07:37,505 - trainer - INFO -     epoch          : 7
+2022-08-04 22:07:37,506 - trainer - INFO -     loss           : 24.974633564668544
+2022-08-04 22:07:37,506 - trainer - INFO -     accuracy       : 0.36166682031898223
+2022-08-04 22:07:37,506 - trainer - INFO -     val_loss       : 4.832194050656089
+2022-08-04 22:07:37,506 - trainer - INFO -     val_accuracy   : 0.1596
+2022-08-04 22:07:37,577 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:07:57,509 - trainer - INFO -     epoch          : 8
+2022-08-04 22:07:57,510 - trainer - INFO -     loss           : 24.271903857062846
+2022-08-04 22:07:57,511 - trainer - INFO -     accuracy       : 0.38858670600165945
+2022-08-04 22:07:57,511 - trainer - INFO -     val_loss       : 4.656342177451411
+2022-08-04 22:07:57,511 - trainer - INFO -     val_accuracy   : 0.1664
+2022-08-04 22:07:57,591 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:08:17,336 - trainer - INFO -     epoch          : 9
+2022-08-04 22:08:17,337 - trainer - INFO -     loss           : 23.780550586476046
+2022-08-04 22:08:17,337 - trainer - INFO -     accuracy       : 0.41375495528717615
+2022-08-04 22:08:17,337 - trainer - INFO -     val_loss       : 4.824334826650499
+2022-08-04 22:08:17,337 - trainer - INFO -     val_accuracy   : 0.1653
+2022-08-04 22:08:36,658 - trainer - INFO -     epoch          : 10
+2022-08-04 22:08:36,659 - trainer - INFO -     loss           : 23.207301846672507
+2022-08-04 22:08:36,659 - trainer - INFO -     accuracy       : 0.43025721397621464
+2022-08-04 22:08:36,659 - trainer - INFO -     val_loss       : 4.806860223601136
+2022-08-04 22:08:36,659 - trainer - INFO -     val_accuracy   : 0.1681
+2022-08-04 22:08:36,740 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:08:55,569 - trainer - INFO -     epoch          : 11
+2022-08-04 22:08:55,570 - trainer - INFO -     loss           : 22.79518852233887
+2022-08-04 22:08:55,571 - trainer - INFO -     accuracy       : 0.44989397990227714
+2022-08-04 22:08:55,571 - trainer - INFO -     val_loss       : 4.4532567458816725
+2022-08-04 22:08:55,571 - trainer - INFO -     val_accuracy   : 0.2038
+2022-08-04 22:08:55,651 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:09:14,770 - trainer - INFO -     epoch          : 12
+2022-08-04 22:09:14,771 - trainer - INFO -     loss           : 22.299621806425208
+2022-08-04 22:09:14,771 - trainer - INFO -     accuracy       : 0.46722596109523373
+2022-08-04 22:09:14,771 - trainer - INFO -     val_loss       : 5.181699155252191
+2022-08-04 22:09:14,772 - trainer - INFO -     val_accuracy   : 0.1608
+2022-08-04 22:09:34,483 - trainer - INFO -     epoch          : 13
+2022-08-04 22:09:34,484 - trainer - INFO -     loss           : 21.949060148351332
+2022-08-04 22:09:34,484 - trainer - INFO -     accuracy       : 0.4801327556006269
+2022-08-04 22:09:34,484 - trainer - INFO -     val_loss       : 4.393066228190555
+2022-08-04 22:09:34,484 - trainer - INFO -     val_accuracy   : 0.2042
+2022-08-04 22:09:34,566 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:09:54,445 - trainer - INFO -     epoch          : 14
+2022-08-04 22:09:54,446 - trainer - INFO -     loss           : 21.528495541740867
+2022-08-04 22:09:54,446 - trainer - INFO -     accuracy       : 0.49414584677791096
+2022-08-04 22:09:54,446 - trainer - INFO -     val_loss       : 4.971813889998424
+2022-08-04 22:09:54,447 - trainer - INFO -     val_accuracy   : 0.1825
+2022-08-04 22:10:12,940 - trainer - INFO -     epoch          : 15
+2022-08-04 22:10:12,940 - trainer - INFO -     loss           : 21.215201142254998
+2022-08-04 22:10:12,940 - trainer - INFO -     accuracy       : 0.5091730432377616
+2022-08-04 22:10:12,941 - trainer - INFO -     val_loss       : 4.72131185893771
+2022-08-04 22:10:12,941 - trainer - INFO -     val_accuracy   : 0.1841
+2022-08-04 22:10:30,971 - trainer - INFO -     epoch          : 16
+2022-08-04 22:10:30,971 - trainer - INFO -     loss           : 20.925433865715476
+2022-08-04 22:10:30,972 - trainer - INFO -     accuracy       : 0.5176546510555914
+2022-08-04 22:10:30,972 - trainer - INFO -     val_loss       : 4.5664912930017785
+2022-08-04 22:10:30,972 - trainer - INFO -     val_accuracy   : 0.2119
+2022-08-04 22:10:31,047 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:10:50,112 - trainer - INFO -     epoch          : 17
+2022-08-04 22:10:50,112 - trainer - INFO -     loss           : 20.653533666274125
+2022-08-04 22:10:50,112 - trainer - INFO -     accuracy       : 0.5292707661104453
+2022-08-04 22:10:50,113 - trainer - INFO -     val_loss       : 4.675689799876153
+2022-08-04 22:10:50,113 - trainer - INFO -     val_accuracy   : 0.2147
+2022-08-04 22:10:50,187 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:11:08,474 - trainer - INFO -     epoch          : 18
+2022-08-04 22:11:08,475 - trainer - INFO -     loss           : 20.386674768784466
+2022-08-04 22:11:08,475 - trainer - INFO -     accuracy       : 0.5394118189361113
+2022-08-04 22:11:08,475 - trainer - INFO -     val_loss       : 4.546198491808735
+2022-08-04 22:11:08,475 - trainer - INFO -     val_accuracy   : 0.2307
+2022-08-04 22:11:08,557 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:11:28,026 - trainer - INFO -     epoch          : 19
+2022-08-04 22:11:28,026 - trainer - INFO -     loss           : 20.065780819163603
+2022-08-04 22:11:28,027 - trainer - INFO -     accuracy       : 0.5546233981746105
+2022-08-04 22:11:28,027 - trainer - INFO -     val_loss       : 4.686952023566524
+2022-08-04 22:11:28,027 - trainer - INFO -     val_accuracy   : 0.2171
+2022-08-04 22:11:47,248 - trainer - INFO -     epoch          : 20
+2022-08-04 22:11:47,249 - trainer - INFO -     loss           : 19.787164811527028
+2022-08-04 22:11:47,249 - trainer - INFO -     accuracy       : 0.5597861159767678
+2022-08-04 22:11:47,249 - trainer - INFO -     val_loss       : 4.454898239691047
+2022-08-04 22:11:47,249 - trainer - INFO -     val_accuracy   : 0.2322
+2022-08-04 22:11:47,300 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:12:05,738 - trainer - INFO -     epoch          : 21
+2022-08-04 22:12:05,739 - trainer - INFO -     loss           : 19.54474859798656
+2022-08-04 22:12:05,739 - trainer - INFO -     accuracy       : 0.5690052549091915
+2022-08-04 22:12:05,740 - trainer - INFO -     val_loss       : 4.629498846923249
+2022-08-04 22:12:05,740 - trainer - INFO -     val_accuracy   : 0.2189
+2022-08-04 22:12:25,417 - trainer - INFO -     epoch          : 22
+2022-08-04 22:12:25,417 - trainer - INFO -     loss           : 19.366918653600358
+2022-08-04 22:12:25,418 - trainer - INFO -     accuracy       : 0.570756891306352
+2022-08-04 22:12:25,418 - trainer - INFO -     val_loss       : 4.8610669872428796
+2022-08-04 22:12:25,418 - trainer - INFO -     val_accuracy   : 0.2293
+2022-08-04 22:12:45,077 - trainer - INFO -     epoch          : 23
+2022-08-04 22:12:45,078 - trainer - INFO -     loss           : 19.081558990478516
+2022-08-04 22:12:45,078 - trainer - INFO -     accuracy       : 0.5850465566516088
+2022-08-04 22:12:45,078 - trainer - INFO -     val_loss       : 4.193741973442368
+2022-08-04 22:12:45,078 - trainer - INFO -     val_accuracy   : 0.2495
+2022-08-04 22:12:45,156 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:13:03,879 - trainer - INFO -     epoch          : 24
+2022-08-04 22:13:03,880 - trainer - INFO -     loss           : 18.948377631692324
+2022-08-04 22:13:03,880 - trainer - INFO -     accuracy       : 0.5867981930487692
+2022-08-04 22:13:03,880 - trainer - INFO -     val_loss       : 4.860601093195662
+2022-08-04 22:13:03,880 - trainer - INFO -     val_accuracy   : 0.2332
+2022-08-04 22:13:21,889 - trainer - INFO -     epoch          : 25
+2022-08-04 22:13:21,890 - trainer - INFO -     loss           : 18.701619754118077
+2022-08-04 22:13:21,890 - trainer - INFO -     accuracy       : 0.5961095233705171
+2022-08-04 22:13:21,890 - trainer - INFO -     val_loss       : 4.759086633030372
+2022-08-04 22:13:21,890 - trainer - INFO -     val_accuracy   : 0.2235
+2022-08-04 22:13:38,059 - trainer - INFO -     epoch          : 26
+2022-08-04 22:13:38,060 - trainer - INFO -     loss           : 18.533621608509737
+2022-08-04 22:13:38,061 - trainer - INFO -     accuracy       : 0.6002581358901079
+2022-08-04 22:13:38,061 - trainer - INFO -     val_loss       : 4.654942953133885
+2022-08-04 22:13:38,061 - trainer - INFO -     val_accuracy   : 0.2446
+2022-08-04 22:13:57,094 - trainer - INFO -     epoch          : 27
+2022-08-04 22:13:57,095 - trainer - INFO -     loss           : 18.339950426887064
+2022-08-04 22:13:57,095 - trainer - INFO -     accuracy       : 0.6074490642573983
+2022-08-04 22:13:57,095 - trainer - INFO -     val_loss       : 4.312330906904196
+2022-08-04 22:13:57,095 - trainer - INFO -     val_accuracy   : 0.2609
+2022-08-04 22:13:57,166 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:14:16,808 - trainer - INFO -     epoch          : 28
+2022-08-04 22:14:16,809 - trainer - INFO -     loss           : 18.238992174933937
+2022-08-04 22:14:16,809 - trainer - INFO -     accuracy       : 0.613533695952798
+2022-08-04 22:14:16,809 - trainer - INFO -     val_loss       : 4.519167218027236
+2022-08-04 22:14:16,809 - trainer - INFO -     val_accuracy   : 0.2505
+2022-08-04 22:14:36,676 - trainer - INFO -     epoch          : 29
+2022-08-04 22:14:36,677 - trainer - INFO -     loss           : 18.01505609400132
+2022-08-04 22:14:36,677 - trainer - INFO -     accuracy       : 0.6210933898773855
+2022-08-04 22:14:36,677 - trainer - INFO -     val_loss       : 4.640654373772537
+2022-08-04 22:14:36,677 - trainer - INFO -     val_accuracy   : 0.247
+2022-08-04 22:14:56,640 - trainer - INFO -     epoch          : 30
+2022-08-04 22:14:56,641 - trainer - INFO -     loss           : 17.787071216807647
+2022-08-04 22:14:56,641 - trainer - INFO -     accuracy       : 0.6255185765649488
+2022-08-04 22:14:56,641 - trainer - INFO -     val_loss       : 4.68736319904086
+2022-08-04 22:14:56,641 - trainer - INFO -     val_accuracy   : 0.2476
+2022-08-04 22:15:16,183 - trainer - INFO -     epoch          : 31
+2022-08-04 22:15:16,185 - trainer - INFO -     loss           : 17.706360345728257
+2022-08-04 22:15:16,185 - trainer - INFO -     accuracy       : 0.6311422513137273
+2022-08-04 22:15:16,185 - trainer - INFO -     val_loss       : 4.8480165578142
+2022-08-04 22:15:16,185 - trainer - INFO -     val_accuracy   : 0.2293
+2022-08-04 22:15:35,064 - trainer - INFO -     epoch          : 32
+2022-08-04 22:15:35,065 - trainer - INFO -     loss           : 17.56465015411377
+2022-08-04 22:15:35,065 - trainer - INFO -     accuracy       : 0.6356596293906149
+2022-08-04 22:15:35,065 - trainer - INFO -     val_loss       : 3.9896819923497455
+2022-08-04 22:15:35,065 - trainer - INFO -     val_accuracy   : 0.2879
+2022-08-04 22:15:35,144 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:15:55,259 - trainer - INFO -     epoch          : 33
+2022-08-04 22:15:55,260 - trainer - INFO -     loss           : 17.43421012654024
+2022-08-04 22:15:55,260 - trainer - INFO -     accuracy       : 0.6399926246888541
+2022-08-04 22:15:55,261 - trainer - INFO -     val_loss       : 4.443210737614692
+2022-08-04 22:15:55,261 - trainer - INFO -     val_accuracy   : 0.2606
+2022-08-04 22:16:13,832 - trainer - INFO -     epoch          : 34
+2022-08-04 22:16:13,832 - trainer - INFO -     loss           : 17.233790891310747
+2022-08-04 22:16:13,832 - trainer - INFO -     accuracy       : 0.6434037060938508
+2022-08-04 22:16:13,832 - trainer - INFO -     val_loss       : 4.894347903094714
+2022-08-04 22:16:13,832 - trainer - INFO -     val_accuracy   : 0.247
+2022-08-04 22:16:33,509 - trainer - INFO -     epoch          : 35
+2022-08-04 22:16:33,510 - trainer - INFO -     loss           : 17.273799885020537
+2022-08-04 22:16:33,510 - trainer - INFO -     accuracy       : 0.6467225961095233
+2022-08-04 22:16:33,510 - trainer - INFO -     val_loss       : 4.558705124673964
+2022-08-04 22:16:33,510 - trainer - INFO -     val_accuracy   : 0.2656
+2022-08-04 22:16:52,897 - trainer - INFO -     epoch          : 36
+2022-08-04 22:16:52,898 - trainer - INFO -     loss           : 17.049117985893698
+2022-08-04 22:16:52,898 - trainer - INFO -     accuracy       : 0.6485664238960082
+2022-08-04 22:16:52,898 - trainer - INFO -     val_loss       : 4.590468298030805
+2022-08-04 22:16:52,898 - trainer - INFO -     val_accuracy   : 0.258
+2022-08-04 22:17:12,417 - trainer - INFO -     epoch          : 37
+2022-08-04 22:17:12,417 - trainer - INFO -     loss           : 16.988422562094296
+2022-08-04 22:17:12,418 - trainer - INFO -     accuracy       : 0.650502443071817
+2022-08-04 22:17:12,418 - trainer - INFO -     val_loss       : 4.009009430680094
+2022-08-04 22:17:12,418 - trainer - INFO -     val_accuracy   : 0.2957
+2022-08-04 22:17:12,495 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:17:29,926 - trainer - INFO -     epoch          : 38
+2022-08-04 22:17:29,927 - trainer - INFO -     loss           : 16.909494186850154
+2022-08-04 22:17:29,927 - trainer - INFO -     accuracy       : 0.6559417350419471
+2022-08-04 22:17:29,927 - trainer - INFO -     val_loss       : 4.379301892051214
+2022-08-04 22:17:29,927 - trainer - INFO -     val_accuracy   : 0.2781
+2022-08-04 22:17:49,397 - trainer - INFO -     epoch          : 39
+2022-08-04 22:17:49,397 - trainer - INFO -     loss           : 16.77430523143095
+2022-08-04 22:17:49,398 - trainer - INFO -     accuracy       : 0.6597215820042408
+2022-08-04 22:17:49,398 - trainer - INFO -     val_loss       : 4.050929105734523
+2022-08-04 22:17:49,398 - trainer - INFO -     val_accuracy   : 0.3011
+2022-08-04 22:17:49,446 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:18:09,227 - trainer - INFO -     epoch          : 40
+2022-08-04 22:18:09,228 - trainer - INFO -     loss           : 16.621732016170725
+2022-08-04 22:18:09,228 - trainer - INFO -     accuracy       : 0.6666359362035585
+2022-08-04 22:18:09,228 - trainer - INFO -     val_loss       : 4.358562538895426
+2022-08-04 22:18:09,229 - trainer - INFO -     val_accuracy   : 0.2803
+2022-08-04 22:18:09,307 - trainer - INFO - Saving checkpoint: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/checkpoint-epoch40.pth ...
+2022-08-04 22:18:29,375 - trainer - INFO -     epoch          : 41
+2022-08-04 22:18:29,376 - trainer - INFO -     loss           : 16.54304552639232
+2022-08-04 22:18:29,376 - trainer - INFO -     accuracy       : 0.6712455056697705
+2022-08-04 22:18:29,376 - trainer - INFO -     val_loss       : 4.386802848381333
+2022-08-04 22:18:29,376 - trainer - INFO -     val_accuracy   : 0.2822
+2022-08-04 22:18:49,198 - trainer - INFO -     epoch          : 42
+2022-08-04 22:18:49,198 - trainer - INFO -     loss           : 16.52015775792739
+2022-08-04 22:18:49,198 - trainer - INFO -     accuracy       : 0.6682031898220706
+2022-08-04 22:18:49,198 - trainer - INFO -     val_loss       : 4.268167504781409
+2022-08-04 22:18:49,199 - trainer - INFO -     val_accuracy   : 0.276
+2022-08-04 22:19:08,440 - trainer - INFO -     epoch          : 43
+2022-08-04 22:19:08,441 - trainer - INFO -     loss           : 16.351419785443476
+2022-08-04 22:19:08,441 - trainer - INFO -     accuracy       : 0.678067668479764
+2022-08-04 22:19:08,441 - trainer - INFO -     val_loss       : 4.304320727722554
+2022-08-04 22:19:08,441 - trainer - INFO -     val_accuracy   : 0.2879
+2022-08-04 22:19:27,217 - trainer - INFO -     epoch          : 44
+2022-08-04 22:19:27,218 - trainer - INFO -     loss           : 16.301304458169376
+2022-08-04 22:19:27,218 - trainer - INFO -     accuracy       : 0.6778832857011156
+2022-08-04 22:19:27,218 - trainer - INFO -     val_loss       : 4.40701312656644
+2022-08-04 22:19:27,218 - trainer - INFO -     val_accuracy   : 0.2727
+2022-08-04 22:19:46,123 - trainer - INFO -     epoch          : 45
+2022-08-04 22:19:46,123 - trainer - INFO -     loss           : 16.118934552809772
+2022-08-04 22:19:46,124 - trainer - INFO -     accuracy       : 0.6841523001751636
+2022-08-04 22:19:46,124 - trainer - INFO -     val_loss       : 4.627072240732893
+2022-08-04 22:19:46,124 - trainer - INFO -     val_accuracy   : 0.267
+2022-08-04 22:20:05,843 - trainer - INFO -     epoch          : 46
+2022-08-04 22:20:05,844 - trainer - INFO -     loss           : 16.204939662708956
+2022-08-04 22:20:05,844 - trainer - INFO -     accuracy       : 0.6803724532128699
+2022-08-04 22:20:05,844 - trainer - INFO -     val_loss       : 4.361317483684685
+2022-08-04 22:20:05,844 - trainer - INFO -     val_accuracy   : 0.2908
+2022-08-04 22:20:24,215 - trainer - INFO -     epoch          : 47
+2022-08-04 22:20:24,216 - trainer - INFO -     loss           : 16.148558549319997
+2022-08-04 22:20:24,216 - trainer - INFO -     accuracy       : 0.6798193048769245
+2022-08-04 22:20:24,216 - trainer - INFO -     val_loss       : 4.406321601022648
+2022-08-04 22:20:24,216 - trainer - INFO -     val_accuracy   : 0.29
+2022-08-04 22:20:42,763 - trainer - INFO -     epoch          : 48
+2022-08-04 22:20:42,763 - trainer - INFO -     loss           : 16.035083815630745
+2022-08-04 22:20:42,764 - trainer - INFO -     accuracy       : 0.6853507882363787
+2022-08-04 22:20:42,764 - trainer - INFO -     val_loss       : 4.285631572143941
+2022-08-04 22:20:42,764 - trainer - INFO -     val_accuracy   : 0.2863
+2022-08-04 22:21:02,010 - trainer - INFO -     epoch          : 49
+2022-08-04 22:21:02,010 - trainer - INFO -     loss           : 15.89896988588221
+2022-08-04 22:21:02,010 - trainer - INFO -     accuracy       : 0.6883931040840785
+2022-08-04 22:21:02,010 - trainer - INFO -     val_loss       : 4.680853991568843
+2022-08-04 22:21:02,011 - trainer - INFO -     val_accuracy   : 0.2726
+2022-08-04 22:21:21,284 - trainer - INFO -     epoch          : 50
+2022-08-04 22:21:21,285 - trainer - INFO -     loss           : 15.99963971306296
+2022-08-04 22:21:21,285 - trainer - INFO -     accuracy       : 0.6859039365723242
+2022-08-04 22:21:21,285 - trainer - INFO -     val_loss       : 4.248202933540827
+2022-08-04 22:21:21,285 - trainer - INFO -     val_accuracy   : 0.2836
+2022-08-04 22:21:41,093 - trainer - INFO -     epoch          : 51
+2022-08-04 22:21:41,094 - trainer - INFO -     loss           : 15.61764176312615
+2022-08-04 22:21:41,094 - trainer - INFO -     accuracy       : 0.6986263482990689
+2022-08-04 22:21:41,094 - trainer - INFO -     val_loss       : 4.083422654791724
+2022-08-04 22:21:41,095 - trainer - INFO -     val_accuracy   : 0.2952
+2022-08-04 22:21:59,979 - trainer - INFO -     epoch          : 52
+2022-08-04 22:21:59,980 - trainer - INFO -     loss           : 15.631018459095674
+2022-08-04 22:21:59,981 - trainer - INFO -     accuracy       : 0.6953996496727206
+2022-08-04 22:21:59,981 - trainer - INFO -     val_loss       : 4.232452063620845
+2022-08-04 22:21:59,981 - trainer - INFO -     val_accuracy   : 0.302
+2022-08-04 22:22:00,063 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:22:20,159 - trainer - INFO -     epoch          : 53
+2022-08-04 22:22:20,159 - trainer - INFO -     loss           : 15.722952416363885
+2022-08-04 22:22:20,160 - trainer - INFO -     accuracy       : 0.6951230755047478
+2022-08-04 22:22:20,160 - trainer - INFO -     val_loss       : 4.339531026309049
+2022-08-04 22:22:20,160 - trainer - INFO -     val_accuracy   : 0.2916
+2022-08-04 22:22:37,131 - trainer - INFO -     epoch          : 54
+2022-08-04 22:22:37,132 - trainer - INFO -     loss           : 15.516024600758271
+2022-08-04 22:22:37,132 - trainer - INFO -     accuracy       : 0.7015764727574445
+2022-08-04 22:22:37,132 - trainer - INFO -     val_loss       : 4.5715077285525165
+2022-08-04 22:22:37,132 - trainer - INFO -     val_accuracy   : 0.2764
+2022-08-04 22:22:56,523 - trainer - INFO -     epoch          : 55
+2022-08-04 22:22:56,524 - trainer - INFO -     loss           : 15.593029482224408
+2022-08-04 22:22:56,524 - trainer - INFO -     accuracy       : 0.697520051627178
+2022-08-04 22:22:56,524 - trainer - INFO -     val_loss       : 4.0442450891567185
+2022-08-04 22:22:56,524 - trainer - INFO -     val_accuracy   : 0.3149
+2022-08-04 22:22:56,571 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:23:15,503 - trainer - INFO -     epoch          : 56
+2022-08-04 22:23:15,504 - trainer - INFO -     loss           : 15.519066283282111
+2022-08-04 22:23:15,504 - trainer - INFO -     accuracy       : 0.7038812574905504
+2022-08-04 22:23:15,504 - trainer - INFO -     val_loss       : 4.0538266912291325
+2022-08-04 22:23:15,504 - trainer - INFO -     val_accuracy   : 0.2995
+2022-08-04 22:23:35,503 - trainer - INFO -     epoch          : 57
+2022-08-04 22:23:35,503 - trainer - INFO -     loss           : 15.395546094109031
+2022-08-04 22:23:35,504 - trainer - INFO -     accuracy       : 0.7047109799944685
+2022-08-04 22:23:35,504 - trainer - INFO -     val_loss       : 4.150043083142631
+2022-08-04 22:23:35,504 - trainer - INFO -     val_accuracy   : 0.3119
+2022-08-04 22:23:55,027 - trainer - INFO -     epoch          : 58
+2022-08-04 22:23:55,028 - trainer - INFO -     loss           : 15.381405325496898
+2022-08-04 22:23:55,028 - trainer - INFO -     accuracy       : 0.7054485111090624
+2022-08-04 22:23:55,029 - trainer - INFO -     val_loss       : 4.2421579934373685
+2022-08-04 22:23:55,029 - trainer - INFO -     val_accuracy   : 0.3017
+2022-08-04 22:24:15,050 - trainer - INFO -     epoch          : 59
+2022-08-04 22:24:15,050 - trainer - INFO -     loss           : 15.337785933999454
+2022-08-04 22:24:15,050 - trainer - INFO -     accuracy       : 0.7059094680556836
+2022-08-04 22:24:15,050 - trainer - INFO -     val_loss       : 4.21949610227271
+2022-08-04 22:24:15,050 - trainer - INFO -     val_accuracy   : 0.3096
+2022-08-04 22:24:34,610 - trainer - INFO -     epoch          : 60
+2022-08-04 22:24:34,610 - trainer - INFO -     loss           : 15.276240360035615
+2022-08-04 22:24:34,610 - trainer - INFO -     accuracy       : 0.7112565686364893
+2022-08-04 22:24:34,610 - trainer - INFO -     val_loss       : 4.1559595337396935
+2022-08-04 22:24:34,611 - trainer - INFO -     val_accuracy   : 0.3125
+2022-08-04 22:24:53,116 - trainer - INFO -     epoch          : 61
+2022-08-04 22:24:53,117 - trainer - INFO -     loss           : 15.136971350277172
+2022-08-04 22:24:53,117 - trainer - INFO -     accuracy       : 0.7133769705909468
+2022-08-04 22:24:53,117 - trainer - INFO -     val_loss       : 4.457680303839188
+2022-08-04 22:24:53,117 - trainer - INFO -     val_accuracy   : 0.2916
+2022-08-04 22:25:05,716 - trainer - INFO -     epoch          : 62
+2022-08-04 22:25:05,717 - trainer - INFO -     loss           : 15.140105415793027
+2022-08-04 22:25:05,717 - trainer - INFO -     accuracy       : 0.7160505208813497
+2022-08-04 22:25:05,717 - trainer - INFO -     val_loss       : 4.3988110415543185
+2022-08-04 22:25:05,717 - trainer - INFO -     val_accuracy   : 0.2903
+2022-08-04 22:25:25,173 - trainer - INFO -     epoch          : 63
+2022-08-04 22:25:25,174 - trainer - INFO -     loss           : 15.125151622996611
+2022-08-04 22:25:25,174 - trainer - INFO -     accuracy       : 0.71540518115608
+2022-08-04 22:25:25,174 - trainer - INFO -     val_loss       : 4.288034605074532
+2022-08-04 22:25:25,175 - trainer - INFO -     val_accuracy   : 0.3002
+2022-08-04 22:25:44,120 - trainer - INFO -     epoch          : 64
+2022-08-04 22:25:44,121 - trainer - INFO -     loss           : 14.982341059516457
+2022-08-04 22:25:44,121 - trainer - INFO -     accuracy       : 0.7178021572785102
+2022-08-04 22:25:44,121 - trainer - INFO -     val_loss       : 4.40099934082997
+2022-08-04 22:25:44,121 - trainer - INFO -     val_accuracy   : 0.3051
+2022-08-04 22:26:03,797 - trainer - INFO -     epoch          : 65
+2022-08-04 22:26:03,797 - trainer - INFO -     loss           : 14.952057086720187
+2022-08-04 22:26:03,798 - trainer - INFO -     accuracy       : 0.7171568175532406
+2022-08-04 22:26:03,798 - trainer - INFO -     val_loss       : 4.126159501981132
+2022-08-04 22:26:03,798 - trainer - INFO -     val_accuracy   : 0.3165
+2022-08-04 22:26:03,880 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:26:23,077 - trainer - INFO -     epoch          : 66
+2022-08-04 22:26:23,078 - trainer - INFO -     loss           : 14.961656043108771
+2022-08-04 22:26:23,078 - trainer - INFO -     accuracy       : 0.722780492302019
+2022-08-04 22:26:23,078 - trainer - INFO -     val_loss       : 4.294221881069714
+2022-08-04 22:26:23,078 - trainer - INFO -     val_accuracy   : 0.3083
+2022-08-04 22:26:42,499 - trainer - INFO -     epoch          : 67
+2022-08-04 22:26:42,500 - trainer - INFO -     loss           : 14.994058732425465
+2022-08-04 22:26:42,500 - trainer - INFO -     accuracy       : 0.7177099658891859
+2022-08-04 22:26:42,500 - trainer - INFO -     val_loss       : 4.225006414365165
+2022-08-04 22:26:42,500 - trainer - INFO -     val_accuracy   : 0.3018
+2022-08-04 22:27:01,496 - trainer - INFO -     epoch          : 68
+2022-08-04 22:27:01,496 - trainer - INFO -     loss           : 14.988448490816005
+2022-08-04 22:27:01,497 - trainer - INFO -     accuracy       : 0.7203835161795888
+2022-08-04 22:27:01,497 - trainer - INFO -     val_loss       : 4.302845290944546
+2022-08-04 22:27:01,497 - trainer - INFO -     val_accuracy   : 0.3081
+2022-08-04 22:27:19,880 - trainer - INFO -     epoch          : 69
+2022-08-04 22:27:19,881 - trainer - INFO -     loss           : 14.754163607429055
+2022-08-04 22:27:19,881 - trainer - INFO -     accuracy       : 0.7231492578593159
+2022-08-04 22:27:19,881 - trainer - INFO -     val_loss       : 4.103044956545286
+2022-08-04 22:27:19,882 - trainer - INFO -     val_accuracy   : 0.3187
+2022-08-04 22:27:19,963 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:27:39,110 - trainer - INFO -     epoch          : 70
+2022-08-04 22:27:39,110 - trainer - INFO -     loss           : 14.94010254355038
+2022-08-04 22:27:39,110 - trainer - INFO -     accuracy       : 0.7209366645155343
+2022-08-04 22:27:39,110 - trainer - INFO -     val_loss       : 4.984564600111563
+2022-08-04 22:27:39,110 - trainer - INFO -     val_accuracy   : 0.2643
+2022-08-04 22:27:58,689 - trainer - INFO -     epoch          : 71
+2022-08-04 22:27:58,689 - trainer - INFO -     loss           : 14.819882291906021
+2022-08-04 22:27:58,689 - trainer - INFO -     accuracy       : 0.723978980363234
+2022-08-04 22:27:58,690 - trainer - INFO -     val_loss       : 4.111325964143004
+2022-08-04 22:27:58,690 - trainer - INFO -     val_accuracy   : 0.3225
+2022-08-04 22:27:58,736 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:28:17,441 - trainer - INFO -     epoch          : 72
+2022-08-04 22:28:17,442 - trainer - INFO -     loss           : 14.741285705566407
+2022-08-04 22:28:17,442 - trainer - INFO -     accuracy       : 0.7271134876002582
+2022-08-04 22:28:17,442 - trainer - INFO -     val_loss       : 4.109070657174798
+2022-08-04 22:28:17,442 - trainer - INFO -     val_accuracy   : 0.3181
+2022-08-04 22:28:37,046 - trainer - INFO -     epoch          : 73
+2022-08-04 22:28:37,047 - trainer - INFO -     loss           : 14.637885946386001
+2022-08-04 22:28:37,047 - trainer - INFO -     accuracy       : 0.7308933345625519
+2022-08-04 22:28:37,047 - trainer - INFO -     val_loss       : 4.2554644783840905
+2022-08-04 22:28:37,047 - trainer - INFO -     val_accuracy   : 0.3141
+2022-08-04 22:28:55,814 - trainer - INFO -     epoch          : 74
+2022-08-04 22:28:55,816 - trainer - INFO -     loss           : 14.625998934577494
+2022-08-04 22:28:55,816 - trainer - INFO -     accuracy       : 0.7302479948372822
+2022-08-04 22:28:55,816 - trainer - INFO -     val_loss       : 4.334410347516024
+2022-08-04 22:28:55,816 - trainer - INFO -     val_accuracy   : 0.2942
+2022-08-04 22:29:13,270 - trainer - INFO -     epoch          : 75
+2022-08-04 22:29:13,271 - trainer - INFO -     loss           : 14.717674760257497
+2022-08-04 22:29:13,271 - trainer - INFO -     accuracy       : 0.727851018714852
+2022-08-04 22:29:13,271 - trainer - INFO -     val_loss       : 4.461220831810674
+2022-08-04 22:29:13,271 - trainer - INFO -     val_accuracy   : 0.297
+2022-08-04 22:29:31,561 - trainer - INFO -     epoch          : 76
+2022-08-04 22:29:31,562 - trainer - INFO -     loss           : 14.619631913129021
+2022-08-04 22:29:31,562 - trainer - INFO -     accuracy       : 0.7292338895547156
+2022-08-04 22:29:31,562 - trainer - INFO -     val_loss       : 4.331119093713881
+2022-08-04 22:29:31,562 - trainer - INFO -     val_accuracy   : 0.3132
+2022-08-04 22:29:50,476 - trainer - INFO -     epoch          : 77
+2022-08-04 22:29:50,477 - trainer - INFO -     loss           : 14.498084090737736
+2022-08-04 22:29:50,477 - trainer - INFO -     accuracy       : 0.7350419470821425
+2022-08-04 22:29:50,478 - trainer - INFO -     val_loss       : 3.9911835978302777
+2022-08-04 22:29:50,478 - trainer - INFO -     val_accuracy   : 0.3278
+2022-08-04 22:29:50,556 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:30:08,905 - trainer - INFO -     epoch          : 78
+2022-08-04 22:30:08,906 - trainer - INFO -     loss           : 14.59354726006003
+2022-08-04 22:30:08,906 - trainer - INFO -     accuracy       : 0.7324605881810639
+2022-08-04 22:30:08,906 - trainer - INFO -     val_loss       : 4.072833559181117
+2022-08-04 22:30:08,906 - trainer - INFO -     val_accuracy   : 0.3164
+2022-08-04 22:30:28,413 - trainer - INFO -     epoch          : 79
+2022-08-04 22:30:28,414 - trainer - INFO -     loss           : 14.456196336185231
+2022-08-04 22:30:28,414 - trainer - INFO -     accuracy       : 0.7397437079376786
+2022-08-04 22:30:28,414 - trainer - INFO -     val_loss       : 4.074452726146843
+2022-08-04 22:30:28,414 - trainer - INFO -     val_accuracy   : 0.3194
+2022-08-04 22:30:47,834 - trainer - INFO -     epoch          : 80
+2022-08-04 22:30:47,835 - trainer - INFO -     loss           : 14.35540054545683
+2022-08-04 22:30:47,835 - trainer - INFO -     accuracy       : 0.7389139854337605
+2022-08-04 22:30:47,835 - trainer - INFO -     val_loss       : 4.588857312745686
+2022-08-04 22:30:47,835 - trainer - INFO -     val_accuracy   : 0.3086
+2022-08-04 22:30:47,909 - trainer - INFO - Saving checkpoint: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/checkpoint-epoch80.pth ...
+2022-08-04 22:31:07,147 - trainer - INFO -     epoch          : 81
+2022-08-04 22:31:07,147 - trainer - INFO -     loss           : 14.406825301226448
+2022-08-04 22:31:07,148 - trainer - INFO -     accuracy       : 0.7380842629298423
+2022-08-04 22:31:07,148 - trainer - INFO -     val_loss       : 4.278423792199243
+2022-08-04 22:31:07,148 - trainer - INFO -     val_accuracy   : 0.3136
+2022-08-04 22:31:26,609 - trainer - INFO -     epoch          : 82
+2022-08-04 22:31:26,610 - trainer - INFO -     loss           : 14.21848855860093
+2022-08-04 22:31:26,610 - trainer - INFO -     accuracy       : 0.7403890476629483
+2022-08-04 22:31:26,610 - trainer - INFO -     val_loss       : 4.546264636365673
+2022-08-04 22:31:26,610 - trainer - INFO -     val_accuracy   : 0.2969
+2022-08-04 22:31:46,540 - trainer - INFO -     epoch          : 83
+2022-08-04 22:31:46,541 - trainer - INFO -     loss           : 14.444592038322897
+2022-08-04 22:31:46,541 - trainer - INFO -     accuracy       : 0.7367013920899788
+2022-08-04 22:31:46,541 - trainer - INFO -     val_loss       : 4.315408410905283
+2022-08-04 22:31:46,541 - trainer - INFO -     val_accuracy   : 0.3112
+2022-08-04 22:32:05,755 - trainer - INFO -     epoch          : 84
+2022-08-04 22:32:05,756 - trainer - INFO -     loss           : 14.265751962100758
+2022-08-04 22:32:05,756 - trainer - INFO -     accuracy       : 0.7432469807319997
+2022-08-04 22:32:05,756 - trainer - INFO -     val_loss       : 5.074381273004073
+2022-08-04 22:32:05,756 - trainer - INFO -     val_accuracy   : 0.2506
+2022-08-04 22:32:23,622 - trainer - INFO -     epoch          : 85
+2022-08-04 22:32:23,622 - trainer - INFO -     loss           : 14.422867673986099
+2022-08-04 22:32:23,623 - trainer - INFO -     accuracy       : 0.7405734304415967
+2022-08-04 22:32:23,623 - trainer - INFO -     val_loss       : 4.512882579731036
+2022-08-04 22:32:23,623 - trainer - INFO -     val_accuracy   : 0.3069
+2022-08-04 22:32:41,448 - trainer - INFO -     epoch          : 86
+2022-08-04 22:32:41,449 - trainer - INFO -     loss           : 14.27291971094468
+2022-08-04 22:32:41,449 - trainer - INFO -     accuracy       : 0.7421406840601088
+2022-08-04 22:32:41,449 - trainer - INFO -     val_loss       : 4.651463101181803
+2022-08-04 22:32:41,449 - trainer - INFO -     val_accuracy   : 0.2892
+2022-08-04 22:33:00,483 - trainer - INFO -     epoch          : 87
+2022-08-04 22:33:00,484 - trainer - INFO -     loss           : 14.246970647924087
+2022-08-04 22:33:00,485 - trainer - INFO -     accuracy       : 0.7438923204572693
+2022-08-04 22:33:00,485 - trainer - INFO -     val_loss       : 4.143650453301925
+2022-08-04 22:33:00,485 - trainer - INFO -     val_accuracy   : 0.3249
+2022-08-04 22:33:19,659 - trainer - INFO -     epoch          : 88
+2022-08-04 22:33:19,660 - trainer - INFO -     loss           : 14.288202824312098
+2022-08-04 22:33:19,660 - trainer - INFO -     accuracy       : 0.7447220429611874
+2022-08-04 22:33:19,660 - trainer - INFO -     val_loss       : 4.69579260258735
+2022-08-04 22:33:19,660 - trainer - INFO -     val_accuracy   : 0.2913
+2022-08-04 22:33:37,966 - trainer - INFO -     epoch          : 89
+2022-08-04 22:33:37,967 - trainer - INFO -     loss           : 14.269836414561553
+2022-08-04 22:33:37,967 - trainer - INFO -     accuracy       : 0.7477643588088873
+2022-08-04 22:33:37,967 - trainer - INFO -     val_loss       : 4.2486422906948045
+2022-08-04 22:33:37,967 - trainer - INFO -     val_accuracy   : 0.3197
+2022-08-04 22:33:57,197 - trainer - INFO -     epoch          : 90
+2022-08-04 22:33:57,198 - trainer - INFO -     loss           : 14.223037831923541
+2022-08-04 22:33:57,198 - trainer - INFO -     accuracy       : 0.7448142343505116
+2022-08-04 22:33:57,198 - trainer - INFO -     val_loss       : 4.313412289076213
+2022-08-04 22:33:57,198 - trainer - INFO -     val_accuracy   : 0.3135
+2022-08-04 22:34:14,633 - trainer - INFO -     epoch          : 91
+2022-08-04 22:34:14,634 - trainer - INFO -     loss           : 14.188890502032113
+2022-08-04 22:34:14,634 - trainer - INFO -     accuracy       : 0.7472112104729418
+2022-08-04 22:34:14,634 - trainer - INFO -     val_loss       : 4.327210634569578
+2022-08-04 22:34:14,635 - trainer - INFO -     val_accuracy   : 0.3154
+2022-08-04 22:34:33,343 - trainer - INFO -     epoch          : 92
+2022-08-04 22:34:33,343 - trainer - INFO -     loss           : 14.029382402756635
+2022-08-04 22:34:33,344 - trainer - INFO -     accuracy       : 0.7472112104729418
+2022-08-04 22:34:33,344 - trainer - INFO -     val_loss       : 4.211026409004308
+2022-08-04 22:34:33,344 - trainer - INFO -     val_accuracy   : 0.3196
+2022-08-04 22:34:53,282 - trainer - INFO -     epoch          : 93
+2022-08-04 22:34:53,283 - trainer - INFO -     loss           : 14.096496671788833
+2022-08-04 22:34:53,283 - trainer - INFO -     accuracy       : 0.7503457177099659
+2022-08-04 22:34:53,283 - trainer - INFO -     val_loss       : 4.058209693884548
+2022-08-04 22:34:53,283 - trainer - INFO -     val_accuracy   : 0.3296
+2022-08-04 22:34:53,329 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:35:12,911 - trainer - INFO -     epoch          : 94
+2022-08-04 22:35:12,914 - trainer - INFO -     loss           : 14.08107717177447
+2022-08-04 22:35:12,914 - trainer - INFO -     accuracy       : 0.751544205771181
+2022-08-04 22:35:12,915 - trainer - INFO -     val_loss       : 4.597037357620046
+2022-08-04 22:35:12,915 - trainer - INFO -     val_accuracy   : 0.2969
+2022-08-04 22:35:32,679 - trainer - INFO -     epoch          : 95
+2022-08-04 22:35:32,680 - trainer - INFO -     loss           : 13.900335244571462
+2022-08-04 22:35:32,680 - trainer - INFO -     accuracy       : 0.7555084355121232
+2022-08-04 22:35:32,680 - trainer - INFO -     val_loss       : 4.256804330439508
+2022-08-04 22:35:32,680 - trainer - INFO -     val_accuracy   : 0.3303
+2022-08-04 22:35:32,741 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:35:52,481 - trainer - INFO -     epoch          : 96
+2022-08-04 22:35:52,481 - trainer - INFO -     loss           : 13.94869562036851
+2022-08-04 22:35:52,482 - trainer - INFO -     accuracy       : 0.7552318613441504
+2022-08-04 22:35:52,482 - trainer - INFO -     val_loss       : 4.125901756407339
+2022-08-04 22:35:52,482 - trainer - INFO -     val_accuracy   : 0.3238
+2022-08-04 22:36:11,771 - trainer - INFO -     epoch          : 97
+2022-08-04 22:36:11,771 - trainer - INFO -     loss           : 14.1284719915951
+2022-08-04 22:36:11,771 - trainer - INFO -     accuracy       : 0.7505301004886143
+2022-08-04 22:36:11,772 - trainer - INFO -     val_loss       : 4.134463038625596
+2022-08-04 22:36:11,772 - trainer - INFO -     val_accuracy   : 0.3329
+2022-08-04 22:36:11,817 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:36:31,732 - trainer - INFO -     epoch          : 98
+2022-08-04 22:36:31,733 - trainer - INFO -     loss           : 14.070207113378189
+2022-08-04 22:36:31,733 - trainer - INFO -     accuracy       : 0.7482253157555084
+2022-08-04 22:36:31,733 - trainer - INFO -     val_loss       : 4.532405648050429
+2022-08-04 22:36:31,734 - trainer - INFO -     val_accuracy   : 0.2926
+2022-08-04 22:36:51,000 - trainer - INFO -     epoch          : 99
+2022-08-04 22:36:51,001 - trainer - INFO -     loss           : 14.023291857102338
+2022-08-04 22:36:51,001 - trainer - INFO -     accuracy       : 0.7513598229925325
+2022-08-04 22:36:51,001 - trainer - INFO -     val_loss       : 4.82091437110418
+2022-08-04 22:36:51,002 - trainer - INFO -     val_accuracy   : 0.2815
+2022-08-04 22:37:10,624 - trainer - INFO -     epoch          : 100
+2022-08-04 22:37:10,625 - trainer - INFO -     loss           : 13.868569149690515
+2022-08-04 22:37:10,625 - trainer - INFO -     accuracy       : 0.755047478565502
+2022-08-04 22:37:10,625 - trainer - INFO -     val_loss       : 4.20403890066509
+2022-08-04 22:37:10,626 - trainer - INFO -     val_accuracy   : 0.3176
+2022-08-04 22:37:28,908 - trainer - INFO -     epoch          : 101
+2022-08-04 22:37:28,909 - trainer - INFO -     loss           : 13.97948881037095
+2022-08-04 22:37:28,909 - trainer - INFO -     accuracy       : 0.7504379090992901
+2022-08-04 22:37:28,909 - trainer - INFO -     val_loss       : 4.329467845868461
+2022-08-04 22:37:28,909 - trainer - INFO -     val_accuracy   : 0.3175
+2022-08-04 22:37:48,417 - trainer - INFO -     epoch          : 102
+2022-08-04 22:37:48,418 - trainer - INFO -     loss           : 13.815944492115694
+2022-08-04 22:37:48,418 - trainer - INFO -     accuracy       : 0.7558772010694201
+2022-08-04 22:37:48,418 - trainer - INFO -     val_loss       : 4.67656557771224
+2022-08-04 22:37:48,418 - trainer - INFO -     val_accuracy   : 0.3005
+2022-08-04 22:38:08,959 - trainer - INFO -     epoch          : 103
+2022-08-04 22:38:08,961 - trainer - INFO -     loss           : 13.897714390474206
+2022-08-04 22:38:08,961 - trainer - INFO -     accuracy       : 0.7545865216188808
+2022-08-04 22:38:08,961 - trainer - INFO -     val_loss       : 4.446858605252037
+2022-08-04 22:38:08,961 - trainer - INFO -     val_accuracy   : 0.3062
+2022-08-04 22:38:28,482 - trainer - INFO -     epoch          : 104
+2022-08-04 22:38:28,482 - trainer - INFO -     loss           : 13.739861443463493
+2022-08-04 22:38:28,482 - trainer - INFO -     accuracy       : 0.7594726652530653
+2022-08-04 22:38:28,483 - trainer - INFO -     val_loss       : 4.502236200284354
+2022-08-04 22:38:28,483 - trainer - INFO -     val_accuracy   : 0.318
+2022-08-04 22:38:47,930 - trainer - INFO -     epoch          : 105
+2022-08-04 22:38:47,931 - trainer - INFO -     loss           : 13.85914732989143
+2022-08-04 22:38:47,931 - trainer - INFO -     accuracy       : 0.755416244122799
+2022-08-04 22:38:47,931 - trainer - INFO -     val_loss       : 4.261155934273442
+2022-08-04 22:38:47,931 - trainer - INFO -     val_accuracy   : 0.3219
+2022-08-04 22:39:08,120 - trainer - INFO -     epoch          : 106
+2022-08-04 22:39:08,121 - trainer - INFO -     loss           : 13.966391484877642
+2022-08-04 22:39:08,121 - trainer - INFO -     accuracy       : 0.7533880335576657
+2022-08-04 22:39:08,121 - trainer - INFO -     val_loss       : 4.117761292035067
+2022-08-04 22:39:08,122 - trainer - INFO -     val_accuracy   : 0.3306
+2022-08-04 22:39:27,175 - trainer - INFO -     epoch          : 107
+2022-08-04 22:39:27,176 - trainer - INFO -     loss           : 13.780489259607652
+2022-08-04 22:39:27,176 - trainer - INFO -     accuracy       : 0.7615008758181986
+2022-08-04 22:39:27,176 - trainer - INFO -     val_loss       : 4.382097087328947
+2022-08-04 22:39:27,176 - trainer - INFO -     val_accuracy   : 0.3279
+2022-08-04 22:39:45,744 - trainer - INFO -     epoch          : 108
+2022-08-04 22:39:45,746 - trainer - INFO -     loss           : 13.812881750219008
+2022-08-04 22:39:45,746 - trainer - INFO -     accuracy       : 0.7539411818936111
+2022-08-04 22:39:45,746 - trainer - INFO -     val_loss       : 4.440247665477704
+2022-08-04 22:39:45,746 - trainer - INFO -     val_accuracy   : 0.3116
+2022-08-04 22:40:03,419 - trainer - INFO -     epoch          : 109
+2022-08-04 22:40:03,420 - trainer - INFO -     loss           : 13.729383176915785
+2022-08-04 22:40:03,420 - trainer - INFO -     accuracy       : 0.7593804738637411
+2022-08-04 22:40:03,420 - trainer - INFO -     val_loss       : 4.378836366194713
+2022-08-04 22:40:03,420 - trainer - INFO -     val_accuracy   : 0.3145
+2022-08-04 22:40:22,871 - trainer - INFO -     epoch          : 110
+2022-08-04 22:40:22,872 - trainer - INFO -     loss           : 13.689191829457002
+2022-08-04 22:40:22,872 - trainer - INFO -     accuracy       : 0.7638056605513045
+2022-08-04 22:40:22,873 - trainer - INFO -     val_loss       : 4.170745629298536
+2022-08-04 22:40:22,873 - trainer - INFO -     val_accuracy   : 0.3278
+2022-08-04 22:40:42,123 - trainer - INFO -     epoch          : 111
+2022-08-04 22:40:42,124 - trainer - INFO -     loss           : 13.740372377283434
+2022-08-04 22:40:42,124 - trainer - INFO -     accuracy       : 0.758181985802526
+2022-08-04 22:40:42,125 - trainer - INFO -     val_loss       : 4.0662257128123995
+2022-08-04 22:40:42,125 - trainer - INFO -     val_accuracy   : 0.3321
+2022-08-04 22:40:58,683 - trainer - INFO -     epoch          : 112
+2022-08-04 22:40:58,684 - trainer - INFO -     loss           : 13.76622059765984
+2022-08-04 22:40:58,684 - trainer - INFO -     accuracy       : 0.7583663685811746
+2022-08-04 22:40:58,684 - trainer - INFO -     val_loss       : 4.254723310470581
+2022-08-04 22:40:58,684 - trainer - INFO -     val_accuracy   : 0.3207
+2022-08-04 22:41:18,421 - trainer - INFO -     epoch          : 113
+2022-08-04 22:41:18,422 - trainer - INFO -     loss           : 13.750371181263644
+2022-08-04 22:41:18,422 - trainer - INFO -     accuracy       : 0.7596570480317139
+2022-08-04 22:41:18,422 - trainer - INFO -     val_loss       : 4.325565837606599
+2022-08-04 22:41:18,422 - trainer - INFO -     val_accuracy   : 0.3142
+2022-08-04 22:41:37,359 - trainer - INFO -     epoch          : 114
+2022-08-04 22:41:37,360 - trainer - INFO -     loss           : 13.706657510645249
+2022-08-04 22:41:37,360 - trainer - INFO -     accuracy       : 0.7632525122153591
+2022-08-04 22:41:37,360 - trainer - INFO -     val_loss       : 4.031813048109224
+2022-08-04 22:41:37,360 - trainer - INFO -     val_accuracy   : 0.3413
+2022-08-04 22:41:37,434 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:41:57,076 - trainer - INFO -     epoch          : 115
+2022-08-04 22:41:57,076 - trainer - INFO -     loss           : 13.637442409290987
+2022-08-04 22:41:57,077 - trainer - INFO -     accuracy       : 0.7657416797271135
+2022-08-04 22:41:57,077 - trainer - INFO -     val_loss       : 4.225258652167984
+2022-08-04 22:41:57,077 - trainer - INFO -     val_accuracy   : 0.3236
+2022-08-04 22:42:15,622 - trainer - INFO -     epoch          : 116
+2022-08-04 22:42:15,622 - trainer - INFO -     loss           : 13.511956529056325
+2022-08-04 22:42:15,623 - trainer - INFO -     accuracy       : 0.7684152300175163
+2022-08-04 22:42:15,623 - trainer - INFO -     val_loss       : 4.09624360482904
+2022-08-04 22:42:15,623 - trainer - INFO -     val_accuracy   : 0.3411
+2022-08-04 22:42:34,134 - trainer - INFO -     epoch          : 117
+2022-08-04 22:42:34,135 - trainer - INFO -     loss           : 13.732597317415125
+2022-08-04 22:42:34,135 - trainer - INFO -     accuracy       : 0.7600258135890108
+2022-08-04 22:42:34,135 - trainer - INFO -     val_loss       : 4.221272580231292
+2022-08-04 22:42:34,136 - trainer - INFO -     val_accuracy   : 0.3388
+2022-08-04 22:42:54,028 - trainer - INFO -     epoch          : 118
+2022-08-04 22:42:54,029 - trainer - INFO -     loss           : 13.772948590446921
+2022-08-04 22:42:54,029 - trainer - INFO -     accuracy       : 0.7611321102609017
+2022-08-04 22:42:54,029 - trainer - INFO -     val_loss       : 4.290409589115577
+2022-08-04 22:42:54,029 - trainer - INFO -     val_accuracy   : 0.3184
+2022-08-04 22:43:13,789 - trainer - INFO -     epoch          : 119
+2022-08-04 22:43:13,790 - trainer - INFO -     loss           : 13.637186454324162
+2022-08-04 22:43:13,791 - trainer - INFO -     accuracy       : 0.7638056605513045
+2022-08-04 22:43:13,791 - trainer - INFO -     val_loss       : 4.073036483571499
+2022-08-04 22:43:13,791 - trainer - INFO -     val_accuracy   : 0.3389
+2022-08-04 22:43:32,853 - trainer - INFO -     epoch          : 120
+2022-08-04 22:43:32,854 - trainer - INFO -     loss           : 13.608918436835793
+2022-08-04 22:43:32,854 - trainer - INFO -     accuracy       : 0.7612243016502259
+2022-08-04 22:43:32,854 - trainer - INFO -     val_loss       : 4.607277972788751
+2022-08-04 22:43:32,854 - trainer - INFO -     val_accuracy   : 0.3145
+2022-08-04 22:43:32,928 - trainer - INFO - Saving checkpoint: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/checkpoint-epoch120.pth ...
+2022-08-04 22:43:52,146 - trainer - INFO -     epoch          : 121
+2022-08-04 22:43:52,146 - trainer - INFO -     loss           : 13.534520171670353
+2022-08-04 22:43:52,147 - trainer - INFO -     accuracy       : 0.7644510002765742
+2022-08-04 22:43:52,147 - trainer - INFO -     val_loss       : 4.472115420087984
+2022-08-04 22:43:52,147 - trainer - INFO -     val_accuracy   : 0.3122
+2022-08-04 22:44:11,778 - trainer - INFO -     epoch          : 122
+2022-08-04 22:44:11,779 - trainer - INFO -     loss           : 13.544130257999196
+2022-08-04 22:44:11,779 - trainer - INFO -     accuracy       : 0.7635290863833318
+2022-08-04 22:44:11,779 - trainer - INFO -     val_loss       : 4.434779650048364
+2022-08-04 22:44:11,779 - trainer - INFO -     val_accuracy   : 0.3258
+2022-08-04 22:44:31,094 - trainer - INFO -     epoch          : 123
+2022-08-04 22:44:31,094 - trainer - INFO -     loss           : 13.490213360505946
+2022-08-04 22:44:31,094 - trainer - INFO -     accuracy       : 0.7637134691619802
+2022-08-04 22:44:31,094 - trainer - INFO -     val_loss       : 4.471508421475375
+2022-08-04 22:44:31,095 - trainer - INFO -     val_accuracy   : 0.3215
+2022-08-04 22:44:50,822 - trainer - INFO -     epoch          : 124
+2022-08-04 22:44:50,823 - trainer - INFO -     loss           : 13.514949383455164
+2022-08-04 22:44:50,823 - trainer - INFO -     accuracy       : 0.7696137180787315
+2022-08-04 22:44:50,823 - trainer - INFO -     val_loss       : 4.841258390040338
+2022-08-04 22:44:50,823 - trainer - INFO -     val_accuracy   : 0.2951
+2022-08-04 22:45:10,298 - trainer - INFO -     epoch          : 125
+2022-08-04 22:45:10,299 - trainer - INFO -     loss           : 13.444601036520565
+2022-08-04 22:45:10,299 - trainer - INFO -     accuracy       : 0.7687839955748134
+2022-08-04 22:45:10,299 - trainer - INFO -     val_loss       : 4.419770243801648
+2022-08-04 22:45:10,299 - trainer - INFO -     val_accuracy   : 0.329
+2022-08-04 22:45:28,908 - trainer - INFO -     epoch          : 126
+2022-08-04 22:45:28,909 - trainer - INFO -     loss           : 13.444896080914665
+2022-08-04 22:45:28,909 - trainer - INFO -     accuracy       : 0.7652807227804923
+2022-08-04 22:45:28,910 - trainer - INFO -     val_loss       : 4.432197972189022
+2022-08-04 22:45:28,910 - trainer - INFO -     val_accuracy   : 0.3168
+2022-08-04 22:45:47,909 - trainer - INFO -     epoch          : 127
+2022-08-04 22:45:47,910 - trainer - INFO -     loss           : 13.505835454604204
+2022-08-04 22:45:47,910 - trainer - INFO -     accuracy       : 0.7669401677883285
+2022-08-04 22:45:47,910 - trainer - INFO -     val_loss       : 4.498862317845791
+2022-08-04 22:45:47,910 - trainer - INFO -     val_accuracy   : 0.3278
+2022-08-04 22:46:07,033 - trainer - INFO -     epoch          : 128
+2022-08-04 22:46:07,033 - trainer - INFO -     loss           : 13.482891228619744
+2022-08-04 22:46:07,033 - trainer - INFO -     accuracy       : 0.7697981008573799
+2022-08-04 22:46:07,033 - trainer - INFO -     val_loss       : 4.291574867465828
+2022-08-04 22:46:07,033 - trainer - INFO -     val_accuracy   : 0.3298
+2022-08-04 22:46:25,983 - trainer - INFO -     epoch          : 129
+2022-08-04 22:46:25,984 - trainer - INFO -     loss           : 13.51343007929185
+2022-08-04 22:46:25,984 - trainer - INFO -     accuracy       : 0.7649119572231954
+2022-08-04 22:46:25,985 - trainer - INFO -     val_loss       : 4.337435375286054
+2022-08-04 22:46:25,985 - trainer - INFO -     val_accuracy   : 0.3197
+2022-08-04 22:46:44,903 - trainer - INFO -     epoch          : 130
+2022-08-04 22:46:44,904 - trainer - INFO -     loss           : 13.481973771487965
+2022-08-04 22:46:44,904 - trainer - INFO -     accuracy       : 0.7708122061399465
+2022-08-04 22:46:44,904 - trainer - INFO -     val_loss       : 4.439671021473559
+2022-08-04 22:46:44,904 - trainer - INFO -     val_accuracy   : 0.3237
+2022-08-04 22:47:04,168 - trainer - INFO -     epoch          : 131
+2022-08-04 22:47:04,169 - trainer - INFO -     loss           : 13.443513017542221
+2022-08-04 22:47:04,169 - trainer - INFO -     accuracy       : 0.7712731630865677
+2022-08-04 22:47:04,169 - trainer - INFO -     val_loss       : 4.140897838375237
+2022-08-04 22:47:04,169 - trainer - INFO -     val_accuracy   : 0.3367
+2022-08-04 22:47:23,394 - trainer - INFO -     epoch          : 132
+2022-08-04 22:47:23,394 - trainer - INFO -     loss           : 13.375340641246122
+2022-08-04 22:47:23,394 - trainer - INFO -     accuracy       : 0.7708122061399465
+2022-08-04 22:47:23,395 - trainer - INFO -     val_loss       : 4.219171542155592
+2022-08-04 22:47:23,395 - trainer - INFO -     val_accuracy   : 0.3285
+2022-08-04 22:47:42,934 - trainer - INFO -     epoch          : 133
+2022-08-04 22:47:42,935 - trainer - INFO -     loss           : 13.307719320409438
+2022-08-04 22:47:42,935 - trainer - INFO -     accuracy       : 0.7746842444915645
+2022-08-04 22:47:42,935 - trainer - INFO -     val_loss       : 4.225583339039283
+2022-08-04 22:47:42,935 - trainer - INFO -     val_accuracy   : 0.3293
+2022-08-04 22:48:01,363 - trainer - INFO -     epoch          : 134
+2022-08-04 22:48:01,364 - trainer - INFO -     loss           : 13.41751756107106
+2022-08-04 22:48:01,364 - trainer - INFO -     accuracy       : 0.7683230386281922
+2022-08-04 22:48:01,364 - trainer - INFO -     val_loss       : 4.3019851823396325
+2022-08-04 22:48:01,364 - trainer - INFO -     val_accuracy   : 0.3144
+2022-08-04 22:48:18,613 - trainer - INFO -     epoch          : 135
+2022-08-04 22:48:18,614 - trainer - INFO -     loss           : 13.35576624028823
+2022-08-04 22:48:18,614 - trainer - INFO -     accuracy       : 0.7685074214068406
+2022-08-04 22:48:18,614 - trainer - INFO -     val_loss       : 4.445513737352589
+2022-08-04 22:48:18,614 - trainer - INFO -     val_accuracy   : 0.3223
+2022-08-04 22:48:35,962 - trainer - INFO -     epoch          : 136
+2022-08-04 22:48:35,963 - trainer - INFO -     loss           : 13.445795889461742
+2022-08-04 22:48:35,963 - trainer - INFO -     accuracy       : 0.7708122061399465
+2022-08-04 22:48:35,963 - trainer - INFO -     val_loss       : 4.458566394033311
+2022-08-04 22:48:35,963 - trainer - INFO -     val_accuracy   : 0.3184
+2022-08-04 22:48:55,292 - trainer - INFO -     epoch          : 137
+2022-08-04 22:48:55,292 - trainer - INFO -     loss           : 13.411492964800667
+2022-08-04 22:48:55,293 - trainer - INFO -     accuracy       : 0.7717341200331889
+2022-08-04 22:48:55,293 - trainer - INFO -     val_loss       : 4.370216556742221
+2022-08-04 22:48:55,293 - trainer - INFO -     val_accuracy   : 0.3303
+2022-08-04 22:49:14,787 - trainer - INFO -     epoch          : 138
+2022-08-04 22:49:14,788 - trainer - INFO -     loss           : 13.315630677167107
+2022-08-04 22:49:14,788 - trainer - INFO -     accuracy       : 0.774499861712916
+2022-08-04 22:49:14,788 - trainer - INFO -     val_loss       : 4.523004580147659
+2022-08-04 22:49:14,789 - trainer - INFO -     val_accuracy   : 0.3012
+2022-08-04 22:49:34,439 - trainer - INFO -     epoch          : 139
+2022-08-04 22:49:34,441 - trainer - INFO -     loss           : 13.34586607989143
+2022-08-04 22:49:34,441 - trainer - INFO -     accuracy       : 0.7730247994837283
+2022-08-04 22:49:34,441 - trainer - INFO -     val_loss       : 4.555873795400692
+2022-08-04 22:49:34,441 - trainer - INFO -     val_accuracy   : 0.3149
+2022-08-04 22:49:53,976 - trainer - INFO -     epoch          : 140
+2022-08-04 22:49:53,977 - trainer - INFO -     loss           : 13.289445428287282
+2022-08-04 22:49:53,977 - trainer - INFO -     accuracy       : 0.7753295842168342
+2022-08-04 22:49:53,977 - trainer - INFO -     val_loss       : 4.206793948064877
+2022-08-04 22:49:53,977 - trainer - INFO -     val_accuracy   : 0.3375
+2022-08-04 22:50:12,795 - trainer - INFO -     epoch          : 141
+2022-08-04 22:50:12,796 - trainer - INFO -     loss           : 13.335080539478975
+2022-08-04 22:50:12,796 - trainer - INFO -     accuracy       : 0.7733013736517009
+2022-08-04 22:50:12,796 - trainer - INFO -     val_loss       : 4.157809254489368
+2022-08-04 22:50:12,796 - trainer - INFO -     val_accuracy   : 0.3281
+2022-08-04 22:50:32,467 - trainer - INFO -     epoch          : 142
+2022-08-04 22:50:32,467 - trainer - INFO -     loss           : 13.469456078024471
+2022-08-04 22:50:32,467 - trainer - INFO -     accuracy       : 0.7681386558495437
+2022-08-04 22:50:32,467 - trainer - INFO -     val_loss       : 4.775156087513212
+2022-08-04 22:50:32,467 - trainer - INFO -     val_accuracy   : 0.3025
+2022-08-04 22:50:51,480 - trainer - INFO -     epoch          : 143
+2022-08-04 22:50:51,481 - trainer - INFO -     loss           : 13.33167890660903
+2022-08-04 22:50:51,481 - trainer - INFO -     accuracy       : 0.7731169908730524
+2022-08-04 22:50:51,481 - trainer - INFO -     val_loss       : 4.409808659855323
+2022-08-04 22:50:51,481 - trainer - INFO -     val_accuracy   : 0.3269
+2022-08-04 22:51:09,929 - trainer - INFO -     epoch          : 144
+2022-08-04 22:51:09,929 - trainer - INFO -     loss           : 13.221061268974752
+2022-08-04 22:51:09,930 - trainer - INFO -     accuracy       : 0.7758827325527796
+2022-08-04 22:51:09,930 - trainer - INFO -     val_loss       : 4.455872158460979
+2022-08-04 22:51:09,930 - trainer - INFO -     val_accuracy   : 0.3218
+2022-08-04 22:51:28,992 - trainer - INFO -     epoch          : 145
+2022-08-04 22:51:28,993 - trainer - INFO -     loss           : 13.386984959770652
+2022-08-04 22:51:28,993 - trainer - INFO -     accuracy       : 0.7723794597584586
+2022-08-04 22:51:28,993 - trainer - INFO -     val_loss       : 4.119816520546056
+2022-08-04 22:51:28,994 - trainer - INFO -     val_accuracy   : 0.3341
+2022-08-04 22:51:48,733 - trainer - INFO -     epoch          : 146
+2022-08-04 22:51:48,734 - trainer - INFO -     loss           : 13.172154291938332
+2022-08-04 22:51:48,734 - trainer - INFO -     accuracy       : 0.7745920531022402
+2022-08-04 22:51:48,734 - trainer - INFO -     val_loss       : 4.387552873997748
+2022-08-04 22:51:48,734 - trainer - INFO -     val_accuracy   : 0.3351
+2022-08-04 22:52:07,963 - trainer - INFO -     epoch          : 147
+2022-08-04 22:52:07,965 - trainer - INFO -     loss           : 13.32926856770235
+2022-08-04 22:52:07,965 - trainer - INFO -     accuracy       : 0.7727482253157555
+2022-08-04 22:52:07,965 - trainer - INFO -     val_loss       : 4.766274738915359
+2022-08-04 22:52:07,965 - trainer - INFO -     val_accuracy   : 0.2919
+2022-08-04 22:52:26,847 - trainer - INFO -     epoch          : 148
+2022-08-04 22:52:26,848 - trainer - INFO -     loss           : 13.297619976716883
+2022-08-04 22:52:26,848 - trainer - INFO -     accuracy       : 0.774499861712916
+2022-08-04 22:52:26,848 - trainer - INFO -     val_loss       : 3.965302343609967
+2022-08-04 22:52:26,848 - trainer - INFO -     val_accuracy   : 0.3488
+2022-08-04 22:52:26,928 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:52:47,058 - trainer - INFO -     epoch          : 149
+2022-08-04 22:52:47,059 - trainer - INFO -     loss           : 13.15951389985926
+2022-08-04 22:52:47,059 - trainer - INFO -     accuracy       : 0.7796625795150733
+2022-08-04 22:52:47,059 - trainer - INFO -     val_loss       : 4.265608739249314
+2022-08-04 22:52:47,059 - trainer - INFO -     val_accuracy   : 0.3328
+2022-08-04 22:53:07,420 - trainer - INFO -     epoch          : 150
+2022-08-04 22:53:07,421 - trainer - INFO -     loss           : 13.162543296813965
+2022-08-04 22:53:07,422 - trainer - INFO -     accuracy       : 0.7793860053471006
+2022-08-04 22:53:07,422 - trainer - INFO -     val_loss       : 4.0326215496546105
+2022-08-04 22:53:07,422 - trainer - INFO -     val_accuracy   : 0.3427
+2022-08-04 22:53:27,223 - trainer - INFO -     epoch          : 151
+2022-08-04 22:53:27,224 - trainer - INFO -     loss           : 13.17141014547909
+2022-08-04 22:53:27,224 - trainer - INFO -     accuracy       : 0.7784640914538582
+2022-08-04 22:53:27,225 - trainer - INFO -     val_loss       : 4.705973015555853
+2022-08-04 22:53:27,225 - trainer - INFO -     val_accuracy   : 0.3151
+2022-08-04 22:53:46,460 - trainer - INFO -     epoch          : 152
+2022-08-04 22:53:46,461 - trainer - INFO -     loss           : 13.08437245312859
+2022-08-04 22:53:46,461 - trainer - INFO -     accuracy       : 0.778003134507237
+2022-08-04 22:53:46,461 - trainer - INFO -     val_loss       : 3.903706629065019
+2022-08-04 22:53:46,461 - trainer - INFO -     val_accuracy   : 0.3542
+2022-08-04 22:53:46,508 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:54:01,677 - trainer - INFO -     epoch          : 153
+2022-08-04 22:54:01,678 - trainer - INFO -     loss           : 13.130048549876493
+2022-08-04 22:54:01,678 - trainer - INFO -     accuracy       : 0.7797547709043975
+2022-08-04 22:54:01,678 - trainer - INFO -     val_loss       : 4.9100049900103215
+2022-08-04 22:54:01,678 - trainer - INFO -     val_accuracy   : 0.2979
+2022-08-04 22:54:21,334 - trainer - INFO -     epoch          : 154
+2022-08-04 22:54:21,335 - trainer - INFO -     loss           : 13.162424704607796
+2022-08-04 22:54:21,335 - trainer - INFO -     accuracy       : 0.7785562828431825
+2022-08-04 22:54:21,336 - trainer - INFO -     val_loss       : 4.132691920558108
+2022-08-04 22:54:21,336 - trainer - INFO -     val_accuracy   : 0.3526
+2022-08-04 22:54:41,106 - trainer - INFO -     epoch          : 155
+2022-08-04 22:54:41,107 - trainer - INFO -     loss           : 13.127571913775276
+2022-08-04 22:54:41,107 - trainer - INFO -     accuracy       : 0.7763436894994008
+2022-08-04 22:54:41,107 - trainer - INFO -     val_loss       : 4.243549352959741
+2022-08-04 22:54:41,107 - trainer - INFO -     val_accuracy   : 0.3276
+2022-08-04 22:55:00,785 - trainer - INFO -     epoch          : 156
+2022-08-04 22:55:00,785 - trainer - INFO -     loss           : 13.251130754807416
+2022-08-04 22:55:00,786 - trainer - INFO -     accuracy       : 0.7762514981100765
+2022-08-04 22:55:00,786 - trainer - INFO -     val_loss       : 4.439580935466139
+2022-08-04 22:55:00,786 - trainer - INFO -     val_accuracy   : 0.3241
+2022-08-04 22:55:13,959 - trainer - INFO -     epoch          : 157
+2022-08-04 22:55:13,960 - trainer - INFO -     loss           : 13.090958157707663
+2022-08-04 22:55:13,961 - trainer - INFO -     accuracy       : 0.7757905411634554
+2022-08-04 22:55:13,961 - trainer - INFO -     val_loss       : 4.363342831406412
+2022-08-04 22:55:13,961 - trainer - INFO -     val_accuracy   : 0.3255
+2022-08-04 22:55:33,583 - trainer - INFO -     epoch          : 158
+2022-08-04 22:55:33,584 - trainer - INFO -     loss           : 13.120716330584358
+2022-08-04 22:55:33,584 - trainer - INFO -     accuracy       : 0.7774499861712916
+2022-08-04 22:55:33,584 - trainer - INFO -     val_loss       : 4.236593412447579
+2022-08-04 22:55:33,584 - trainer - INFO -     val_accuracy   : 0.3223
+2022-08-04 22:55:53,104 - trainer - INFO -     epoch          : 159
+2022-08-04 22:55:53,105 - trainer - INFO -     loss           : 13.034220785253188
+2022-08-04 22:55:53,105 - trainer - INFO -     accuracy       : 0.7834424264773671
+2022-08-04 22:55:53,105 - trainer - INFO -     val_loss       : 4.3749463920351825
+2022-08-04 22:55:53,105 - trainer - INFO -     val_accuracy   : 0.3328
+2022-08-04 22:56:11,993 - trainer - INFO -     epoch          : 160
+2022-08-04 22:56:11,994 - trainer - INFO -     loss           : 13.112523348191205
+2022-08-04 22:56:11,994 - trainer - INFO -     accuracy       : 0.7786484742325067
+2022-08-04 22:56:11,994 - trainer - INFO -     val_loss       : 4.12921406649336
+2022-08-04 22:56:11,994 - trainer - INFO -     val_accuracy   : 0.3394
+2022-08-04 22:56:12,043 - trainer - INFO - Saving checkpoint: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/checkpoint-epoch160.pth ...
+2022-08-04 22:56:30,855 - trainer - INFO -     epoch          : 161
+2022-08-04 22:56:30,856 - trainer - INFO -     loss           : 25.816916746251724
+2022-08-04 22:56:30,856 - trainer - INFO -     accuracy       : 0.82114870471098
+2022-08-04 22:56:30,856 - trainer - INFO -     val_loss       : 3.0886129337021067
+2022-08-04 22:56:30,856 - trainer - INFO -     val_accuracy   : 0.4155
+2022-08-04 22:56:30,936 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:56:50,777 - trainer - INFO -     epoch          : 162
+2022-08-04 22:56:50,777 - trainer - INFO -     loss           : 23.467050305534812
+2022-08-04 22:56:50,778 - trainer - INFO -     accuracy       : 0.8342398819950216
+2022-08-04 22:56:50,778 - trainer - INFO -     val_loss       : 2.747293659403354
+2022-08-04 22:56:50,778 - trainer - INFO -     val_accuracy   : 0.4387
+2022-08-04 22:56:50,824 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:57:10,383 - trainer - INFO -     epoch          : 163
+2022-08-04 22:57:10,384 - trainer - INFO -     loss           : 22.348364695380717
+2022-08-04 22:57:10,384 - trainer - INFO -     accuracy       : 0.8397713653544759
+2022-08-04 22:57:10,384 - trainer - INFO -     val_loss       : 2.597093953361994
+2022-08-04 22:57:10,384 - trainer - INFO -     val_accuracy   : 0.4514
+2022-08-04 22:57:10,431 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:57:30,262 - trainer - INFO -     epoch          : 164
+2022-08-04 22:57:30,263 - trainer - INFO -     loss           : 21.653752843071434
+2022-08-04 22:57:30,263 - trainer - INFO -     accuracy       : 0.844104360652715
+2022-08-04 22:57:30,263 - trainer - INFO -     val_loss       : 2.5221527513069444
+2022-08-04 22:57:30,263 - trainer - INFO -     val_accuracy   : 0.4589
+2022-08-04 22:57:30,340 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:57:49,210 - trainer - INFO -     epoch          : 165
+2022-08-04 22:57:49,210 - trainer - INFO -     loss           : 21.207662604836855
+2022-08-04 22:57:49,211 - trainer - INFO -     accuracy       : 0.8373743892320458
+2022-08-04 22:57:49,211 - trainer - INFO -     val_loss       : 2.5099461274810984
+2022-08-04 22:57:49,211 - trainer - INFO -     val_accuracy   : 0.4656
+2022-08-04 22:57:49,287 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:58:08,300 - trainer - INFO -     epoch          : 166
+2022-08-04 22:58:08,301 - trainer - INFO -     loss           : 20.848410157596362
+2022-08-04 22:58:08,301 - trainer - INFO -     accuracy       : 0.8433668295381211
+2022-08-04 22:58:08,301 - trainer - INFO -     val_loss       : 2.5001489225822158
+2022-08-04 22:58:08,301 - trainer - INFO -     val_accuracy   : 0.4688
+2022-08-04 22:58:08,382 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:58:28,466 - trainer - INFO -     epoch          : 167
+2022-08-04 22:58:28,466 - trainer - INFO -     loss           : 20.71011964012595
+2022-08-04 22:58:28,466 - trainer - INFO -     accuracy       : 0.8447497003779847
+2022-08-04 22:58:28,467 - trainer - INFO -     val_loss       : 2.511208807365804
+2022-08-04 22:58:28,467 - trainer - INFO -     val_accuracy   : 0.4687
+2022-08-04 22:58:48,580 - trainer - INFO -     epoch          : 168
+2022-08-04 22:58:48,581 - trainer - INFO -     loss           : 20.30698220870074
+2022-08-04 22:58:48,581 - trainer - INFO -     accuracy       : 0.847976399004333
+2022-08-04 22:58:48,581 - trainer - INFO -     val_loss       : 2.5117487560344647
+2022-08-04 22:58:48,581 - trainer - INFO -     val_accuracy   : 0.4722
+2022-08-04 22:58:48,662 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:59:07,544 - trainer - INFO -     epoch          : 169
+2022-08-04 22:59:07,545 - trainer - INFO -     loss           : 19.912110553068274
+2022-08-04 22:59:07,545 - trainer - INFO -     accuracy       : 0.8465013367751452
+2022-08-04 22:59:07,546 - trainer - INFO -     val_loss       : 2.4881976691982413
+2022-08-04 22:59:07,546 - trainer - INFO -     val_accuracy   : 0.474
+2022-08-04 22:59:07,627 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:59:25,420 - trainer - INFO -     epoch          : 170
+2022-08-04 22:59:25,421 - trainer - INFO -     loss           : 20.002305905959187
+2022-08-04 22:59:25,421 - trainer - INFO -     accuracy       : 0.8451184659352816
+2022-08-04 22:59:25,422 - trainer - INFO -     val_loss       : 2.495147686970385
+2022-08-04 22:59:25,422 - trainer - INFO -     val_accuracy   : 0.4758
+2022-08-04 22:59:25,518 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 22:59:45,118 - trainer - INFO -     epoch          : 171
+2022-08-04 22:59:45,119 - trainer - INFO -     loss           : 19.678954259087057
+2022-08-04 22:59:45,119 - trainer - INFO -     accuracy       : 0.8486217387296027
+2022-08-04 22:59:45,119 - trainer - INFO -     val_loss       : 2.513921970053564
+2022-08-04 22:59:45,119 - trainer - INFO -     val_accuracy   : 0.4748
+2022-08-04 23:00:05,101 - trainer - INFO -     epoch          : 172
+2022-08-04 23:00:05,101 - trainer - INFO -     loss           : 19.636042325636918
+2022-08-04 23:00:05,102 - trainer - INFO -     accuracy       : 0.8498202267908177
+2022-08-04 23:00:05,102 - trainer - INFO -     val_loss       : 2.51012269756462
+2022-08-04 23:00:05,102 - trainer - INFO -     val_accuracy   : 0.476
+2022-08-04 23:00:05,149 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 23:00:23,983 - trainer - INFO -     epoch          : 173
+2022-08-04 23:00:23,984 - trainer - INFO -     loss           : 19.26646672417136
+2022-08-04 23:00:23,984 - trainer - INFO -     accuracy       : 0.8501889923481147
+2022-08-04 23:00:23,984 - trainer - INFO -     val_loss       : 2.4890964951696275
+2022-08-04 23:00:23,984 - trainer - INFO -     val_accuracy   : 0.4796
+2022-08-04 23:00:24,065 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 23:00:44,129 - trainer - INFO -     epoch          : 174
+2022-08-04 23:00:44,130 - trainer - INFO -     loss           : 19.214438920862534
+2022-08-04 23:00:44,130 - trainer - INFO -     accuracy       : 0.8494514612335208
+2022-08-04 23:00:44,130 - trainer - INFO -     val_loss       : 2.518369825580452
+2022-08-04 23:00:44,130 - trainer - INFO -     val_accuracy   : 0.4773
+2022-08-04 23:01:04,060 - trainer - INFO -     epoch          : 175
+2022-08-04 23:01:04,061 - trainer - INFO -     loss           : 18.994559175827924
+2022-08-04 23:01:04,062 - trainer - INFO -     accuracy       : 0.8506499492947359
+2022-08-04 23:01:04,062 - trainer - INFO -     val_loss       : 2.5289319708377502
+2022-08-04 23:01:04,062 - trainer - INFO -     val_accuracy   : 0.4763
+2022-08-04 23:01:22,468 - trainer - INFO -     epoch          : 176
+2022-08-04 23:01:22,470 - trainer - INFO -     loss           : 18.87241895339068
+2022-08-04 23:01:22,470 - trainer - INFO -     accuracy       : 0.8513874804093298
+2022-08-04 23:01:22,470 - trainer - INFO -     val_loss       : 2.5518092399911034
+2022-08-04 23:01:22,470 - trainer - INFO -     val_accuracy   : 0.4782
+2022-08-04 23:01:42,191 - trainer - INFO -     epoch          : 177
+2022-08-04 23:01:42,192 - trainer - INFO -     loss           : 18.889603547488942
+2022-08-04 23:01:42,192 - trainer - INFO -     accuracy       : 0.8537844565317599
+2022-08-04 23:01:42,192 - trainer - INFO -     val_loss       : 2.5448370945604544
+2022-08-04 23:01:42,192 - trainer - INFO -     val_accuracy   : 0.4804
+2022-08-04 23:01:42,269 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 23:02:00,465 - trainer - INFO -     epoch          : 178
+2022-08-04 23:02:00,466 - trainer - INFO -     loss           : 18.49785088931813
+2022-08-04 23:02:00,466 - trainer - INFO -     accuracy       : 0.8525859684705448
+2022-08-04 23:02:00,466 - trainer - INFO -     val_loss       : 2.546761835677714
+2022-08-04 23:02:00,466 - trainer - INFO -     val_accuracy   : 0.4797
+2022-08-04 23:02:19,961 - trainer - INFO -     epoch          : 179
+2022-08-04 23:02:19,962 - trainer - INFO -     loss           : 18.367237147162943
+2022-08-04 23:02:19,962 - trainer - INFO -     accuracy       : 0.8541532220890569
+2022-08-04 23:02:19,963 - trainer - INFO -     val_loss       : 2.5684792044796523
+2022-08-04 23:02:19,963 - trainer - INFO -     val_accuracy   : 0.4808
+2022-08-04 23:02:20,027 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 23:02:39,520 - trainer - INFO -     epoch          : 180
+2022-08-04 23:02:39,520 - trainer - INFO -     loss           : 18.37729724435245
+2022-08-04 23:02:39,521 - trainer - INFO -     accuracy       : 0.8561814326541901
+2022-08-04 23:02:39,521 - trainer - INFO -     val_loss       : 2.5629601025883155
+2022-08-04 23:02:39,521 - trainer - INFO -     val_accuracy   : 0.4809
+2022-08-04 23:02:39,594 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 23:02:58,675 - trainer - INFO -     epoch          : 181
+2022-08-04 23:02:58,676 - trainer - INFO -     loss           : 18.1181941986084
+2022-08-04 23:02:58,676 - trainer - INFO -     accuracy       : 0.851848437355951
+2022-08-04 23:02:58,676 - trainer - INFO -     val_loss       : 2.5526974865152865
+2022-08-04 23:02:58,676 - trainer - INFO -     val_accuracy   : 0.4814
+2022-08-04 23:02:58,747 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
+2022-08-04 23:03:18,467 - trainer - INFO -     epoch          : 182
+2022-08-04 23:03:18,467 - trainer - INFO -     loss           : 17.932762168435488
+2022-08-04 23:03:18,467 - trainer - INFO -     accuracy       : 0.8578408776620263
+2022-08-04 23:03:18,467 - trainer - INFO -     val_loss       : 2.5561585426330566
+2022-08-04 23:03:18,467 - trainer - INFO -     val_accuracy   : 0.48
+2022-08-04 23:03:38,088 - trainer - INFO -     epoch          : 183
+2022-08-04 23:03:38,089 - trainer - INFO -     loss           : 17.878845091427074
+2022-08-04 23:03:38,089 - trainer - INFO -     accuracy       : 0.8543376048677054
+2022-08-04 23:03:38,089 - trainer - INFO -     val_loss       : 2.541763916800294
+2022-08-04 23:03:38,089 - trainer - INFO -     val_accuracy   : 0.4809
+2022-08-04 23:03:56,996 - trainer - INFO -     epoch          : 184
+2022-08-04 23:03:56,997 - trainer - INFO -     loss           : 17.973666561351102
+2022-08-04 23:03:56,997 - trainer - INFO -     accuracy       : 0.8578408776620263
+2022-08-04 23:03:56,997 - trainer - INFO -     val_loss       : 2.55704271340672
+2022-08-04 23:03:56,997 - trainer - INFO -     val_accuracy   : 0.4807
+2022-08-04 23:04:14,981 - trainer - INFO -     epoch          : 185
+2022-08-04 23:04:14,982 - trainer - INFO -     loss           : 17.890709192612594
+2022-08-04 23:04:14,982 - trainer - INFO -     accuracy       : 0.8566423896008113
+2022-08-04 23:04:14,982 - trainer - INFO -     val_loss       : 2.5460183288477642
+2022-08-04 23:04:14,983 - trainer - INFO -     val_accuracy   : 0.4816
+2022-08-04 23:04:15,059 - trainer - INFO - Saving current best: saved/models/Imbalance_CIFAR100_LT_RIDE/0804_220455/model_best.pth ...
