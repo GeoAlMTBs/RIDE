@@ -61,7 +61,7 @@ class EAModel(BaseModel):
 class ResNet18MoEModel(Model):
     def __init__(self, num_classes, use_conv_moe, num_expert, moe_top_k):
         super().__init__(num_classes, None)
-        self.backbone = ResNet18MoE(use_conv_moe, num_expert, moe_top_k)
+        self.backbone = ResNet18MoE(num_classes, use_conv_moe, num_expert, moe_top_k)
 
 class ResNet10Model(Model):
     def __init__(self, num_classes, reduce_dimension=False, layer3_output_dim=None, layer4_output_dim=None, use_norm=False, num_experts=1, **kwargs):
