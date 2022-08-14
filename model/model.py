@@ -11,6 +11,14 @@ from .ldam_drw_resnets import resnet_cifar
 from .ldam_drw_resnets import ride_resnet_cifar
 from .ldam_drw_resnets import ea_resnet_cifar
 
+import os
+import sys
+basedir = os.getenv('basedir')
+sys.path.append(basedir + 'fastmoe/examples/resnet')
+
+from resnet import ResNet18MoE
+
+# ?
 
 class Model(BaseModel):
     requires_target = False
@@ -32,7 +40,7 @@ class Model(BaseModel):
 class EAModel(BaseModel):
     requires_target = True
     confidence_model = True
-
+    # ?
     def __init__(self, num_classes, backbone_class=None):
         super().__init__()
         if backbone_class is not None: # Do not init backbone here if None
@@ -43,11 +51,17 @@ class EAModel(BaseModel):
 
     def forward(self, x, mode=None, target=None):
         x = self.backbone(x, target=target)
+    # ? backbone, this sort of thing
 
         assert isinstance(x, tuple) # logits, extra_info
         assert mode is None
         
         return x
+
+class ResNet18MoEModel(Model):
+    def __init__(self, num_classes, use_conv_moe, num_expert, moe_top_k):
+        super().__init__(num_classes, None)
+        self.backbone = ResNet18MoE(use_conv_moe, num_expert, moe_top_k)
 
 class ResNet10Model(Model):
     def __init__(self, num_classes, reduce_dimension=False, layer3_output_dim=None, layer4_output_dim=None, use_norm=False, num_experts=1, **kwargs):
