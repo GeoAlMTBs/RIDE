@@ -1,0 +1,184 @@
+Files already downloadTHCudaCheck FAIL file=/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/generic/ClassNLLCriterion.cu line=235 error=710 : device-side assert triggered
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [0,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [1,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [2,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [5,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [9,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [10,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [11,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [12,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [14,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [15,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [16,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [17,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [18,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [19,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [20,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [21,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [22,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [23,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [26,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [27,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [30,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/ClassNLLCriterion.cu:108: cunn_ClassNLLCriterion_updateOutput_kernel: block: [0,0,0], thread: [31,0,0] Assertion `t >= 0 && t < n_classes` failed.
+Traceback (most recent call last):
+  File "train.py", line 110, in <module>
+    main(config)
+  File "train.py", line 75, in main
+    trainer.train()
+  File "/home/3024hlh/RIDE/base/base_trainer.py", line 76, in train
+    result = self._train_epoch(epoch)
+  File "/home/3024hlh/RIDE/trainer/trainer.py", line 150, in _train_epoch
+    loss.backward()
+  File "/home/3024hlh/anaconda3/envs/ride/lib/python3.7/site-packages/torch/tensor.py", line 221, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/3024hlh/anaconda3/envs/ride/lib/python3.7/site-packages/torch/autograd/__init__.py", line 132, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: cuda runtime error (710) : device-side assert triggered at /opt/conda/conda-bld/pytorch_1603729047590/work/aten/src/THCUNN/generic/ClassNLLCriterion.cu:235
+2776],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183]],
+
+         [[-2.2214, -2.2214, -2.2214,  ...,  1.7002,  1.7392,  1.7977],
+          [-2.2214, -2.2214, -2.2214,  ...,  1.7002,  1.7002,  1.3295],
+          [-2.2214, -2.2214, -2.2214,  ...,  1.6221,  1.6807,  1.3490],
+          ...,
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -1.4605],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214]]],
+
+
+        [[[-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          ...,
+          [ 2.5141,  2.5141,  2.5141,  ...,  2.5141, -2.4291, -2.4291],
+          [ 2.5141,  2.5141,  2.5141,  ...,  2.5141, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ...,  2.5141, -2.4291, -2.4291]],
+
+         [[-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          ...,
+          [ 2.5968,  2.5968,  2.5968,  ...,  2.5968, -2.4183, -2.4183],
+          [ 2.5968,  2.5968,  2.5968,  ...,  2.5968, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ...,  2.5968, -2.4183, -2.4183]],
+
+         [[-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          ...,
+          [ 2.7537,  2.7537,  2.7537,  ...,  2.7537, -2.2214, -2.2214],
+          [ 2.7537,  2.7537,  2.7537,  ...,  2.7537, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ...,  2.7537, -2.2214, -2.2214]]],
+
+
+        [[[-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          ...,
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291]],
+
+         [[-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          ...,
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183]],
+
+         [[-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          ...,
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214]]],
+
+
+        ...,
+
+
+        [[[-2.4291, -2.4291, -2.4291,  ...,  2.5141,  2.5141, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ...,  2.5141,  2.5141, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ...,  2.5141,  2.5141, -2.4291],
+          ...,
+          [-2.4291, -2.4291, -2.4291,  ...,  2.4172,  2.4753,  2.4947],
+          [-2.4291, -2.4291, -2.4291,  ...,  2.4753,  2.4947,  2.4947],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291]],
+
+         [[-2.4183, -2.4183, -2.4183,  ...,  2.5968,  2.5968, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ...,  2.5575,  2.5575, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ...,  2.5575,  2.5575, -2.4183],
+          ...,
+          [-2.4183, -2.4183, -2.4183,  ...,  2.1445,  2.3608,  2.4985],
+          [-2.4183, -2.4183, -2.4183,  ...,  2.5378,  2.5575,  2.5575],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183]],
+
+         [[-2.2214, -2.2214, -2.2214,  ...,  2.3440,  2.3440, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ...,  2.3635,  2.3635, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ...,  2.4221,  2.4221, -2.2214],
+          ...,
+          [-2.2214, -2.2214, -2.2214,  ...,  1.8563,  2.1489,  2.2465],
+          [-2.2214, -2.2214, -2.2214,  ...,  2.3245,  2.3635,  2.3635],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214]]],
+
+
+        [[[-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          ...,
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291]],
+
+         [[-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          ...,
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183]],
+
+         [[-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          ...,
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214]]],
+
+
+        [[[-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          ...,
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291],
+          [-2.4291, -2.4291, -2.4291,  ..., -2.4291, -2.4291, -2.4291]],
+
+         [[-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          ...,
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183],
+          [-2.4183, -2.4183, -2.4183,  ..., -2.4183, -2.4183, -2.4183]],
+
+         [[-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          ...,
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214],
+          [-2.2214, -2.2214, -2.2214,  ..., -2.2214, -2.2214, -2.2214]]]])
+tensor([13, 24, 48,  7,  9, 18,  1,  4,  2, 21, 28, 27, 18,  4, 33, 61, 72, 10,
+        18, 49, 20, 16, 33, 40,  1,  5, 21, 59,  3,  0, 44, 22, 18,  1, 26,  5,
+        19, 26,  8,  8,  4,  7,  4, 32, 15, 29,  0, 13,  7, 11, 19,  1, 25, 81,
+        11, 11, 20, 57, 11, 48, 11, 15, 11, 16, 32,  0, 27, 15,  4,  4, 83, 37,
+         6, 25, 13, 32, 11, 32,  9, 15,  7, 15, 30,  7, 14, 88, 47, 17, 40, 12,
+        14, 23,  3, 13, 43, 36, 11,  3,  7,  5, 13, 66, 34, 14, 46, 15, 51, 19,
+        30, 28, 20, 27,  1,  6, 18, 51, 23, 24, 10,  6,  3,  2, 68, 26,  5, 25,
+        29, 62])

@@ -82,6 +82,11 @@ class Trainer(BaseTrainer):
             else:
                 data, target = data
                 idx, contrast_idx = None, None
+            
+            # debug
+            print(data)
+            print(target)
+
             data, target = data.to(self.device), target.to(self.device)
 
             self.optimizer.zero_grad()

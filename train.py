@@ -62,7 +62,7 @@ def main(config):
                 return lr
             lr_scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
         else:
-            lr_scheduler = config.init_obj('lr_scheduler' torch.optim.lr_scheduler, optimizer)
+            lr_scheduler = config.init_obj('lr_scheduler', torch.optim.lr_scheduler, optimizer)
     else:
         lr_scheduler = None
 
