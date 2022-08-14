@@ -84,8 +84,8 @@ class Trainer(BaseTrainer):
                 idx, contrast_idx = None, None
             
             # debug
-            print(data)
-            print(target)
+            # print(data)
+            # print(target)
 
             data, target = data.to(self.device), target.to(self.device)
 
@@ -125,17 +125,17 @@ class Trainer(BaseTrainer):
                                 })
                         if isinstance(teacher, dict):
                             teacher = teacher["output"]
-                    if self.add_extra_info:
-                        if isinstance(output, dict):
-                            logits = output["logits"]
-                            extra_info.update({
-                                "logits": logits.transpose(0, 1)
-                            })
-                        else:
-                            extra_info.update({
-                                "logits": self.real_model.backbone.logits
-                            })
-
+#                   if self.add_extra_info:
+#                        if isinstance(output, dict):
+#                            logits = output["logits"]
+#                            extra_info.update({
+#                                "logits": logits.transpose(0, 1)
+#                            })
+#                        else:
+#                            extra_info.update({
+#                                "logits": self.real_model.backbone.logits
+#                            })
+#
                     if isinstance(output, dict):
                         output = output["output"]
 
