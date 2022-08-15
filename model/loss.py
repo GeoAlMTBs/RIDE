@@ -52,7 +52,7 @@ class CrossEntropyLoss(nn.Module):
         
         return self
 
-    def forward(self, output_logits, target): # output is logits
+    def forward(self, output_logits, target, extra_info=None): # output is logits
         return F.cross_entropy(output_logits, target, weight=self.per_cls_weights)
 
 class LDAMLoss(nn.Module):
