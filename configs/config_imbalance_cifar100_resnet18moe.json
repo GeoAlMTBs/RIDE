@@ -1,12 +1,12 @@
 {
-    "name": "Imbalance_CIFAR100_LT_ResNet18",
+    "name": "Imbalance_CIFAR100_LT_ResNet18MoE",
     "n_gpu": 1,
 
     "arch": {
         "type": "ResNet18MoEModel",
         "args": {
             "num_classes": 100,
-	        "use_conv_moe": [0, 0, 0, 0],
+	        "use_conv_moe": [0, 1, 1, 1],
             "num_expert": 8,
 	        "moe_top_k": 2
         }
