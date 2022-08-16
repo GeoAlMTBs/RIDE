@@ -1,0 +1,1 @@
+nohup python train.py -c "./configs/config_imbalance_cifar100_resnet18moe.json" --device 1 1>out.txt 2>error.txt &

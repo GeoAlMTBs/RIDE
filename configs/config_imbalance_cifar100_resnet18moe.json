@@ -7,8 +7,8 @@
         "args": {
             "num_classes": 100,
 	        "use_conv_moe": [0, 1, 1, 1],
-            "num_expert": 8,
-	        "moe_top_k": 2
+            "num_expert": 128,
+	        "moe_top_k": 8
         }
     },
     "data_loader": {
@@ -31,9 +31,8 @@
     },
     "add_extra_info": true,
     "loss": {
-        "type": "CrossEntropyLoss",
+        "type": "LDAMLoss",
         "args": {
-            "reweight_CE": false
         }
     },
     "metrics": [

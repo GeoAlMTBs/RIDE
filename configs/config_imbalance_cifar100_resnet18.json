@@ -31,9 +31,8 @@
     },
     "add_extra_info": true,
     "loss": {
-        "type": "CrossEntropyLoss",
+        "type": "LDAMLoss",
         "args": {
-            "reweight_CE": false
         }
     },
     "metrics": [
