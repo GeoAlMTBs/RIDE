@@ -331,7 +331,7 @@ class ResNet_s_MoE(nn.Module):
                 num_blocks[2],
                 2,
                 basic_block_moe_idx,
-                (self.h, self.w)
+                (self.h, self.w),
                 num_expert,
                 moe_top_k
                 )
