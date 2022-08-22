@@ -274,7 +274,7 @@ class ResNet_s_MoE(nn.Module):
         ):
         super(ResNet_s_MoE, self).__init__()
         self.in_planes = 16
-        self.hw = hw
+        self.h, self.w = hw
 
         self.conv1 = nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(16)
@@ -286,7 +286,7 @@ class ResNet_s_MoE(nn.Module):
                 num_blocks[0],
                 1,
                 basic_block_moe_idx,
-                self.hw,
+                (self.h, self.w),
                 num_expert,
                 moe_top_k
                 )
@@ -313,14 +313,15 @@ class ResNet_s_MoE(nn.Module):
                 num_blocks[1],
                 2,
                 basic_block_moe_idx,
-                self.hw,
+                (self.h, self.w),
                 num_expert,
                 moe_top_k
                 )
         else:
             self.layer2 = self._make_layer(block, layer2_output_dim, num_blocks[1], stride=2)
 
-        self.hw = self.hw // 2
+        self.h = self.h / 2
+        self.w = self.w / 2
 
         if layer_moe_idx[2] == True:
             self.layer3 = self._make_layer_moe(
@@ -330,14 +331,15 @@ class ResNet_s_MoE(nn.Module):
                 num_blocks[2],
                 2,
                 basic_block_moe_idx,
-                self.hw,
+                (self.h, self.w)
                 num_expert,
                 moe_top_k
                 )
         else:
             self.layer3 = self._make_layer(block, layer3_output_dim, num_blocks[2], stride=2)
 
-        self.hw = self.hw // 2
+        self.h = self.h / 2
+        self.w = self.w / 2
 
         if use_norm:
             self.linear = NormedLinear(layer3_output_dim, num_classes)
