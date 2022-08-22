@@ -22,11 +22,17 @@ Reference:
 If you use this implementation in you work, please don't forget to mention the
 author, Yerlan Idelbayev.
 '''
+from math import prod
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.nn.init as init
 from torch.nn import Parameter
+
+import os
+import sys
+basedir = os.getenv('basedir')
+sys.path.append(basedir + 'fastmoe/examples/resnet')
 
 __all__ = ['ResNet_s', 'resnet20', 'resnet32', 'resnet44', 'resnet56', 'resnet110', 'resnet1202']
 
@@ -55,7 +61,6 @@ class LambdaLayer(nn.Module):
     def forward(self, x):
         return self.lambd(x)
 
-
 class BasicBlock(nn.Module):
     expansion = 1
 
@@ -77,7 +82,8 @@ class BasicBlock(nn.Module):
                 # self.shortcut = LambdaLayer(lambda x: F.pad(x[:, :, ::2, ::2], (0, 0, 0, 0, planes // 4, planes // 4), "constant", 0))
                 self.shortcut = LambdaLayer(lambda x:
                                             F.pad(x[:, :, ::2, ::2], (0, 0, 0, 0, (planes - in_planes) // 2, (planes - in_planes) // 2), "constant", 0))
-                
+            # ?
+
             elif option == 'B':
                 self.shortcut = nn.Sequential(
                      nn.Conv2d(in_planes, self.expansion * planes, kernel_size=1, stride=stride, bias=False),
@@ -91,6 +97,91 @@ class BasicBlock(nn.Module):
         out = F.relu(out)
         return out
 
+sys.path.append(basedir + 'fastmoe/fmoe')
+from resnetff import FMoEResNetFF
+from resnetconv import FMoEResNetConv
+
+class CustomizedMoEBasicBlock(FMoEResNetConv):
+    """The Residual block of ResNet."""
+    def __init__(
+        self,
+        input_channels,
+        num_channels,
+        d_model,
+        moe_num_expert=8,
+        moe_top_k=2,
+        # use_1x1conv=False,
+        strides=1,
+        option='A'
+        ):
+
+        super().__init__(
+            num_expert=moe_num_expert,
+            num_channels=num_channels,
+            d_model=d_model,
+            top_k=moe_top_k
+            )
+
+        self.conv1 = nn.Conv2d(
+            input_channels,
+            num_channels,
+            kernel_size=3,
+            padding=1,
+            stride=strides
+            )
+
+        self.shortcut == nn.Sequential()
+        if strides != 1 or input_channels != num_channels:
+            if option == 'A':
+                """
+                For CIFAR10 ResNet paper uses option A.
+                """
+                self.planes = num_channels
+                self.in_planes = input_channels
+                # self.shortcut = LambdaLayer(lambda x: F.pad(x[:, :, ::2, ::2], (0, 0, 0, 0, num_channels // 4, num_channels // 4), "constant", 0))
+                self.shortcut = LambdaLayer(
+                    lambda x: F.pad(
+                        x[:, :, ::2, ::2],
+                        (0, 0, 0, 0, (num_channels - input_channels) // 2, (num_channels - input_channels) // 2),
+                        "constant",
+                        0
+                        )
+                    )
+            # ?
+
+            elif option == 'B':
+                self.shortcut = nn.Sequential(
+                    nn.Conv2d(
+                        input_channels,
+                        self.expansion * num_channels,
+                        kernel_size=1,
+                        stride=strides,
+                        bias=False
+                        ),
+                    nn.BatchNorm2d(self.expansion * num_channels)
+                    )
+        # if use_1x1conv:
+        #     self.conv3 = nn.Conv2d(
+        #         input_channels,
+        #         num_channels,
+        #         kernel_size=1,
+        #         stride=strides)
+        # else:
+        #     self.conv3 = None
+
+        self.bn1 = nn.BatchNorm2d(num_channels)
+        self.bn2 = nn.BatchNorm2d(num_channels)
+
+        # self.bn3 = nn.BatchNorm2d(num_channels)
+
+    def forward(self, X):
+        Y = F.relu(self.bn1(self.conv1(X)))
+        Y = self.bn2(super().forward(Y))
+        # if self.conv3:
+        #     X = self.bn3(self.conv3(X))
+        Y += self.shortcut(X)
+        Y = F.relu(Y)
+        return Y
 
 class ResNet_s(nn.Module):
 
@@ -160,6 +251,165 @@ class ResNet_s(nn.Module):
         
         out = self.linear(out)
         out = out * self.s # This hyperparam s is originally in the loss function, but we moved it here to prevent using s multiple times in distillation.
+        return out
+
+class ResNet_s_MoE(nn.Module):
+
+    def __init__(
+        self,
+        block,
+        moe_block,
+        num_blocks,
+        num_expert,
+        moe_top_k,
+        num_classes=10,
+        layer_moe_idx=[True, True, True, False],
+        basic_block_moe_idx=[False, True, True, True, True],
+        reduce_dimension=False,
+        layer2_output_dim=None,
+        layer3_output_dim=None,
+        use_norm=False,
+        s=30,
+        hw=[32, 32]
+        ):
+        super(ResNet_s_MoE, self).__init__()
+        self.in_planes = 16
+        self.hw = hw
+
+        self.conv1 = nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False)
+        self.bn1 = nn.BatchNorm2d(16)
+        if layer_moe_idx[0] == True:
+            self.layer1 = self._make_layer_moe(
+                block,
+                moe_block,
+                16,
+                num_blocks[0],
+                1,
+                basic_block_moe_idx,
+                self.hw,
+                num_expert,
+                moe_top_k
+                )
+        else:
+            self.layer1 = self._make_layer(block, 16, num_blocks[0], stride=1)
+
+        if layer2_output_dim is None:
+            if reduce_dimension:
+                layer2_output_dim = 24
+            else:
+                layer2_output_dim = 32
+
+        if layer3_output_dim is None:
+            if reduce_dimension:
+                layer3_output_dim = 48
+            else:
+                layer3_output_dim = 64
+
+        if layer_moe_idx[1] == True:
+            self.layer2 = self._make_layer_moe(
+                block,
+                moe_block,
+                layer2_output_dim,
+                num_blocks[1],
+                2,
+                basic_block_moe_idx,
+                self.hw,
+                num_expert,
+                moe_top_k
+                )
+        else:
+            self.layer2 = self._make_layer(block, layer2_output_dim, num_blocks[1], stride=2)
+
+        self.hw = self.hw // 2
+
+        if layer_moe_idx[2] == True:
+            self.layer3 = self._make_layer_moe(
+                block,
+                moe_block,
+                layer3_output_dim,
+                num_blocks[2],
+                2,
+                basic_block_moe_idx,
+                self.hw,
+                num_expert,
+                moe_top_k
+                )
+        else:
+            self.layer3 = self._make_layer(block, layer3_output_dim, num_blocks[2], stride=2)
+
+        self.hw = self.hw // 2
+
+        if use_norm:
+            self.linear = NormedLinear(layer3_output_dim, num_classes)
+        else:
+            s = 1
+            self.linear = nn.Linear(layer3_output_dim, num_classes)
+        
+        self.s = s
+
+        self.apply(_weights_init)
+
+    def _make_layer(self, block, planes, num_blocks, stride):
+        strides = [stride] + [1]*(num_blocks-1)
+        layers = []
+        for stride in strides:
+            layers.append(block(self.in_planes, planes, stride))
+            self.in_planes = planes * block.expansion
+
+        return nn.Sequential(*layers)
+
+    def _make_layer_moe(self, block, moe_block, planes, num_blocks, stride, basic_block_moe_idx, hw, num_expert, moe_top_k):
+        strides = [stride] + [1]*(num_blocks-1)
+        layers = []
+        for idx, stride in enumerate(strides):
+            if basic_block_moe_idx[idx] == True and stride == 1:
+                layers.append(
+                    moe_block(
+                        self.in_planes,
+                        planes,
+                        planes * prod(hw),
+                        moe_num_expert=num_expert,
+                        moe_top_k=moe_top_k,
+                        strides=1,
+                        option='A'
+                        )
+                    )
+            else:
+                layers.append(block(self.in_planes, planes, stride))
+
+            self.in_planes = planes * block.expansion
+
+        return nn.Sequential(*layers)
+
+    def _hook_before_iter(self):
+        assert self.training, "_hook_before_iter should be called at training time only, after train() is called"
+        count = 0
+        for module in self.modules():
+            if isinstance(module, nn.BatchNorm2d):
+                if module.weight.requires_grad == False:
+                    module.eval()
+                    count += 1
+
+        if count > 0:
+            print("Warning: detected at least one frozen BN, set them to eval state. Count:", count)
+    # ? What does this function do?
+
+    def forward(self, x):
+        out = F.relu(self.bn1(self.conv1(x)))
+        out = self.layer1(out)
+        out = self.layer2(out)
+        out = self.layer3(out)
+        self.feat_before_GAP = out
+        out = F.avg_pool2d(out, out.size()[3])
+        out = out.view(out.size(0), -1)
+        self.feat = out
+
+        out = self.linear(out)
+
+        self.logits = out
+
+        out = out * self.s # This hyperparam s is originally in the loss function, but we moved it here to prevent using s multiple times in distillation.
+        # ?
         return out
 
 

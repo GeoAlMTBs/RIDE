@@ -54,3 +54,4 @@
 	* accuary 77.29%
 ## Try to Do
 * Add a meta json file describing all runs in the same arch for convenience
+* Use ResNet32 to repeat the above experiments

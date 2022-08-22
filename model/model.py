@@ -38,6 +38,7 @@ class Model(BaseModel):
         return x
 
 class EAModel(BaseModel):
+    # ? What's EA model? evaluation?
     requires_target = True
     confidence_model = True
     # ?
@@ -61,8 +62,39 @@ class EAModel(BaseModel):
 class ResNet18MoEModel(Model):
     def __init__(self, num_classes, use_conv_moe, num_expert, moe_top_k):
         super().__init__(num_classes, None)
-        print('in resnet18moemodel: ', use_conv_moe)
+        # print('in resnet18moemodel: ', use_conv_moe)
         self.backbone = ResNet18MoE(num_classes, use_conv_moe, num_expert, moe_top_k)
+
+class ResNet32MoEModel(Model):
+    def __init__(
+        self,
+        num_expert,
+        moe_top_k,
+        num_classes,
+        layer_moe_idx,
+        basic_block_moe_idx,
+        reduce_dimension=False,
+        layer2_output_dim=None,
+        layer3_output_dim=None,
+        use_norm=False,
+        **kwargs
+        ):
+        super().__init__(num_classes, None)
+        self.backbone = resnet_cifar.ResNet_s_MoE(
+            resnet_cifar.BasicBlock,
+            resnet_cifar.CustomizedMoEBasicBlock,
+            [5, 5, 5],
+            num_expert,
+            moe_top_k,
+            num_classes,
+            layer_moe_idx,
+            basic_block_moe_idx,
+            reduce_dimension,
+            layer2_output_dim=layer2_output_dim,
+            layer3_output_dim=layer3_output_dim,
+            use_norm=use_norm,
+            **kwargs
+            )
 
 class ResNet10Model(Model):
     def __init__(self, num_classes, reduce_dimension=False, layer3_output_dim=None, layer4_output_dim=None, use_norm=False, num_experts=1, **kwargs):
