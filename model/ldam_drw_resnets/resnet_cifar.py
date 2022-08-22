@@ -34,6 +34,14 @@ import sys
 basedir = os.getenv('basedir')
 sys.path.append(basedir + 'fastmoe/examples/resnet')
 
+import logging
+
+logger = logging.getLogger(__name__)
+c_handler = logging.StreamHandler()
+c_handler.setLevel(logging.DEBUG)
+c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+logger.addHandler(c_handler)
+
 __all__ = ['ResNet_s', 'resnet20', 'resnet32', 'resnet44', 'resnet56', 'resnet110', 'resnet1202']
 
 def _weights_init(m):
@@ -365,6 +373,11 @@ class ResNet_s_MoE(nn.Module):
         layers = []
         for idx, stride in enumerate(strides):
             if basic_block_moe_idx[idx] == True and stride == 1:
+
+                logger.debug(f'planes {planes}')
+                logger.debug(f'hw {hw}')
+                logger.debug(f'prod(hw) {prod(hw)}')
+                
                 layers.append(
                     moe_block(
                         self.in_planes,
