@@ -123,6 +123,7 @@ class CustomizedMoEBasicBlock(FMoEResNetConv):
         option='A'
         ):
 
+        # FMoEResNetConv only takes care of one convolutional layer
         super().__init__(
             num_expert=moe_num_expert,
             num_channels=num_channels,
@@ -285,6 +286,7 @@ class ResNet_s_MoE(nn.Module):
         self.h, self.w = hw
 
         self.conv1 = nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False)
+        # (32, 32)
         self.bn1 = nn.BatchNorm2d(16)
         if layer_moe_idx[0] == True:
             self.layer1 = self._make_layer_moe(
@@ -300,6 +302,7 @@ class ResNet_s_MoE(nn.Module):
                 )
         else:
             self.layer1 = self._make_layer(block, 16, num_blocks[0], stride=1)
+        # (32, 32)
 
         if layer2_output_dim is None:
             if reduce_dimension:
@@ -328,8 +331,10 @@ class ResNet_s_MoE(nn.Module):
         else:
             self.layer2 = self._make_layer(block, layer2_output_dim, num_blocks[1], stride=2)
 
-        self.h = self.h / 2
-        self.w = self.w / 2
+        self.h = int(self.h / 2)
+        self.w = int(self.w / 2)
+
+        logger.debug(f'(self.h, self.w) ({self.h}, {self.w})')
 
         if layer_moe_idx[2] == True:
             self.layer3 = self._make_layer_moe(
@@ -346,8 +351,9 @@ class ResNet_s_MoE(nn.Module):
         else:
             self.layer3 = self._make_layer(block, layer3_output_dim, num_blocks[2], stride=2)
 
-        self.h = self.h / 2
-        self.w = self.w / 2
+        self.h = int(self.h / 2)
+        self.w = int(self.w / 2)
+        # ? Strange huh. float h, w will cause the TypeError: new(): argument 'size' must be tuple of ints, but found element of type float at pos 2 error
 
         if use_norm:
             self.linear = NormedLinear(layer3_output_dim, num_classes)
@@ -369,20 +375,21 @@ class ResNet_s_MoE(nn.Module):
         return nn.Sequential(*layers)
 
     def _make_layer_moe(self, block, moe_block, planes, num_blocks, stride, basic_block_moe_idx, hw, num_expert, moe_top_k):
+        h, w = hw
         strides = [stride] + [1]*(num_blocks-1)
         layers = []
         for idx, stride in enumerate(strides):
             if basic_block_moe_idx[idx] == True and stride == 1:
-
-                logger.debug(f'planes {planes}')
+                logger.info(f'planes {planes}')
                 logger.debug(f'hw {hw}')
                 logger.debug(f'prod(hw) {prod(hw)}')
-                
+                print(hw)
+
                 layers.append(
                     moe_block(
                         self.in_planes,
                         planes,
-                        planes * prod(hw),
+                        int(planes * h * w), # d_model
                         moe_num_expert=num_expert,
                         moe_top_k=moe_top_k,
                         strides=1,
@@ -391,6 +398,10 @@ class ResNet_s_MoE(nn.Module):
                     )
             else:
                 layers.append(block(self.in_planes, planes, stride))
+            
+            if stride == 2:
+                h = int(h / 2)
+                w = int(w / 2)
 
             self.in_planes = planes * block.expansion
 
