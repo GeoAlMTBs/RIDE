@@ -5,13 +5,13 @@
     "arch": {
         "type": "ResNet32MoEModel",
         "args": {
-            "num_expert": 8,
-	        "moe_top_k": 2,
+            "num_expert": 32,
+	        "moe_top_k": 4,
             "num_classes": 100,
-            "layer_moe_idx": [1, 1, 1, 0],
-            "basic_block_moe_idx": [0, 1, 1, 1, 1],
-            "reduce_dimension": true,
-	        "use_norm": true
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
         }
     },
     "data_loader": {

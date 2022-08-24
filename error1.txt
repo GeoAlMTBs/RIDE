@@ -1,13 +1,5 @@
 nohup: ignoring input
 planes 16
 planes 16
-planes 16
-planes 16
-planes 24
-planes 24
-planes 24
-planes 24
-planes 48
-planes 48
-planes 48
-planes 48
+planes 64
+planes 64
