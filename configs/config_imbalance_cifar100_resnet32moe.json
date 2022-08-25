@@ -5,10 +5,10 @@
     "arch": {
         "type": "ResNet32MoEModel",
         "args": {
-            "num_expert": 32,
+            "num_expert": 1024,
 	        "moe_top_k": 4,
             "num_classes": 100,
-            "layer_moe_idx": [0, 1, 1, 0],
+            "layer_moe_idx": [0, 0, 1, 0],
             "basic_block_moe_idx": [0, 0, 0, 1, 1],
             "reduce_dimension": false,
 	        "use_norm": false
@@ -51,7 +51,7 @@
     "trainer": {
         "epochs": 200,
 
-        "save_dir": "saved/",
+        "save_dir": "/datapool/workspace/3024hlh/saved",
         "save_period": 40,
         "verbosity": 2,
         

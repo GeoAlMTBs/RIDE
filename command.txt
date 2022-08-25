@@ -1,1 +1,2 @@
 nohup python train.py -c "./configs/config_imbalance_cifar100_resnet18moe.json" --device 1 1>out.txt 2>error.txt &
+nohup python train.py -c "./configs/config_imbalance_cifar100_resnet32moe.json" --device 1 1>out.txt 2>error.txt &

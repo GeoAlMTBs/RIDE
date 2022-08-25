@@ -380,10 +380,11 @@ class ResNet_s_MoE(nn.Module):
         layers = []
         for idx, stride in enumerate(strides):
             if basic_block_moe_idx[idx] == True and stride == 1:
-                logger.info(f'planes {planes}')
-                logger.debug(f'hw {hw}')
-                logger.debug(f'prod(hw) {prod(hw)}')
-                print(hw)
+                # logger.info(f'planes {planes}')
+                # logger.debug(f'hw {hw}')
+                # logger.debug(f'prod(hw) {prod(hw)}')
+                # print(hw)
+                # ? Where is the logger saved?
 
                 layers.append(
                     moe_block(

@@ -73,7 +73,7 @@
             "reduce_dimension": true,
 	        "use_norm": true
 	* accuracy 34.82%
-* 3 out.txt
+* 3
 	*       "num_expert": 128,
 	        "moe_top_k": 16,
             "num_classes": 100,
@@ -81,7 +81,8 @@
             "basic_block_moe_idx": [0, 0, 0, 1, 1],
             "reduce_dimension": true,
 	        "use_norm": true
-* 4 out1.txt
+	* accuracy 36.89%
+* 4
 	*       "num_expert": 128,
 	        "moe_top_k": 16,
             "num_classes": 100,
@@ -89,7 +90,9 @@
             "basic_block_moe_idx": [0, 0, 0, 1, 1],
             "reduce_dimension": false,
 	        "use_norm": true
-* 5 out2.txt
+	* accuracy 38.36%
+	* reduce_dimension is set to false compared to run 3, which increases model performance
+* 5
 	*       "num_expert": 128,
 	        "moe_top_k": 16,
             "num_classes": 100,
@@ -97,6 +100,8 @@
             "basic_block_moe_idx": [0, 0, 0, 1, 1],
             "reduce_dimension": false,
 	        "use_norm": false
+	* accuracy 38.80%
+	* use_norm is set to false compared to the previous run, which improves acc.
 * 6
 	*       "num_expert": 32,
 	        "moe_top_k": 4,
@@ -115,7 +120,148 @@
             "reduce_dimension": false,
 	        "use_norm": false
 	* accuracy 39.26%
+	* Compared to run 6, expert should not be placed on the first layer?
 * 8
+	*       "num_expert": 32,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.98% < 42.00%(ResNet18)
+	* Compared to run 7, there is no need to be so many experts? 
+* 9
+	*       "num_expert": 32,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 1, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 38.87%
+	* Compared to run 8
+* 10
+	*       "num_expert": 32,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 1, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.96%
+	* Compare it to run7. Add a moe on basic block might increase performance?
+* 11
+	*       "num_expert": 32,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 1, 1, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.58%
+* 12
+	*       "num_expert": 32,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.75%
+* 13
+	*       "num_expert": 32,
+	        "moe_top_k": 8,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.01%
+* 14
+	*       "num_expert": 32,
+	        "moe_top_k": 16,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.55%
+* 15
+	*       "num_expert": 32,
+	        "moe_top_k": 32,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.72%
+* 16
+   *        "num_expert": 8,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.35%
+* 17
+	*       "num_expert": 16,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.42%
+* 18
+	*       "num_expert": 64,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy **41.20%**
+* 19
+	*       "num_expert": 32,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 38.38%
+* 20
+	* 
+            "num_expert": 128,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.49%
+* 21
+	*
+            "num_expert": 256,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.04%
+* 22 out4	
+	*
+            "num_expert": 1024,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* Training takes too much time :( .
 ### CIFAR10-LT
 * 1
 	*      "num_expert": 8,

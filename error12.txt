@@ -1,0 +1,28 @@
+nohup: ignoring input
+planes 32
+planes 32
+planes 64
+planes 64
+Traceback (most recent call last):
+  File "/home/3024hlh/anaconda3/envs/ride/lib/python3.8/site-packages/torch/serialization.py", line 372, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol)
+  File "/home/3024hlh/anaconda3/envs/ride/lib/python3.8/site-packages/torch/serialization.py", line 491, in _save
+    zip_file.write_record(name, storage.data_ptr(), num_bytes)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 110, in <module>
+    main(config)
+  File "train.py", line 75, in main
+    trainer.train()
+  File "/home/3024hlh/RIDE/base/base_trainer.py", line 112, in train
+    self._save_checkpoint(epoch, save_best=best)
+  File "/home/3024hlh/RIDE/base/base_trainer.py", line 153, in _save_checkpoint
+    torch.save(state, filename)
+  File "/home/3024hlh/anaconda3/envs/ride/lib/python3.8/site-packages/torch/serialization.py", line 373, in save
+    return
+  File "/home/3024hlh/anaconda3/envs/ride/lib/python3.8/site-packages/torch/serialization.py", line 259, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:274] . unexpected pos 61801600 vs 61801488
