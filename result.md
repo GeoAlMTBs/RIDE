@@ -18,7 +18,6 @@
 * 1
 	* LDAMLoss
 	* accuracy 76.47%
-
 ## ResNet18-MoE
 ### CIFAR100-LT
 * 0815_130523
@@ -44,15 +43,14 @@
 * 5
 	* num_expert 128
 	* moe_top_k 8
-	* LDAMLoss 43.18%
-* 
+	* LDAMLoss 
+	* accuracy 43.18%
 ### CIFAR10-LT
 * 1
 	* num_expert 8
 	* moe_top_k 2
 	* LDAMLoss
 	* accuary 77.29%
-
 ## ResNet32-MoE
 ### CIFAR100-LT
 * 1
@@ -233,8 +231,7 @@
 	        "use_norm": false
 	* accuracy 38.38%
 * 20
-	* 
-            "num_expert": 128,
+	* 	    "num_expert": 128,
 	        "moe_top_k": 4,
             "num_classes": 100,
             "layer_moe_idx": [0, 1, 1, 0],
@@ -243,8 +240,7 @@
 	        "use_norm": false
 	* accuracy 39.49%
 * 21
-	*
-            "num_expert": 256,
+	*       "num_expert": 256,
 	        "moe_top_k": 4,
             "num_classes": 100,
             "layer_moe_idx": [0, 1, 1, 0],
@@ -253,8 +249,7 @@
 	        "use_norm": false
 	* accuracy 40.04%
 * 22 out4	
-	*
-            "num_expert": 1024,
+	*       "num_expert": 1024,
 	        "moe_top_k": 4,
             "num_classes": 100,
             "layer_moe_idx": [0, 1, 1, 0],
