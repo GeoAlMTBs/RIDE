@@ -1,5 +1,6 @@
 import os
 import logging
+import json
 from pathlib import Path
 from functools import reduce, partial
 from operator import getitem
@@ -26,12 +27,14 @@ class ConfigParser:
 
         # set save_dir where trained model and log will be saved.
         save_dir = Path(self.config['trainer']['save_dir'])
+        config_zoo_save_path = Path(self.config['config_zoo']['save_dir'])
 
         exper_name = self.config['name']
         if run_id is None: # use timestamp as default run-id
             run_id = datetime.now().strftime(r'%m%d_%H%M%S')
         self._save_dir = save_dir / 'models' / exper_name / run_id
         self._log_dir = save_dir / 'log' / exper_name / run_id
+        self._config_zoo_path = config_zoo_save_path
 
         # make directory for saving checkpoints and log.
         exist_ok = run_id == ''
@@ -40,6 +43,7 @@ class ConfigParser:
 
         # save updated config file to the checkpoint dir
         write_json(self.config, self.save_dir / 'config.json')
+        # config_zoo = read_json(self._config_zoo_path / 'config_zoo.json')
 
         # configure logging module
         setup_logging(self.log_dir)
@@ -75,7 +79,7 @@ class ConfigParser:
             assert args.config is not None, msg_no_cfg
             resume = None
             cfg_fname = Path(args.config)
-        
+
         config = read_json(cfg_fname)
         if args.config and resume:
             # update new config for fine-tuning

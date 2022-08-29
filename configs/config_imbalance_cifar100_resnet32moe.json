@@ -5,8 +5,8 @@
     "arch": {
         "type": "ResNet32MoEModel",
         "args": {
-            "num_expert": 1024,
-	        "moe_top_k": 4,
+            "num_expert": 64,
+	        "moe_top_k": 2,
             "num_classes": 100,
             "layer_moe_idx": [0, 0, 1, 0],
             "basic_block_moe_idx": [0, 0, 0, 1, 1],
@@ -57,5 +57,8 @@
         
         "monitor": "max val_accuracy",
         "tensorboard": false
+    },
+    "config_zoo": {
+        "save_dir": "/home/3024hlh/RIDE"
     }
 }

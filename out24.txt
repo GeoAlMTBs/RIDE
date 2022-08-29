@@ -1,0 +1,2829 @@
+Files already downloaded and verified
+Files already downloaded and verified
+ResNet32MoEModel(
+  (backbone): ResNet_s_MoE(
+    (conv1): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (layer1): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (2): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (3): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (4): BasicBlock(
+        (conv1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+    )
+    (layer2): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): LambdaLayer()
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (2): BasicBlock(
+        (conv1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (3): BasicBlock(
+        (conv1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (4): BasicBlock(
+        (conv1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+    )
+    (layer3): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): LambdaLayer()
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (2): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential()
+      )
+      (3): CustomizedMoEBasicBlock(
+        (experts): ModuleList(
+          (0): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (1): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (2): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (3): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (4): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (5): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (6): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (7): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (gate): NaiveGate(
+          (gate): Linear(in_features=4096, out_features=8, bias=True)
+        )
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (shortcut): Sequential()
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): CustomizedMoEBasicBlock(
+        (experts): ModuleList(
+          (0): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (1): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (2): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (3): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (4): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (5): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (6): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (7): _Expert(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (gate): NaiveGate(
+          (gate): Linear(in_features=4096, out_features=8, bias=True)
+        )
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (shortcut): Sequential()
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (linear): Linear(in_features=64, out_features=100, bias=True)
+  )
+)
+Train Epoch: 1 [0/85 (0%)] Loss: 13.228343 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 1 [11/85 (13%)] Loss: 11.287225 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 1 [22/85 (26%)] Loss: 10.414014 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 1 [33/85 (39%)] Loss: 10.450059 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 1 [44/85 (52%)] Loss: 10.452949 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 1 [55/85 (65%)] Loss: 10.025091 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 1 [66/85 (78%)] Loss: 10.011689 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 1 [77/85 (91%)] Loss: 10.153531 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 1
+    loss           : 10.439917957081514
+    accuracy       : 0.0755047478565502
+    val_loss       : 14.192663784268536
+    val_accuracy   : 0.0392
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 2 [0/85 (0%)] Loss: 9.773095 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 2 [11/85 (13%)] Loss: 9.964616 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 2 [22/85 (26%)] Loss: 9.861088 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 2 [33/85 (39%)] Loss: 9.630500 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 2 [44/85 (52%)] Loss: 9.653461 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 2 [55/85 (65%)] Loss: 9.974866 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 2 [66/85 (78%)] Loss: 9.291068 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 2 [77/85 (91%)] Loss: 9.285125 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 2
+    loss           : 9.738676250682158
+    accuracy       : 0.13718078731446484
+    val_loss       : 14.23455099516277
+    val_accuracy   : 0.0479
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 3 [0/85 (0%)] Loss: 9.569679 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 3 [11/85 (13%)] Loss: 9.439439 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 3 [22/85 (26%)] Loss: 10.040491 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 3 [33/85 (39%)] Loss: 9.648365 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 3 [44/85 (52%)] Loss: 9.818628 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 3 [55/85 (65%)] Loss: 10.112588 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 3 [66/85 (78%)] Loss: 9.546337 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 3 [77/85 (91%)] Loss: 9.675409 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 3
+    loss           : 9.50050516689525
+    accuracy       : 0.17700746750253527
+    val_loss       : 14.099325095550924
+    val_accuracy   : 0.0707
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 4 [0/85 (0%)] Loss: 9.068158 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 4 [11/85 (13%)] Loss: 9.623285 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 4 [22/85 (26%)] Loss: 9.597052 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 4 [33/85 (39%)] Loss: 9.396029 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 4 [44/85 (52%)] Loss: 9.442670 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 4 [55/85 (65%)] Loss: 9.038631 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 4 [66/85 (78%)] Loss: 8.947506 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 4 [77/85 (91%)] Loss: 9.730085 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 4
+    loss           : 9.28229170406566
+    accuracy       : 0.21185581266709688
+    val_loss       : 14.404772891273982
+    val_accuracy   : 0.0665
+Train Epoch: 5 [0/85 (0%)] Loss: 8.787516 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 5 [11/85 (13%)] Loss: 9.115239 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 5 [22/85 (26%)] Loss: 8.840152 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 5 [33/85 (39%)] Loss: 9.429282 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 5 [44/85 (52%)] Loss: 9.219664 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 5 [55/85 (65%)] Loss: 9.163975 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 5 [66/85 (78%)] Loss: 8.598707 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 5 [77/85 (91%)] Loss: 9.518791 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 5
+    loss           : 9.100298073712517
+    accuracy       : 0.23665529639531668
+    val_loss       : 14.405947564523432
+    val_accuracy   : 0.0757
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 6 [0/85 (0%)] Loss: 8.801737 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 6 [11/85 (13%)] Loss: 9.120685 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 6 [22/85 (26%)] Loss: 8.846699 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 6 [33/85 (39%)] Loss: 9.116087 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 6 [44/85 (52%)] Loss: 8.967583 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 6 [55/85 (65%)] Loss: 8.944954 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 6 [66/85 (78%)] Loss: 9.128958 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 6 [77/85 (91%)] Loss: 8.831924 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 6
+    loss           : 8.927610666611615
+    accuracy       : 0.2573061676039458
+    val_loss       : 14.104943637606464
+    val_accuracy   : 0.0975
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 7 [0/85 (0%)] Loss: 8.870483 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 7 [11/85 (13%)] Loss: 9.221587 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 7 [22/85 (26%)] Loss: 8.480198 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 7 [33/85 (39%)] Loss: 8.850762 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 7 [44/85 (52%)] Loss: 8.721251 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 7 [55/85 (65%)] Loss: 8.946427 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 7 [66/85 (78%)] Loss: 8.601520 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 7 [77/85 (91%)] Loss: 8.482502 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 7
+    loss           : 8.755486482732437
+    accuracy       : 0.2774960818659537
+    val_loss       : 14.055236876765385
+    val_accuracy   : 0.0959
+Train Epoch: 8 [0/85 (0%)] Loss: 8.251276 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 8 [11/85 (13%)] Loss: 9.142497 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 8 [22/85 (26%)] Loss: 9.021419 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 8 [33/85 (39%)] Loss: 8.744147 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 8 [44/85 (52%)] Loss: 8.338086 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 8 [55/85 (65%)] Loss: 8.822689 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 8 [66/85 (78%)] Loss: 9.185050 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 8 [77/85 (91%)] Loss: 8.387059 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 8
+    loss           : 8.5975666438832
+    accuracy       : 0.30091269475430993
+    val_loss       : 13.85321635234205
+    val_accuracy   : 0.1216
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 9 [0/85 (0%)] Loss: 8.178612 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 9 [11/85 (13%)] Loss: 9.090491 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 9 [22/85 (26%)] Loss: 8.592733 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 9 [33/85 (39%)] Loss: 9.131596 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 9 [44/85 (52%)] Loss: 8.458728 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 9 [55/85 (65%)] Loss: 8.614833 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 9 [66/85 (78%)] Loss: 8.807143 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 9 [77/85 (91%)] Loss: 8.492525 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 9
+    loss           : 8.474393154593075
+    accuracy       : 0.3131741495344335
+    val_loss       : 14.383551259584065
+    val_accuracy   : 0.0981
+Train Epoch: 10 [0/85 (0%)] Loss: 8.652052 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 10 [11/85 (13%)] Loss: 8.223696 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 10 [22/85 (26%)] Loss: 8.666002 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 10 [33/85 (39%)] Loss: 8.875960 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 10 [44/85 (52%)] Loss: 8.338257 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 10 [55/85 (65%)] Loss: 8.326210 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 10 [66/85 (78%)] Loss: 8.204165 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 10 [77/85 (91%)] Loss: 7.393147 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 10
+    loss           : 8.307718248928294
+    accuracy       : 0.3325343412925233
+    val_loss       : 14.276909333241138
+    val_accuracy   : 0.1184
+Train Epoch: 11 [0/85 (0%)] Loss: 8.108654 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 11 [11/85 (13%)] Loss: 8.023098 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 11 [22/85 (26%)] Loss: 8.435565 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 11 [33/85 (39%)] Loss: 8.895755 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 11 [44/85 (52%)] Loss: 8.488416 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 11 [55/85 (65%)] Loss: 8.465466 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 11 [66/85 (78%)] Loss: 8.409257 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 11 [77/85 (91%)] Loss: 7.428664 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 11
+    loss           : 8.210193488177131
+    accuracy       : 0.3464552410804831
+    val_loss       : 14.230425786368455
+    val_accuracy   : 0.1267
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 12 [0/85 (0%)] Loss: 7.987376 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 12 [11/85 (13%)] Loss: 8.122538 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 12 [22/85 (26%)] Loss: 7.799372 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 12 [33/85 (39%)] Loss: 8.422886 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 12 [44/85 (52%)] Loss: 8.744276 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 12 [55/85 (65%)] Loss: 8.096265 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 12 [66/85 (78%)] Loss: 7.950502 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 12 [77/85 (91%)] Loss: 7.684833 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 12
+    loss           : 8.04790091234095
+    accuracy       : 0.3609292892043883
+    val_loss       : 14.427594933328749
+    val_accuracy   : 0.1177
+Train Epoch: 13 [0/85 (0%)] Loss: 7.087985 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 13 [11/85 (13%)] Loss: 7.971255 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 13 [22/85 (26%)] Loss: 7.857443 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 13 [33/85 (39%)] Loss: 8.053836 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 13 [44/85 (52%)] Loss: 7.969245 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 13 [55/85 (65%)] Loss: 8.096941 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 13 [66/85 (78%)] Loss: 7.354569 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 13 [77/85 (91%)] Loss: 7.911897 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 13
+    loss           : 7.949376577489517
+    accuracy       : 0.3737438923204573
+    val_loss       : 13.9135030674029
+    val_accuracy   : 0.1449
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 14 [0/85 (0%)] Loss: 7.464037 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 14 [11/85 (13%)] Loss: 7.606042 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 14 [22/85 (26%)] Loss: 7.637374 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 14 [33/85 (39%)] Loss: 9.122885 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 14 [44/85 (52%)] Loss: 7.676876 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 14 [55/85 (65%)] Loss: 7.983246 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 14 [66/85 (78%)] Loss: 8.148706 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 14 [77/85 (91%)] Loss: 7.897303 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 14
+    loss           : 7.798247875886805
+    accuracy       : 0.388033557665714
+    val_loss       : 14.244265423545354
+    val_accuracy   : 0.1407
+Train Epoch: 15 [0/85 (0%)] Loss: 7.313727 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 15 [11/85 (13%)] Loss: 7.717978 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 15 [22/85 (26%)] Loss: 8.075894 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 15 [33/85 (39%)] Loss: 7.126315 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 15 [44/85 (52%)] Loss: 7.360759 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 15 [55/85 (65%)] Loss: 8.012184 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 15 [66/85 (78%)] Loss: 7.649994 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 15 [77/85 (91%)] Loss: 7.043993 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 15
+    loss           : 7.703188969107235
+    accuracy       : 0.40167788328570114
+    val_loss       : 13.51133554193038
+    val_accuracy   : 0.1506
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 16 [0/85 (0%)] Loss: 7.305502 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 16 [11/85 (13%)] Loss: 7.418024 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 16 [22/85 (26%)] Loss: 7.687132 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 16 [33/85 (39%)] Loss: 7.783003 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 16 [44/85 (52%)] Loss: 7.520696 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 16 [55/85 (65%)] Loss: 7.252132 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 16 [66/85 (78%)] Loss: 7.965325 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 16 [77/85 (91%)] Loss: 7.918379 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 16
+    loss           : 7.600882406795726
+    accuracy       : 0.4112657877754218
+    val_loss       : 13.844702020476136
+    val_accuracy   : 0.1522
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 17 [0/85 (0%)] Loss: 6.713254 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 17 [11/85 (13%)] Loss: 7.970625 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 17 [22/85 (26%)] Loss: 7.172513 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 17 [33/85 (39%)] Loss: 8.013457 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 17 [44/85 (52%)] Loss: 7.830833 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 17 [55/85 (65%)] Loss: 8.061221 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 17 [66/85 (78%)] Loss: 6.905565 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 17 [77/85 (91%)] Loss: 6.845437 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 17
+    loss           : 7.485594143587
+    accuracy       : 0.4208536922651424
+    val_loss       : 13.434214579908154
+    val_accuracy   : 0.1585
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 18 [0/85 (0%)] Loss: 7.258194 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 18 [11/85 (13%)] Loss: 7.379441 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 18 [22/85 (26%)] Loss: 7.189934 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 18 [33/85 (39%)] Loss: 6.908557 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 18 [44/85 (52%)] Loss: 7.479783 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 18 [55/85 (65%)] Loss: 8.156403 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 18 [66/85 (78%)] Loss: 7.236493 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 18 [77/85 (91%)] Loss: 7.663084 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 18
+    loss           : 7.37894894656013
+    accuracy       : 0.43597308011431735
+    val_loss       : 13.933035500441925
+    val_accuracy   : 0.1586
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 19 [0/85 (0%)] Loss: 7.100560 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 19 [11/85 (13%)] Loss: 7.566564 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 19 [22/85 (26%)] Loss: 7.326253 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 19 [33/85 (39%)] Loss: 7.276438 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 19 [44/85 (52%)] Loss: 7.595779 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 19 [55/85 (65%)] Loss: 6.984926 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 19 [66/85 (78%)] Loss: 6.969498 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 19 [77/85 (91%)] Loss: 7.039972 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 19
+    loss           : 7.317011692944695
+    accuracy       : 0.43597308011431735
+    val_loss       : 13.48008824601958
+    val_accuracy   : 0.1838
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 20 [0/85 (0%)] Loss: 7.303677 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 20 [11/85 (13%)] Loss: 7.077885 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 20 [22/85 (26%)] Loss: 7.740770 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 20 [33/85 (39%)] Loss: 7.751612 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 20 [44/85 (52%)] Loss: 6.678243 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 20 [55/85 (65%)] Loss: 7.441967 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 20 [66/85 (78%)] Loss: 7.434078 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 20 [77/85 (91%)] Loss: 7.215336 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 20
+    loss           : 7.220574586531695
+    accuracy       : 0.45182999907808613
+    val_loss       : 13.674437365954436
+    val_accuracy   : 0.1851
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 21 [0/85 (0%)] Loss: 6.687855 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 21 [11/85 (13%)] Loss: 6.925655 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 21 [22/85 (26%)] Loss: 7.084499 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 21 [33/85 (39%)] Loss: 7.378197 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 21 [44/85 (52%)] Loss: 6.847672 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 21 [55/85 (65%)] Loss: 7.241058 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 21 [66/85 (78%)] Loss: 7.783434 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 21 [77/85 (91%)] Loss: 6.586791 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 21
+    loss           : 7.124214497734519
+    accuracy       : 0.4639992624688854
+    val_loss       : 13.218725494191617
+    val_accuracy   : 0.1877
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 22 [0/85 (0%)] Loss: 7.454195 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 22 [11/85 (13%)] Loss: 6.496728 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 22 [22/85 (26%)] Loss: 7.402585 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 22 [33/85 (39%)] Loss: 6.900463 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 22 [44/85 (52%)] Loss: 7.024202 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 22 [55/85 (65%)] Loss: 6.987403 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 22 [66/85 (78%)] Loss: 7.721148 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 22 [77/85 (91%)] Loss: 6.918742 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 22
+    loss           : 7.014060817045324
+    accuracy       : 0.4663040472019913
+    val_loss       : 13.77797083311443
+    val_accuracy   : 0.1831
+Train Epoch: 23 [0/85 (0%)] Loss: 6.876009 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 23 [11/85 (13%)] Loss: 7.061646 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 23 [22/85 (26%)] Loss: 6.511865 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 23 [33/85 (39%)] Loss: 6.836335 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 23 [44/85 (52%)] Loss: 6.790286 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 23 [55/85 (65%)] Loss: 6.863992 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 23 [66/85 (78%)] Loss: 7.166744 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 23 [77/85 (91%)] Loss: 6.443821 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 23
+    loss           : 6.957260552574606
+    accuracy       : 0.47847331059279063
+    val_loss       : 14.853142786629592
+    val_accuracy   : 0.1653
+Train Epoch: 24 [0/85 (0%)] Loss: 6.818578 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 24 [11/85 (13%)] Loss: 6.760026 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 24 [22/85 (26%)] Loss: 6.438997 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 24 [33/85 (39%)] Loss: 6.271459 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 24 [44/85 (52%)] Loss: 5.599572 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 24 [55/85 (65%)] Loss: 6.955793 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 24 [66/85 (78%)] Loss: 7.172273 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 24 [77/85 (91%)] Loss: 6.736931 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 24
+    loss           : 6.828636719198788
+    accuracy       : 0.4936848898312898
+    val_loss       : 13.55938852286037
+    val_accuracy   : 0.1848
+Train Epoch: 25 [0/85 (0%)] Loss: 6.540588 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 25 [11/85 (13%)] Loss: 6.806177 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 25 [22/85 (26%)] Loss: 6.727712 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 25 [33/85 (39%)] Loss: 6.518617 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 25 [44/85 (52%)] Loss: 6.861582 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 25 [55/85 (65%)] Loss: 7.069249 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 25 [66/85 (78%)] Loss: 7.345891 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 25 [77/85 (91%)] Loss: 6.930048 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 25
+    loss           : 6.764279932134292
+    accuracy       : 0.4974647367935835
+    val_loss       : 14.43862631351133
+    val_accuracy   : 0.1859
+Train Epoch: 26 [0/85 (0%)] Loss: 5.711565 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 26 [11/85 (13%)] Loss: 6.476436 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 26 [22/85 (26%)] Loss: 7.120210 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 26 [33/85 (39%)] Loss: 5.967421 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 26 [44/85 (52%)] Loss: 6.640449 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 26 [55/85 (65%)] Loss: 6.767993 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 26 [66/85 (78%)] Loss: 6.772327 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 26 [77/85 (91%)] Loss: 6.165681 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 26
+    loss           : 6.700478587431066
+    accuracy       : 0.49884760763344704
+    val_loss       : 13.749988350687147
+    val_accuracy   : 0.1923
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 27 [0/85 (0%)] Loss: 6.587368 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 27 [11/85 (13%)] Loss: 5.902811 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 27 [22/85 (26%)] Loss: 7.185119 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 27 [33/85 (39%)] Loss: 6.426258 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 27 [44/85 (52%)] Loss: 5.948220 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 27 [55/85 (65%)] Loss: 6.420657 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 27 [66/85 (78%)] Loss: 5.572161 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 27 [77/85 (91%)] Loss: 7.912125 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 27
+    loss           : 6.608081643721636
+    accuracy       : 0.5154420577118097
+    val_loss       : 13.532763891582247
+    val_accuracy   : 0.2014
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 28 [0/85 (0%)] Loss: 6.018932 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 28 [11/85 (13%)] Loss: 6.090208 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 28 [22/85 (26%)] Loss: 7.221804 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 28 [33/85 (39%)] Loss: 6.560910 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 28 [44/85 (52%)] Loss: 6.373648 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 28 [55/85 (65%)] Loss: 6.654968 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 28 [66/85 (78%)] Loss: 6.862898 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 28 [77/85 (91%)] Loss: 7.152519 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 28
+    loss           : 6.550422870411593
+    accuracy       : 0.5193140960634277
+    val_loss       : 13.116247708284401
+    val_accuracy   : 0.2066
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 29 [0/85 (0%)] Loss: 5.499510 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 29 [11/85 (13%)] Loss: 6.665938 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 29 [22/85 (26%)] Loss: 5.929678 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 29 [33/85 (39%)] Loss: 5.846231 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 29 [44/85 (52%)] Loss: 6.880807 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 29 [55/85 (65%)] Loss: 6.198565 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 29 [66/85 (78%)] Loss: 6.685802 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 29 [77/85 (91%)] Loss: 6.929855 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 29
+    loss           : 6.477819863487692
+    accuracy       : 0.5257674933161243
+    val_loss       : 13.97206518921671
+    val_accuracy   : 0.2094
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 30 [0/85 (0%)] Loss: 6.381636 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 30 [11/85 (13%)] Loss: 5.965821 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 30 [22/85 (26%)] Loss: 6.354626 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 30 [33/85 (39%)] Loss: 6.768734 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 30 [44/85 (52%)] Loss: 6.752996 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 30 [55/85 (65%)] Loss: 6.269327 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 30 [66/85 (78%)] Loss: 6.101911 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 30 [77/85 (91%)] Loss: 6.544017 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 30
+    loss           : 6.4238419588874365
+    accuracy       : 0.5270581727666636
+    val_loss       : 13.564054151124592
+    val_accuracy   : 0.2076
+Train Epoch: 31 [0/85 (0%)] Loss: 6.132854 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 31 [11/85 (13%)] Loss: 6.061435 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 31 [22/85 (26%)] Loss: 5.553193 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 31 [33/85 (39%)] Loss: 6.634905 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 31 [44/85 (52%)] Loss: 6.391313 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 31 [55/85 (65%)] Loss: 6.454847 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 31 [66/85 (78%)] Loss: 6.501934 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 31 [77/85 (91%)] Loss: 6.420753 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 31
+    loss           : 6.3496637793148265
+    accuracy       : 0.5374757997603024
+    val_loss       : 13.530124833312216
+    val_accuracy   : 0.2157
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 32 [0/85 (0%)] Loss: 6.139225 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 32 [11/85 (13%)] Loss: 6.282899 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 32 [22/85 (26%)] Loss: 6.275158 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 32 [33/85 (39%)] Loss: 6.285701 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 32 [44/85 (52%)] Loss: 6.554617 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 32 [55/85 (65%)] Loss: 6.490655 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 32 [66/85 (78%)] Loss: 6.601367 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 32 [77/85 (91%)] Loss: 6.128868 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 32
+    loss           : 6.315748175452737
+    accuracy       : 0.5383977136535447
+    val_loss       : 13.379481617408462
+    val_accuracy   : 0.2165
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 33 [0/85 (0%)] Loss: 6.028179 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 33 [11/85 (13%)] Loss: 5.859457 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 33 [22/85 (26%)] Loss: 5.839838 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 33 [33/85 (39%)] Loss: 5.870473 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 33 [44/85 (52%)] Loss: 6.343572 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 33 [55/85 (65%)] Loss: 6.681920 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 33 [66/85 (78%)] Loss: 5.665409 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 33 [77/85 (91%)] Loss: 5.780828 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 33
+    loss           : 6.223730743632597
+    accuracy       : 0.5463261731354292
+    val_loss       : 13.50411831578122
+    val_accuracy   : 0.2187
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 34 [0/85 (0%)] Loss: 6.234734 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 34 [11/85 (13%)] Loss: 6.098136 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 34 [22/85 (26%)] Loss: 6.111813 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 34 [33/85 (39%)] Loss: 5.974339 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 34 [44/85 (52%)] Loss: 6.878852 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 34 [55/85 (65%)] Loss: 6.266149 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 34 [66/85 (78%)] Loss: 6.652348 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 34 [77/85 (91%)] Loss: 6.503036 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 34
+    loss           : 6.180357153275434
+    accuracy       : 0.5552687378998802
+    val_loss       : 13.46828056287162
+    val_accuracy   : 0.2263
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 35 [0/85 (0%)] Loss: 5.722147 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 35 [11/85 (13%)] Loss: 5.518214 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 35 [22/85 (26%)] Loss: 6.523018 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 35 [33/85 (39%)] Loss: 4.632212 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 35 [44/85 (52%)] Loss: 5.869070 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 35 [55/85 (65%)] Loss: 7.548976 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 35 [66/85 (78%)] Loss: 6.918098 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 35 [77/85 (91%)] Loss: 6.340173 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 35
+    loss           : 6.138662843143239
+    accuracy       : 0.5550843551212317
+    val_loss       : 13.76076474974427
+    val_accuracy   : 0.211
+Train Epoch: 36 [0/85 (0%)] Loss: 6.218529 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 36 [11/85 (13%)] Loss: 7.315763 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 36 [22/85 (26%)] Loss: 5.695031 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 36 [33/85 (39%)] Loss: 6.016107 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 36 [44/85 (52%)] Loss: 6.226423 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 36 [55/85 (65%)] Loss: 6.815130 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 36 [66/85 (78%)] Loss: 5.708114 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 36 [77/85 (91%)] Loss: 6.202124 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 36
+    loss           : 6.012461752050063
+    accuracy       : 0.568820872130543
+    val_loss       : 14.221000912823255
+    val_accuracy   : 0.2031
+Train Epoch: 37 [0/85 (0%)] Loss: 5.649420 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 37 [11/85 (13%)] Loss: 5.415084 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 37 [22/85 (26%)] Loss: 6.095795 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 37 [33/85 (39%)] Loss: 6.073986 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 37 [44/85 (52%)] Loss: 6.220921 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 37 [55/85 (65%)] Loss: 6.402824 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 37 [66/85 (78%)] Loss: 5.847732 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 37 [77/85 (91%)] Loss: 6.433267 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 37
+    loss           : 5.995302766912124
+    accuracy       : 0.566884852954734
+    val_loss       : 13.52141487749317
+    val_accuracy   : 0.2314
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 38 [0/85 (0%)] Loss: 5.442630 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 38 [11/85 (13%)] Loss: 5.799610 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 38 [22/85 (26%)] Loss: 6.850397 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 38 [33/85 (39%)] Loss: 5.816822 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 38 [44/85 (52%)] Loss: 6.174009 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 38 [55/85 (65%)] Loss: 5.463829 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 38 [66/85 (78%)] Loss: 6.737150 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 38 [77/85 (91%)] Loss: 5.124121 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 38
+    loss           : 5.952079122206744
+    accuracy       : 0.5756430349405366
+    val_loss       : 13.667733530454997
+    val_accuracy   : 0.2156
+Train Epoch: 39 [0/85 (0%)] Loss: 5.090371 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 39 [11/85 (13%)] Loss: 6.938169 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 39 [22/85 (26%)] Loss: 5.985650 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 39 [33/85 (39%)] Loss: 6.524288 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 39 [44/85 (52%)] Loss: 5.706824 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 39 [55/85 (65%)] Loss: 5.992263 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 39 [66/85 (78%)] Loss: 5.923966 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 39 [77/85 (91%)] Loss: 5.886190 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 39
+    loss           : 5.9318151586196
+    accuracy       : 0.5733382502074307
+    val_loss       : 13.416226036940948
+    val_accuracy   : 0.2378
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 40 [0/85 (0%)] Loss: 4.745319 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 40 [11/85 (13%)] Loss: 5.683642 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 40 [22/85 (26%)] Loss: 6.203956 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 40 [33/85 (39%)] Loss: 6.142146 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 40 [44/85 (52%)] Loss: 6.364266 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 40 [55/85 (65%)] Loss: 6.144106 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 40 [66/85 (78%)] Loss: 6.799382 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 40 [77/85 (91%)] Loss: 7.106855 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 40
+    loss           : 5.842066495558795
+    accuracy       : 0.5811745182999908
+    val_loss       : 13.248386793498751
+    val_accuracy   : 0.2398
+Saving checkpoint: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/checkpoint-epoch40.pth ...
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 41 [0/85 (0%)] Loss: 5.505989 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 41 [11/85 (13%)] Loss: 5.508476 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 41 [22/85 (26%)] Loss: 6.007270 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 41 [33/85 (39%)] Loss: 5.029644 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 41 [44/85 (52%)] Loss: 6.411605 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 41 [55/85 (65%)] Loss: 5.576627 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 41 [66/85 (78%)] Loss: 6.035002 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 41 [77/85 (91%)] Loss: 5.159379 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 41
+    loss           : 5.826120701958152
+    accuracy       : 0.584769982483636
+    val_loss       : 12.950849883164032
+    val_accuracy   : 0.2485
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 42 [0/85 (0%)] Loss: 5.593475 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 42 [11/85 (13%)] Loss: 6.216581 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 42 [22/85 (26%)] Loss: 5.601552 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 42 [33/85 (39%)] Loss: 4.684359 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 42 [44/85 (52%)] Loss: 6.110426 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 42 [55/85 (65%)] Loss: 6.464731 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 42 [66/85 (78%)] Loss: 5.758992 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 42 [77/85 (91%)] Loss: 5.140386 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 42
+    loss           : 5.8256130274604345
+    accuracy       : 0.5890107863925509
+    val_loss       : 14.212847359572784
+    val_accuracy   : 0.2219
+Train Epoch: 43 [0/85 (0%)] Loss: 5.057402 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 43 [11/85 (13%)] Loss: 5.891600 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 43 [22/85 (26%)] Loss: 5.712309 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 43 [33/85 (39%)] Loss: 4.927950 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 43 [44/85 (52%)] Loss: 5.603036 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 43 [55/85 (65%)] Loss: 5.533964 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 43 [66/85 (78%)] Loss: 5.825156 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 43 [77/85 (91%)] Loss: 4.772130 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 43
+    loss           : 5.763122485665714
+    accuracy       : 0.5929750161334931
+    val_loss       : 13.178121216689483
+    val_accuracy   : 0.2419
+Train Epoch: 44 [0/85 (0%)] Loss: 5.310465 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 44 [11/85 (13%)] Loss: 4.790743 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 44 [22/85 (26%)] Loss: 5.973445 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 44 [33/85 (39%)] Loss: 5.734972 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 44 [44/85 (52%)] Loss: 5.939194 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 44 [55/85 (65%)] Loss: 6.285862 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 44 [66/85 (78%)] Loss: 6.137722 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 44 [77/85 (91%)] Loss: 6.807452 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 44
+    loss           : 5.700370558570413
+    accuracy       : 0.5946344611413295
+    val_loss       : 13.740333363979678
+    val_accuracy   : 0.2349
+Train Epoch: 45 [0/85 (0%)] Loss: 5.202305 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 45 [11/85 (13%)] Loss: 5.898398 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 45 [22/85 (26%)] Loss: 6.150538 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 45 [33/85 (39%)] Loss: 5.182668 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 45 [44/85 (52%)] Loss: 5.509118 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 45 [55/85 (65%)] Loss: 5.832229 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 45 [66/85 (78%)] Loss: 5.354958 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 45 [77/85 (91%)] Loss: 5.706061 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 45
+    loss           : 5.699604808582979
+    accuracy       : 0.5977689683783535
+    val_loss       : 14.96078700053541
+    val_accuracy   : 0.2074
+Train Epoch: 46 [0/85 (0%)] Loss: 5.807551 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 46 [11/85 (13%)] Loss: 5.592272 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 46 [22/85 (26%)] Loss: 6.147305 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 46 [33/85 (39%)] Loss: 5.658492 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 46 [44/85 (52%)] Loss: 5.502773 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 46 [55/85 (65%)] Loss: 5.285025 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 46 [66/85 (78%)] Loss: 5.063519 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 46 [77/85 (91%)] Loss: 5.957043 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 46
+    loss           : 5.707430087818819
+    accuracy       : 0.5989674564395685
+    val_loss       : 13.995290261280688
+    val_accuracy   : 0.2173
+Train Epoch: 47 [0/85 (0%)] Loss: 4.992639 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 47 [11/85 (13%)] Loss: 5.549618 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 47 [22/85 (26%)] Loss: 5.264833 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 47 [33/85 (39%)] Loss: 5.518634 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 47 [44/85 (52%)] Loss: 6.527965 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 47 [55/85 (65%)] Loss: 6.152239 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 47 [66/85 (78%)] Loss: 5.580287 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 47 [77/85 (91%)] Loss: 5.875884 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 47
+    loss           : 5.6303861674140485
+    accuracy       : 0.6033926431271319
+    val_loss       : 14.192775617671918
+    val_accuracy   : 0.2259
+Train Epoch: 48 [0/85 (0%)] Loss: 5.740904 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 48 [11/85 (13%)] Loss: 5.332976 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 48 [22/85 (26%)] Loss: 5.298875 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 48 [33/85 (39%)] Loss: 5.230851 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 48 [44/85 (52%)] Loss: 6.093782 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 48 [55/85 (65%)] Loss: 5.780731 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 48 [66/85 (78%)] Loss: 5.024514 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 48 [77/85 (91%)] Loss: 5.967511 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 48
+    loss           : 5.583268917308134
+    accuracy       : 0.6072646814787499
+    val_loss       : 13.422546785089034
+    val_accuracy   : 0.2489
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 49 [0/85 (0%)] Loss: 5.980847 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 49 [11/85 (13%)] Loss: 6.280921 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 49 [22/85 (26%)] Loss: 5.217554 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 49 [33/85 (39%)] Loss: 5.631571 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 49 [44/85 (52%)] Loss: 5.309099 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 49 [55/85 (65%)] Loss: 5.807890 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 49 [66/85 (78%)] Loss: 5.736108 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 49 [77/85 (91%)] Loss: 5.636670 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 49
+    loss           : 5.579082219740924
+    accuracy       : 0.6103991887157739
+    val_loss       : 13.944435192059867
+    val_accuracy   : 0.2291
+Train Epoch: 50 [0/85 (0%)] Loss: 5.467816 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 50 [11/85 (13%)] Loss: 6.075698 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 50 [22/85 (26%)] Loss: 5.527742 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 50 [33/85 (39%)] Loss: 5.689988 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 50 [44/85 (52%)] Loss: 6.541661 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 50 [55/85 (65%)] Loss: 4.922829 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 50 [66/85 (78%)] Loss: 5.240397 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 50 [77/85 (91%)] Loss: 4.937630 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 50
+    loss           : 5.5197961190167595
+    accuracy       : 0.6122430165022587
+    val_loss       : 13.445554503911659
+    val_accuracy   : 0.2451
+Train Epoch: 51 [0/85 (0%)] Loss: 5.526217 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 51 [11/85 (13%)] Loss: 5.403579 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 51 [22/85 (26%)] Loss: 5.489036 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 51 [33/85 (39%)] Loss: 4.916793 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 51 [44/85 (52%)] Loss: 6.128689 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 51 [55/85 (65%)] Loss: 5.757714 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 51 [66/85 (78%)] Loss: 5.794519 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 51 [77/85 (91%)] Loss: 5.813520 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 51
+    loss           : 5.528699992684757
+    accuracy       : 0.6129805476168526
+    val_loss       : 13.24070182027696
+    val_accuracy   : 0.2561
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 52 [0/85 (0%)] Loss: 4.848961 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 52 [11/85 (13%)] Loss: 4.766815 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 52 [22/85 (26%)] Loss: 5.008618 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 52 [33/85 (39%)] Loss: 5.647046 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 52 [44/85 (52%)] Loss: 5.935781 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 52 [55/85 (65%)] Loss: 4.952812 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 52 [66/85 (78%)] Loss: 5.824602 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 52 [77/85 (91%)] Loss: 5.410751 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 52
+    loss           : 5.391246346866383
+    accuracy       : 0.627546787130082
+    val_loss       : 14.396362425405767
+    val_accuracy   : 0.2385
+Train Epoch: 53 [0/85 (0%)] Loss: 5.862301 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 53 [11/85 (13%)] Loss: 5.859104 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 53 [22/85 (26%)] Loss: 4.875344 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 53 [33/85 (39%)] Loss: 4.775916 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 53 [44/85 (52%)] Loss: 6.059072 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 53 [55/85 (65%)] Loss: 5.456928 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 53 [66/85 (78%)] Loss: 5.441797 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 53 [77/85 (91%)] Loss: 6.051498 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 53
+    loss           : 5.457961054409251
+    accuracy       : 0.6190651793122522
+    val_loss       : 13.784382554549206
+    val_accuracy   : 0.2403
+Train Epoch: 54 [0/85 (0%)] Loss: 5.963834 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 54 [11/85 (13%)] Loss: 5.724391 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 54 [22/85 (26%)] Loss: 5.013127 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 54 [33/85 (39%)] Loss: 5.258296 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 54 [44/85 (52%)] Loss: 4.723940 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 54 [55/85 (65%)] Loss: 5.856622 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 54 [66/85 (78%)] Loss: 5.927956 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 54 [77/85 (91%)] Loss: 6.126612 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 54
+    loss           : 5.423546202042523
+    accuracy       : 0.6218309209919793
+    val_loss       : 13.729080598565597
+    val_accuracy   : 0.2494
+Train Epoch: 55 [0/85 (0%)] Loss: 5.426157 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 55 [11/85 (13%)] Loss: 5.769677 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 55 [22/85 (26%)] Loss: 4.812315 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 55 [33/85 (39%)] Loss: 5.566625 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 55 [44/85 (52%)] Loss: 5.513117 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 55 [55/85 (65%)] Loss: 5.357981 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 55 [66/85 (78%)] Loss: 5.814565 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 55 [77/85 (91%)] Loss: 5.348033 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 55
+    loss           : 5.38866273094626
+    accuracy       : 0.6237669401677883
+    val_loss       : 13.9729755981059
+    val_accuracy   : 0.2489
+Train Epoch: 56 [0/85 (0%)] Loss: 5.935947 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 56 [11/85 (13%)] Loss: 6.277001 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 56 [22/85 (26%)] Loss: 4.862059 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 56 [33/85 (39%)] Loss: 4.624766 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 56 [44/85 (52%)] Loss: 5.457105 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 56 [55/85 (65%)] Loss: 5.337434 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 56 [66/85 (78%)] Loss: 5.925408 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 56 [77/85 (91%)] Loss: 4.577116 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 56
+    loss           : 5.358146471135757
+    accuracy       : 0.6278233612980547
+    val_loss       : 13.06832259214377
+    val_accuracy   : 0.2748
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 57 [0/85 (0%)] Loss: 5.272882 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 57 [11/85 (13%)] Loss: 5.586271 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 57 [22/85 (26%)] Loss: 5.676156 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 57 [33/85 (39%)] Loss: 5.187572 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 57 [44/85 (52%)] Loss: 5.727928 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 57 [55/85 (65%)] Loss: 5.780089 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 57 [66/85 (78%)] Loss: 4.659055 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 57 [77/85 (91%)] Loss: 5.432062 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 57
+    loss           : 5.319402717141545
+    accuracy       : 0.6293906149165668
+    val_loss       : 14.676066664200794
+    val_accuracy   : 0.2371
+Train Epoch: 58 [0/85 (0%)] Loss: 5.706574 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 58 [11/85 (13%)] Loss: 5.515488 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 58 [22/85 (26%)] Loss: 4.559991 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 58 [33/85 (39%)] Loss: 5.248360 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 58 [44/85 (52%)] Loss: 5.331563 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 58 [55/85 (65%)] Loss: 4.953381 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 58 [66/85 (78%)] Loss: 5.224681 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 58 [77/85 (91%)] Loss: 4.842699 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 58
+    loss           : 5.316724171357996
+    accuracy       : 0.6307734857564303
+    val_loss       : 13.983260154724121
+    val_accuracy   : 0.2422
+Train Epoch: 59 [0/85 (0%)] Loss: 5.971339 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 59 [11/85 (13%)] Loss: 4.955685 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 59 [22/85 (26%)] Loss: 5.901852 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 59 [33/85 (39%)] Loss: 5.400723 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 59 [44/85 (52%)] Loss: 5.082747 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 59 [55/85 (65%)] Loss: 5.230417 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 59 [66/85 (78%)] Loss: 5.653230 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 59 [77/85 (91%)] Loss: 5.444594 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 59
+    loss           : 5.27478588328642
+    accuracy       : 0.63685811745183
+    val_loss       : 13.301898449282103
+    val_accuracy   : 0.2651
+Train Epoch: 60 [0/85 (0%)] Loss: 4.511525 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 60 [11/85 (13%)] Loss: 5.198545 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 60 [22/85 (26%)] Loss: 4.595614 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 60 [33/85 (39%)] Loss: 5.303585 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 60 [44/85 (52%)] Loss: 5.341099 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 60 [55/85 (65%)] Loss: 5.881010 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 60 [66/85 (78%)] Loss: 5.498624 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 60 [77/85 (91%)] Loss: 5.363413 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 60
+    loss           : 5.217894144619213
+    accuracy       : 0.6350142896653452
+    val_loss       : 13.727121377293068
+    val_accuracy   : 0.2523
+Train Epoch: 61 [0/85 (0%)] Loss: 4.983925 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 61 [11/85 (13%)] Loss: 5.179449 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 61 [22/85 (26%)] Loss: 5.065062 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 61 [33/85 (39%)] Loss: 5.477195 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 61 [44/85 (52%)] Loss: 5.284856 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 61 [55/85 (65%)] Loss: 5.700522 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 61 [66/85 (78%)] Loss: 5.295605 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 61 [77/85 (91%)] Loss: 5.729684 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 61
+    loss           : 5.193278795130112
+    accuracy       : 0.6431271319258781
+    val_loss       : 14.5236750614794
+    val_accuracy   : 0.252
+Train Epoch: 62 [0/85 (0%)] Loss: 5.663271 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 62 [11/85 (13%)] Loss: 4.703329 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 62 [22/85 (26%)] Loss: 5.639904 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 62 [33/85 (39%)] Loss: 5.378048 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 62 [44/85 (52%)] Loss: 5.148634 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 62 [55/85 (65%)] Loss: 5.136383 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 62 [66/85 (78%)] Loss: 5.388118 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 62 [77/85 (91%)] Loss: 5.505441 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 62
+    loss           : 5.221043149162742
+    accuracy       : 0.6469991702774961
+    val_loss       : 13.628753106805343
+    val_accuracy   : 0.2694
+Train Epoch: 63 [0/85 (0%)] Loss: 5.446096 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 63 [11/85 (13%)] Loss: 4.439069 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 63 [22/85 (26%)] Loss: 5.242682 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 63 [33/85 (39%)] Loss: 5.040730 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 63 [44/85 (52%)] Loss: 4.640556 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 63 [55/85 (65%)] Loss: 4.806404 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 63 [66/85 (78%)] Loss: 4.514043 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 63 [77/85 (91%)] Loss: 5.199152 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 63
+    loss           : 5.166508096807143
+    accuracy       : 0.6488429980639808
+    val_loss       : 14.25680487668967
+    val_accuracy   : 0.2504
+Train Epoch: 64 [0/85 (0%)] Loss: 4.905278 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 64 [11/85 (13%)] Loss: 4.958592 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 64 [22/85 (26%)] Loss: 5.740728 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 64 [33/85 (39%)] Loss: 5.797081 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 64 [44/85 (52%)] Loss: 4.967028 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 64 [55/85 (65%)] Loss: 5.771419 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 64 [66/85 (78%)] Loss: 5.525885 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 64 [77/85 (91%)] Loss: 5.050411 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 64
+    loss           : 5.16663190056296
+    accuracy       : 0.6467225961095233
+    val_loss       : 14.554899843433235
+    val_accuracy   : 0.2384
+Train Epoch: 65 [0/85 (0%)] Loss: 4.673034 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 65 [11/85 (13%)] Loss: 5.252312 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 65 [22/85 (26%)] Loss: 5.681068 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 65 [33/85 (39%)] Loss: 5.501277 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 65 [44/85 (52%)] Loss: 6.155156 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 65 [55/85 (65%)] Loss: 5.090981 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 65 [66/85 (78%)] Loss: 5.316944 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 65 [77/85 (91%)] Loss: 6.125875 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 65
+    loss           : 5.168359021579518
+    accuracy       : 0.646169447773578
+    val_loss       : 14.028810344164885
+    val_accuracy   : 0.2498
+Train Epoch: 66 [0/85 (0%)] Loss: 6.047583 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 66 [11/85 (13%)] Loss: 5.492111 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 66 [22/85 (26%)] Loss: 4.696422 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 66 [33/85 (39%)] Loss: 5.423617 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 66 [44/85 (52%)] Loss: 5.181511 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 66 [55/85 (65%)] Loss: 4.954565 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 66 [66/85 (78%)] Loss: 5.189119 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 66 [77/85 (91%)] Loss: 5.195452 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 66
+    loss           : 5.116038771236644
+    accuracy       : 0.6490273808426293
+    val_loss       : 13.772394626955442
+    val_accuracy   : 0.2633
+Train Epoch: 67 [0/85 (0%)] Loss: 5.107082 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 67 [11/85 (13%)] Loss: 4.372969 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 67 [22/85 (26%)] Loss: 4.806737 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 67 [33/85 (39%)] Loss: 6.300646 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 67 [44/85 (52%)] Loss: 4.861377 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 67 [55/85 (65%)] Loss: 5.040896 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 67 [66/85 (78%)] Loss: 5.083930 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 67 [77/85 (91%)] Loss: 5.828553 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 67
+    loss           : 5.090520561442656
+    accuracy       : 0.6513321655757353
+    val_loss       : 13.863395521912393
+    val_accuracy   : 0.2582
+Train Epoch: 68 [0/85 (0%)] Loss: 3.904088 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 68 [11/85 (13%)] Loss: 4.573380 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 68 [22/85 (26%)] Loss: 4.711426 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 68 [33/85 (39%)] Loss: 5.018166 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 68 [44/85 (52%)] Loss: 5.288505 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 68 [55/85 (65%)] Loss: 5.234292 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 68 [66/85 (78%)] Loss: 5.911096 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 68 [77/85 (91%)] Loss: 5.405966 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 68
+    loss           : 5.099176606009988
+    accuracy       : 0.649303955010602
+    val_loss       : 13.844413817683353
+    val_accuracy   : 0.256
+Train Epoch: 69 [0/85 (0%)] Loss: 5.830291 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 69 [11/85 (13%)] Loss: 4.543196 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 69 [22/85 (26%)] Loss: 6.154136 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 69 [33/85 (39%)] Loss: 5.228463 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 69 [44/85 (52%)] Loss: 5.224022 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 69 [55/85 (65%)] Loss: 4.706001 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 69 [66/85 (78%)] Loss: 6.004605 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 69 [77/85 (91%)] Loss: 4.841360 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 69
+    loss           : 5.113650759528665
+    accuracy       : 0.6481976583387111
+    val_loss       : 14.954844595510748
+    val_accuracy   : 0.235
+Train Epoch: 70 [0/85 (0%)] Loss: 4.842875 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 70 [11/85 (13%)] Loss: 4.442837 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 70 [22/85 (26%)] Loss: 4.904552 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 70 [33/85 (39%)] Loss: 4.753697 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 70 [44/85 (52%)] Loss: 5.120726 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 70 [55/85 (65%)] Loss: 6.062893 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 70 [66/85 (78%)] Loss: 4.938506 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 70 [77/85 (91%)] Loss: 5.361149 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 70
+    loss           : 5.002303325428683
+    accuracy       : 0.6618419839586983
+    val_loss       : 13.80744073360781
+    val_accuracy   : 0.2744
+Train Epoch: 71 [0/85 (0%)] Loss: 5.298443 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 71 [11/85 (13%)] Loss: 5.223082 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 71 [22/85 (26%)] Loss: 4.859818 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 71 [33/85 (39%)] Loss: 4.618663 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 71 [44/85 (52%)] Loss: 4.966634 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 71 [55/85 (65%)] Loss: 5.656928 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 71 [66/85 (78%)] Loss: 5.773960 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 71 [77/85 (91%)] Loss: 4.760999 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 71
+    loss           : 5.074155280169319
+    accuracy       : 0.6507790172397898
+    val_loss       : 13.816125338590599
+    val_accuracy   : 0.2556
+Train Epoch: 72 [0/85 (0%)] Loss: 4.817430 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 72 [11/85 (13%)] Loss: 5.062350 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 72 [22/85 (26%)] Loss: 4.304237 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 72 [33/85 (39%)] Loss: 4.001811 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 72 [44/85 (52%)] Loss: 4.937763 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 72 [55/85 (65%)] Loss: 4.691346 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 72 [66/85 (78%)] Loss: 5.410952 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 72 [77/85 (91%)] Loss: 5.751853 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 72
+    loss           : 4.923574775807998
+    accuracy       : 0.667189084539504
+    val_loss       : 14.250567387930955
+    val_accuracy   : 0.2451
+Train Epoch: 73 [0/85 (0%)] Loss: 4.731168 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 73 [11/85 (13%)] Loss: 4.241318 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 73 [22/85 (26%)] Loss: 4.372496 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 73 [33/85 (39%)] Loss: 5.716441 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 73 [44/85 (52%)] Loss: 4.275733 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 73 [55/85 (65%)] Loss: 5.140476 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 73 [66/85 (78%)] Loss: 5.390894 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 73 [77/85 (91%)] Loss: 5.151258 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 73
+    loss           : 4.917499278573429
+    accuracy       : 0.6670047017608556
+    val_loss       : 14.05247718473024
+    val_accuracy   : 0.2689
+Train Epoch: 74 [0/85 (0%)] Loss: 5.180043 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 74 [11/85 (13%)] Loss: 4.239557 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 74 [22/85 (26%)] Loss: 4.728760 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 74 [33/85 (39%)] Loss: 5.162363 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 74 [44/85 (52%)] Loss: 6.003494 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 74 [55/85 (65%)] Loss: 4.672939 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 74 [66/85 (78%)] Loss: 4.886892 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 74 [77/85 (91%)] Loss: 5.921042 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 74
+    loss           : 5.051311818291159
+    accuracy       : 0.6564948833778925
+    val_loss       : 13.82959375502188
+    val_accuracy   : 0.2568
+Train Epoch: 75 [0/85 (0%)] Loss: 5.079787 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 75 [11/85 (13%)] Loss: 5.331486 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 75 [22/85 (26%)] Loss: 4.541613 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 75 [33/85 (39%)] Loss: 4.878619 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 75 [44/85 (52%)] Loss: 5.352393 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 75 [55/85 (65%)] Loss: 5.921436 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 75 [66/85 (78%)] Loss: 5.261414 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 75 [77/85 (91%)] Loss: 4.693270 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 75
+    loss           : 4.926572005888995
+    accuracy       : 0.6642389600811284
+    val_loss       : 14.589680599260934
+    val_accuracy   : 0.2473
+Train Epoch: 76 [0/85 (0%)] Loss: 4.841595 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 76 [11/85 (13%)] Loss: 4.442009 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 76 [22/85 (26%)] Loss: 5.115664 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 76 [33/85 (39%)] Loss: 4.256445 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 76 [44/85 (52%)] Loss: 4.749166 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 76 [55/85 (65%)] Loss: 4.687336 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 76 [66/85 (78%)] Loss: 5.219155 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 76 [77/85 (91%)] Loss: 4.779798 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 76
+    loss           : 4.882745437061085
+    accuracy       : 0.6701392089978796
+    val_loss       : 14.843088560466525
+    val_accuracy   : 0.2301
+Train Epoch: 77 [0/85 (0%)] Loss: 5.384921 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 77 [11/85 (13%)] Loss: 4.793323 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 77 [22/85 (26%)] Loss: 4.489355 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 77 [33/85 (39%)] Loss: 5.132350 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 77 [44/85 (52%)] Loss: 4.612829 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 77 [55/85 (65%)] Loss: 5.543427 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 77 [66/85 (78%)] Loss: 4.709085 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 77 [77/85 (91%)] Loss: 5.497673 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 77
+    loss           : 4.907894917095409
+    accuracy       : 0.6672812759288282
+    val_loss       : 15.964406037632424
+    val_accuracy   : 0.2216
+Train Epoch: 78 [0/85 (0%)] Loss: 4.668717 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 78 [11/85 (13%)] Loss: 4.826390 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 78 [22/85 (26%)] Loss: 5.444558 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 78 [33/85 (39%)] Loss: 4.858472 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 78 [44/85 (52%)] Loss: 4.847177 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 78 [55/85 (65%)] Loss: 5.539226 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 78 [66/85 (78%)] Loss: 5.404134 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 78 [77/85 (91%)] Loss: 5.493955 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 78
+    loss           : 4.922011465184829
+    accuracy       : 0.6643311514704526
+    val_loss       : 13.351621639879443
+    val_accuracy   : 0.2641
+Train Epoch: 79 [0/85 (0%)] Loss: 4.599387 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 79 [11/85 (13%)] Loss: 4.279139 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 79 [22/85 (26%)] Loss: 4.176308 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 79 [33/85 (39%)] Loss: 4.977615 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 79 [44/85 (52%)] Loss: 5.270367 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 79 [55/85 (65%)] Loss: 5.140071 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 79 [66/85 (78%)] Loss: 4.063657 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 79 [77/85 (91%)] Loss: 4.600159 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 79
+    loss           : 4.856301487193388
+    accuracy       : 0.672997142066931
+    val_loss       : 12.88119132609307
+    val_accuracy   : 0.2881
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 80 [0/85 (0%)] Loss: 4.615027 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 80 [11/85 (13%)] Loss: 5.327897 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 80 [22/85 (26%)] Loss: 4.413393 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 80 [33/85 (39%)] Loss: 3.945148 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 80 [44/85 (52%)] Loss: 4.502957 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 80 [55/85 (65%)] Loss: 4.210371 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 80 [66/85 (78%)] Loss: 5.227952 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 80 [77/85 (91%)] Loss: 5.069110 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 80
+    loss           : 4.85916119743796
+    accuracy       : 0.6751175440213883
+    val_loss       : 13.41414234306239
+    val_accuracy   : 0.2769
+Saving checkpoint: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/checkpoint-epoch80.pth ...
+Train Epoch: 81 [0/85 (0%)] Loss: 5.166924 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 81 [11/85 (13%)] Loss: 4.171479 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 81 [22/85 (26%)] Loss: 4.975049 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 81 [33/85 (39%)] Loss: 4.885147 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 81 [44/85 (52%)] Loss: 5.902188 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 81 [55/85 (65%)] Loss: 4.647447 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 81 [66/85 (78%)] Loss: 5.881531 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 81 [77/85 (91%)] Loss: 4.783355 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 81
+    loss           : 4.859062273362103
+    accuracy       : 0.6668203189822071
+    val_loss       : 13.560140996039669
+    val_accuracy   : 0.2659
+Train Epoch: 82 [0/85 (0%)] Loss: 4.663540 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 82 [11/85 (13%)] Loss: 4.411343 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 82 [22/85 (26%)] Loss: 5.168453 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 82 [33/85 (39%)] Loss: 5.041559 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 82 [44/85 (52%)] Loss: 4.397799 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 82 [55/85 (65%)] Loss: 6.153174 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 82 [66/85 (78%)] Loss: 5.223001 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 82 [77/85 (91%)] Loss: 5.160192 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 82
+    loss           : 4.786285888447481
+    accuracy       : 0.6789895823730063
+    val_loss       : 13.92324673374997
+    val_accuracy   : 0.2581
+Train Epoch: 83 [0/85 (0%)] Loss: 4.393514 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 83 [11/85 (13%)] Loss: 4.987741 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 83 [22/85 (26%)] Loss: 4.845162 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 83 [33/85 (39%)] Loss: 4.222886 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 83 [44/85 (52%)] Loss: 4.025373 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 83 [55/85 (65%)] Loss: 4.764639 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 83 [66/85 (78%)] Loss: 4.067468 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 83 [77/85 (91%)] Loss: 4.163434 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 83
+    loss           : 4.8229749960057875
+    accuracy       : 0.6736424817922007
+    val_loss       : 13.415595573715017
+    val_accuracy   : 0.275
+Train Epoch: 84 [0/85 (0%)] Loss: 4.251815 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 84 [11/85 (13%)] Loss: 4.720787 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 84 [22/85 (26%)] Loss: 4.971663 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 84 [33/85 (39%)] Loss: 5.724506 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 84 [44/85 (52%)] Loss: 4.701084 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 84 [55/85 (65%)] Loss: 5.446047 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 84 [66/85 (78%)] Loss: 4.866613 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 84 [77/85 (91%)] Loss: 5.590984 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 84
+    loss           : 4.795126833635218
+    accuracy       : 0.675762883746658
+    val_loss       : 14.983718051186091
+    val_accuracy   : 0.2578
+Train Epoch: 85 [0/85 (0%)] Loss: 4.611792 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 85 [11/85 (13%)] Loss: 4.613970 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 85 [22/85 (26%)] Loss: 4.143144 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 85 [33/85 (39%)] Loss: 4.811682 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 85 [44/85 (52%)] Loss: 4.796128 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 85 [55/85 (65%)] Loss: 4.746423 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 85 [66/85 (78%)] Loss: 4.825213 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 85 [77/85 (91%)] Loss: 4.035090 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 85
+    loss           : 4.813412492415484
+    accuracy       : 0.6754863095786854
+    val_loss       : 13.49844809423519
+    val_accuracy   : 0.2894
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 86 [0/85 (0%)] Loss: 4.296113 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 86 [11/85 (13%)] Loss: 4.672979 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 86 [22/85 (26%)] Loss: 4.739243 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 86 [33/85 (39%)] Loss: 4.263493 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 86 [44/85 (52%)] Loss: 3.888040 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 86 [55/85 (65%)] Loss: 4.625537 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 86 [66/85 (78%)] Loss: 4.434396 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 86 [77/85 (91%)] Loss: 4.075717 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 86
+    loss           : 4.7388654035680435
+    accuracy       : 0.675762883746658
+    val_loss       : 13.358256557319738
+    val_accuracy   : 0.2852
+Train Epoch: 87 [0/85 (0%)] Loss: 4.600132 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 87 [11/85 (13%)] Loss: 4.632470 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 87 [22/85 (26%)] Loss: 4.106180 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 87 [33/85 (39%)] Loss: 5.355891 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 87 [44/85 (52%)] Loss: 4.676948 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 87 [55/85 (65%)] Loss: 5.820444 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 87 [66/85 (78%)] Loss: 4.403946 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 87 [77/85 (91%)] Loss: 5.191403 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 87
+    loss           : 4.754458309622372
+    accuracy       : 0.6823084723886789
+    val_loss       : 14.545519345923315
+    val_accuracy   : 0.2671
+Train Epoch: 88 [0/85 (0%)] Loss: 4.500078 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 88 [11/85 (13%)] Loss: 4.848992 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 88 [22/85 (26%)] Loss: 4.594067 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 88 [33/85 (39%)] Loss: 4.583324 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 88 [44/85 (52%)] Loss: 3.815783 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 88 [55/85 (65%)] Loss: 4.540651 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 88 [66/85 (78%)] Loss: 4.220313 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 88 [77/85 (91%)] Loss: 5.073033 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 88
+    loss           : 4.689039993286133
+    accuracy       : 0.684705448511109
+    val_loss       : 14.70140138457093
+    val_accuracy   : 0.2524
+Train Epoch: 89 [0/85 (0%)] Loss: 4.610178 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 89 [11/85 (13%)] Loss: 3.869605 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 89 [22/85 (26%)] Loss: 4.691280 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 89 [33/85 (39%)] Loss: 4.150252 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 89 [44/85 (52%)] Loss: 5.213913 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 89 [55/85 (65%)] Loss: 4.798330 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 89 [66/85 (78%)] Loss: 4.399632 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 89 [77/85 (91%)] Loss: 4.932212 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 89
+    loss           : 4.775146672304939
+    accuracy       : 0.6797271134876003
+    val_loss       : 14.388775233980976
+    val_accuracy   : 0.2797
+Train Epoch: 90 [0/85 (0%)] Loss: 4.335884 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 90 [11/85 (13%)] Loss: 4.223082 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 90 [22/85 (26%)] Loss: 4.551390 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 90 [33/85 (39%)] Loss: 5.174205 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 90 [44/85 (52%)] Loss: 3.598070 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 90 [55/85 (65%)] Loss: 5.323683 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 90 [66/85 (78%)] Loss: 5.382205 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 90 [77/85 (91%)] Loss: 3.856212 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 90
+    loss           : 4.743011095944573
+    accuracy       : 0.681570941274085
+    val_loss       : 13.368459955046449
+    val_accuracy   : 0.2895
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 91 [0/85 (0%)] Loss: 4.570229 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 91 [11/85 (13%)] Loss: 4.626545 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 91 [22/85 (26%)] Loss: 4.755469 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 91 [33/85 (39%)] Loss: 5.050217 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 91 [44/85 (52%)] Loss: 4.584009 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 91 [55/85 (65%)] Loss: 4.519156 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 91 [66/85 (78%)] Loss: 4.863212 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 91 [77/85 (91%)] Loss: 5.599640 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 91
+    loss           : 4.696672105789185
+    accuracy       : 0.6855351710150271
+    val_loss       : 13.968338555927518
+    val_accuracy   : 0.2783
+Train Epoch: 92 [0/85 (0%)] Loss: 3.946778 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 92 [11/85 (13%)] Loss: 4.266384 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 92 [22/85 (26%)] Loss: 4.785028 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 92 [33/85 (39%)] Loss: 5.149762 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 92 [44/85 (52%)] Loss: 4.411740 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 92 [55/85 (65%)] Loss: 4.745229 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 92 [66/85 (78%)] Loss: 5.295764 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 92 [77/85 (91%)] Loss: 4.411843 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 92
+    loss           : 4.648251951442045
+    accuracy       : 0.6879321471374573
+    val_loss       : 13.609971360315251
+    val_accuracy   : 0.2814
+Train Epoch: 93 [0/85 (0%)] Loss: 4.140245 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 93 [11/85 (13%)] Loss: 4.447979 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 93 [22/85 (26%)] Loss: 5.181546 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 93 [33/85 (39%)] Loss: 4.620509 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 93 [44/85 (52%)] Loss: 5.008292 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 93 [55/85 (65%)] Loss: 4.193637 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 93 [66/85 (78%)] Loss: 4.902112 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 93 [77/85 (91%)] Loss: 4.909219 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 93
+    loss           : 4.640890665615307
+    accuracy       : 0.6867336590762423
+    val_loss       : 14.36234090298037
+    val_accuracy   : 0.2692
+Train Epoch: 94 [0/85 (0%)] Loss: 4.732141 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 94 [11/85 (13%)] Loss: 5.321699 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 94 [22/85 (26%)] Loss: 5.182422 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 94 [33/85 (39%)] Loss: 5.479948 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 94 [44/85 (52%)] Loss: 5.405699 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 94 [55/85 (65%)] Loss: 5.021643 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 94 [66/85 (78%)] Loss: 4.359407 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 94 [77/85 (91%)] Loss: 5.611042 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 94
+    loss           : 4.724498030718635
+    accuracy       : 0.6880243385267816
+    val_loss       : 13.933861539333682
+    val_accuracy   : 0.2799
+Train Epoch: 95 [0/85 (0%)] Loss: 4.664218 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 95 [11/85 (13%)] Loss: 4.677075 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 95 [22/85 (26%)] Loss: 4.492149 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 95 [33/85 (39%)] Loss: 4.828125 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 95 [44/85 (52%)] Loss: 4.132347 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 95 [55/85 (65%)] Loss: 4.899393 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 95 [66/85 (78%)] Loss: 5.093491 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 95 [77/85 (91%)] Loss: 4.756141 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 95
+    loss           : 4.692652968799367
+    accuracy       : 0.6836913432285424
+    val_loss       : 13.812071450148956
+    val_accuracy   : 0.2783
+Train Epoch: 96 [0/85 (0%)] Loss: 4.374629 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 96 [11/85 (13%)] Loss: 3.968689 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 96 [22/85 (26%)] Loss: 4.953272 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 96 [33/85 (39%)] Loss: 4.430364 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 96 [44/85 (52%)] Loss: 4.730151 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 96 [55/85 (65%)] Loss: 4.060092 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 96 [66/85 (78%)] Loss: 4.929470 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 96 [77/85 (91%)] Loss: 5.350238 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 96
+    loss           : 4.660034965066349
+    accuracy       : 0.6888540610306997
+    val_loss       : 14.12848584863204
+    val_accuracy   : 0.2775
+Train Epoch: 97 [0/85 (0%)] Loss: 4.678650 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 97 [11/85 (13%)] Loss: 4.139400 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 97 [22/85 (26%)] Loss: 4.777255 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 97 [33/85 (39%)] Loss: 5.050835 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 97 [44/85 (52%)] Loss: 4.776865 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 97 [55/85 (65%)] Loss: 4.179465 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 97 [66/85 (78%)] Loss: 5.106916 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 97 [77/85 (91%)] Loss: 4.605482 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 97
+    loss           : 4.604450175341438
+    accuracy       : 0.6926339079929934
+    val_loss       : 13.673841029782839
+    val_accuracy   : 0.2746
+Train Epoch: 98 [0/85 (0%)] Loss: 4.884932 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 98 [11/85 (13%)] Loss: 4.804586 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 98 [22/85 (26%)] Loss: 4.641883 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 98 [33/85 (39%)] Loss: 5.902174 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 98 [44/85 (52%)] Loss: 4.536906 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 98 [55/85 (65%)] Loss: 4.556687 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 98 [66/85 (78%)] Loss: 4.927786 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 98 [77/85 (91%)] Loss: 5.142552 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 98
+    loss           : 4.56674487731036
+    accuracy       : 0.69364801327556
+    val_loss       : 13.752415705330764
+    val_accuracy   : 0.2774
+Train Epoch: 99 [0/85 (0%)] Loss: 3.896030 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 99 [11/85 (13%)] Loss: 5.035132 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 99 [22/85 (26%)] Loss: 4.594347 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 99 [33/85 (39%)] Loss: 4.239989 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 99 [44/85 (52%)] Loss: 4.379071 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 99 [55/85 (65%)] Loss: 5.830778 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 99 [66/85 (78%)] Loss: 4.787806 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 99 [77/85 (91%)] Loss: 4.788702 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 99
+    loss           : 4.641214496949139
+    accuracy       : 0.6894072093666451
+    val_loss       : 14.087917714179317
+    val_accuracy   : 0.2761
+Train Epoch: 100 [0/85 (0%)] Loss: 4.419106 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 100 [11/85 (13%)] Loss: 4.586638 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 100 [22/85 (26%)] Loss: 4.666356 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 100 [33/85 (39%)] Loss: 4.637373 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 100 [44/85 (52%)] Loss: 4.563745 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 100 [55/85 (65%)] Loss: 5.120063 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 100 [66/85 (78%)] Loss: 4.958991 max group LR: 0.1000 min group LR: 0.1000
+Train Epoch: 100 [77/85 (91%)] Loss: 4.369031 max group LR: 0.1000 min group LR: 0.1000
+    epoch          : 100
+    loss           : 4.606229397829841
+    accuracy       : 0.6950308841154236
+    val_loss       : 15.143077983131892
+    val_accuracy   : 0.2433
+Train Epoch: 101 [0/85 (0%)] Loss: 4.819017 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 101 [11/85 (13%)] Loss: 3.339529 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 101 [22/85 (26%)] Loss: 3.747269 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 101 [33/85 (39%)] Loss: 3.906568 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 101 [44/85 (52%)] Loss: 3.989711 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 101 [55/85 (65%)] Loss: 3.416427 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 101 [66/85 (78%)] Loss: 3.205801 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 101 [77/85 (91%)] Loss: 2.666783 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 101
+    loss           : 3.706177759170532
+    accuracy       : 0.7640822347192772
+    val_loss       : 12.031457599205307
+    val_accuracy   : 0.3561
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 102 [0/85 (0%)] Loss: 3.405790 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 102 [11/85 (13%)] Loss: 3.080115 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 102 [22/85 (26%)] Loss: 2.815041 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 102 [33/85 (39%)] Loss: 2.974602 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 102 [44/85 (52%)] Loss: 2.255259 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 102 [55/85 (65%)] Loss: 2.871252 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 102 [66/85 (78%)] Loss: 3.260266 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 102 [77/85 (91%)] Loss: 3.226917 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 102
+    loss           : 3.233683723561904
+    accuracy       : 0.799760302387757
+    val_loss       : 11.927589549294002
+    val_accuracy   : 0.366
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 103 [0/85 (0%)] Loss: 3.090622 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 103 [11/85 (13%)] Loss: 3.401676 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 103 [22/85 (26%)] Loss: 2.439948 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 103 [33/85 (39%)] Loss: 3.027762 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 103 [44/85 (52%)] Loss: 2.770992 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 103 [55/85 (65%)] Loss: 3.256420 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 103 [66/85 (78%)] Loss: 2.671104 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 103 [77/85 (91%)] Loss: 3.070256 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 103
+    loss           : 3.087513101802153
+    accuracy       : 0.8133124366184198
+    val_loss       : 11.951128392279903
+    val_accuracy   : 0.3642
+Train Epoch: 104 [0/85 (0%)] Loss: 3.483054 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 104 [11/85 (13%)] Loss: 2.647235 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 104 [22/85 (26%)] Loss: 2.911426 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 104 [33/85 (39%)] Loss: 4.356875 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 104 [44/85 (52%)] Loss: 2.746578 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 104 [55/85 (65%)] Loss: 2.418321 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 104 [66/85 (78%)] Loss: 3.468146 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 104 [77/85 (91%)] Loss: 3.091140 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 104
+    loss           : 2.99291934967041
+    accuracy       : 0.8187517285885498
+    val_loss       : 11.972054867804806
+    val_accuracy   : 0.3691
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 105 [0/85 (0%)] Loss: 2.464177 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 105 [11/85 (13%)] Loss: 3.017688 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 105 [22/85 (26%)] Loss: 3.203350 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 105 [33/85 (39%)] Loss: 3.453899 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 105 [44/85 (52%)] Loss: 2.654984 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 105 [55/85 (65%)] Loss: 3.164288 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 105 [66/85 (78%)] Loss: 3.547543 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 105 [77/85 (91%)] Loss: 2.572557 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 105
+    loss           : 2.9125312636880314
+    accuracy       : 0.8271411450170554
+    val_loss       : 12.126534546477885
+    val_accuracy   : 0.3657
+Train Epoch: 106 [0/85 (0%)] Loss: 2.963036 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 106 [11/85 (13%)] Loss: 2.525227 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 106 [22/85 (26%)] Loss: 3.379333 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 106 [33/85 (39%)] Loss: 2.792469 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 106 [44/85 (52%)] Loss: 2.607255 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 106 [55/85 (65%)] Loss: 3.216257 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 106 [66/85 (78%)] Loss: 2.643153 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 106 [77/85 (91%)] Loss: 2.698852 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 106
+    loss           : 2.8407543911653406
+    accuracy       : 0.8290771641928644
+    val_loss       : 12.151226719723471
+    val_accuracy   : 0.3669
+Train Epoch: 107 [0/85 (0%)] Loss: 2.809566 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 107 [11/85 (13%)] Loss: 2.791300 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 107 [22/85 (26%)] Loss: 2.359099 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 107 [33/85 (39%)] Loss: 2.614825 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 107 [44/85 (52%)] Loss: 2.646048 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 107 [55/85 (65%)] Loss: 2.273921 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 107 [66/85 (78%)] Loss: 2.963308 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 107 [77/85 (91%)] Loss: 2.340134 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 107
+    loss           : 2.757435173146865
+    accuracy       : 0.8356227528348852
+    val_loss       : 12.132141197784037
+    val_accuracy   : 0.3705
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 108 [0/85 (0%)] Loss: 2.836320 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 108 [11/85 (13%)] Loss: 2.823916 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 108 [22/85 (26%)] Loss: 2.578365 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 108 [33/85 (39%)] Loss: 2.848665 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 108 [44/85 (52%)] Loss: 3.042446 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 108 [55/85 (65%)] Loss: 2.473589 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 108 [66/85 (78%)] Loss: 2.550554 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 108 [77/85 (91%)] Loss: 2.369555 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 108
+    loss           : 2.7101740458432366
+    accuracy       : 0.8392182170185305
+    val_loss       : 12.107201817669447
+    val_accuracy   : 0.366
+Train Epoch: 109 [0/85 (0%)] Loss: 2.689565 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 109 [11/85 (13%)] Loss: 3.216619 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 109 [22/85 (26%)] Loss: 2.428326 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 109 [33/85 (39%)] Loss: 2.619442 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 109 [44/85 (52%)] Loss: 2.289552 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 109 [55/85 (65%)] Loss: 2.457670 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 109 [66/85 (78%)] Loss: 2.429915 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 109 [77/85 (91%)] Loss: 3.023195 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 109
+    loss           : 2.650836536463569
+    accuracy       : 0.840601087858394
+    val_loss       : 12.075939938991885
+    val_accuracy   : 0.3752
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 110 [0/85 (0%)] Loss: 3.261733 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 110 [11/85 (13%)] Loss: 2.385815 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 110 [22/85 (26%)] Loss: 2.616976 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 110 [33/85 (39%)] Loss: 2.414577 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 110 [44/85 (52%)] Loss: 2.743800 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 110 [55/85 (65%)] Loss: 2.819143 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 110 [66/85 (78%)] Loss: 2.745815 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 110 [77/85 (91%)] Loss: 2.392151 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 110
+    loss           : 2.608897492464851
+    accuracy       : 0.847976399004333
+    val_loss       : 12.20005684864672
+    val_accuracy   : 0.3709
+Train Epoch: 111 [0/85 (0%)] Loss: 2.913457 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 111 [11/85 (13%)] Loss: 3.082386 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 111 [22/85 (26%)] Loss: 2.603379 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 111 [33/85 (39%)] Loss: 2.537580 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 111 [44/85 (52%)] Loss: 2.307416 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 111 [55/85 (65%)] Loss: 2.353697 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 111 [66/85 (78%)] Loss: 2.939636 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 111 [77/85 (91%)] Loss: 2.499025 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 111
+    loss           : 2.586629763771506
+    accuracy       : 0.8488983128975753
+    val_loss       : 12.22305115566978
+    val_accuracy   : 0.368
+Train Epoch: 112 [0/85 (0%)] Loss: 2.560311 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 112 [11/85 (13%)] Loss: 2.697234 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 112 [22/85 (26%)] Loss: 2.155501 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 112 [33/85 (39%)] Loss: 1.936077 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 112 [44/85 (52%)] Loss: 2.858519 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 112 [55/85 (65%)] Loss: 2.132440 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 112 [66/85 (78%)] Loss: 2.559028 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 112 [77/85 (91%)] Loss: 2.389866 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 112
+    loss           : 2.5570149674135094
+    accuracy       : 0.8526781598598691
+    val_loss       : 12.161892094189607
+    val_accuracy   : 0.3727
+Train Epoch: 113 [0/85 (0%)] Loss: 2.248019 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 113 [11/85 (13%)] Loss: 2.764443 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 113 [22/85 (26%)] Loss: 2.196798 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 113 [33/85 (39%)] Loss: 2.236076 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 113 [44/85 (52%)] Loss: 1.932398 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 113 [55/85 (65%)] Loss: 2.381750 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 113 [66/85 (78%)] Loss: 2.442039 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 113 [77/85 (91%)] Loss: 2.849270 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 113
+    loss           : 2.457449959306156
+    accuracy       : 0.8591315571125657
+    val_loss       : 12.336817717250389
+    val_accuracy   : 0.3772
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 114 [0/85 (0%)] Loss: 2.178154 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 114 [11/85 (13%)] Loss: 2.465912 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 114 [22/85 (26%)] Loss: 2.954001 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 114 [33/85 (39%)] Loss: 2.665372 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 114 [44/85 (52%)] Loss: 2.591996 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 114 [55/85 (65%)] Loss: 1.945472 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 114 [66/85 (78%)] Loss: 2.453492 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 114 [77/85 (91%)] Loss: 2.747277 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 114
+    loss           : 2.439707742017858
+    accuracy       : 0.8602378537844565
+    val_loss       : 12.265993094142479
+    val_accuracy   : 0.374
+Train Epoch: 115 [0/85 (0%)] Loss: 1.720580 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 115 [11/85 (13%)] Loss: 1.931233 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 115 [22/85 (26%)] Loss: 2.296093 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 115 [33/85 (39%)] Loss: 2.456487 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 115 [44/85 (52%)] Loss: 3.031249 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 115 [55/85 (65%)] Loss: 2.226495 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 115 [66/85 (78%)] Loss: 2.479645 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 115 [77/85 (91%)] Loss: 2.974044 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 115
+    loss           : 2.391104590191561
+    accuracy       : 0.8628192126855352
+    val_loss       : 12.341508841212791
+    val_accuracy   : 0.3746
+Train Epoch: 116 [0/85 (0%)] Loss: 2.681783 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 116 [11/85 (13%)] Loss: 3.119515 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 116 [22/85 (26%)] Loss: 2.082356 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 116 [33/85 (39%)] Loss: 2.802108 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 116 [44/85 (52%)] Loss: 1.932053 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 116 [55/85 (65%)] Loss: 2.974018 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 116 [66/85 (78%)] Loss: 2.012376 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 116 [77/85 (91%)] Loss: 2.285403 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 116
+    loss           : 2.37335658494164
+    accuracy       : 0.8659537199225592
+    val_loss       : 12.414516400687303
+    val_accuracy   : 0.371
+Train Epoch: 117 [0/85 (0%)] Loss: 2.368496 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 117 [11/85 (13%)] Loss: 2.630620 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 117 [22/85 (26%)] Loss: 2.485860 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 117 [33/85 (39%)] Loss: 1.909083 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 117 [44/85 (52%)] Loss: 2.506638 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 117 [55/85 (65%)] Loss: 2.251641 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 117 [66/85 (78%)] Loss: 1.931262 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 117 [77/85 (91%)] Loss: 2.199395 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 117
+    loss           : 2.302773353632759
+    accuracy       : 0.8695491841062045
+    val_loss       : 12.393907088267651
+    val_accuracy   : 0.3761
+Train Epoch: 118 [0/85 (0%)] Loss: 2.075229 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 118 [11/85 (13%)] Loss: 2.075435 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 118 [22/85 (26%)] Loss: 2.976414 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 118 [33/85 (39%)] Loss: 2.470419 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 118 [44/85 (52%)] Loss: 2.390998 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 118 [55/85 (65%)] Loss: 2.793989 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 118 [66/85 (78%)] Loss: 2.131332 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 118 [77/85 (91%)] Loss: 2.465027 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 118
+    loss           : 2.2956827682607313
+    accuracy       : 0.8725914999539043
+    val_loss       : 12.439727107180826
+    val_accuracy   : 0.3751
+Train Epoch: 119 [0/85 (0%)] Loss: 3.080786 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 119 [11/85 (13%)] Loss: 2.427608 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 119 [22/85 (26%)] Loss: 2.155996 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 119 [33/85 (39%)] Loss: 2.398649 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 119 [44/85 (52%)] Loss: 2.231915 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 119 [55/85 (65%)] Loss: 2.850969 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 119 [66/85 (78%)] Loss: 2.734082 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 119 [77/85 (91%)] Loss: 2.351276 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 119
+    loss           : 2.2748279711779427
+    accuracy       : 0.8726836913432285
+    val_loss       : 12.451700222643115
+    val_accuracy   : 0.3724
+Train Epoch: 120 [0/85 (0%)] Loss: 2.062076 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 120 [11/85 (13%)] Loss: 2.015129 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 120 [22/85 (26%)] Loss: 2.460973 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 120 [33/85 (39%)] Loss: 2.438262 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 120 [44/85 (52%)] Loss: 2.869867 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 120 [55/85 (65%)] Loss: 2.144804 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 120 [66/85 (78%)] Loss: 2.167377 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 120 [77/85 (91%)] Loss: 2.282212 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 120
+    loss           : 2.234966656740974
+    accuracy       : 0.8739743707937678
+    val_loss       : 12.630212723454342
+    val_accuracy   : 0.3778
+Saving checkpoint: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/checkpoint-epoch120.pth ...
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 121 [0/85 (0%)] Loss: 2.234786 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 121 [11/85 (13%)] Loss: 2.293047 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 121 [22/85 (26%)] Loss: 2.257773 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 121 [33/85 (39%)] Loss: 1.836884 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 121 [44/85 (52%)] Loss: 2.764675 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 121 [55/85 (65%)] Loss: 2.819794 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 121 [66/85 (78%)] Loss: 2.342157 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 121 [77/85 (91%)] Loss: 2.293015 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 121
+    loss           : 2.237608086361605
+    accuracy       : 0.8720383516179588
+    val_loss       : 12.651909236666523
+    val_accuracy   : 0.3729
+Train Epoch: 122 [0/85 (0%)] Loss: 2.275887 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 122 [11/85 (13%)] Loss: 1.693347 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 122 [22/85 (26%)] Loss: 2.285954 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 122 [33/85 (39%)] Loss: 1.795030 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 122 [44/85 (52%)] Loss: 1.959217 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 122 [55/85 (65%)] Loss: 2.725639 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 122 [66/85 (78%)] Loss: 2.349730 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 122 [77/85 (91%)] Loss: 2.448561 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 122
+    loss           : 2.2129050675560444
+    accuracy       : 0.877108878030792
+    val_loss       : 12.617293514782869
+    val_accuracy   : 0.3756
+Train Epoch: 123 [0/85 (0%)] Loss: 2.644598 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 123 [11/85 (13%)] Loss: 2.001012 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 123 [22/85 (26%)] Loss: 2.622715 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 123 [33/85 (39%)] Loss: 2.019417 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 123 [44/85 (52%)] Loss: 1.744822 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 123 [55/85 (65%)] Loss: 1.660581 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 123 [66/85 (78%)] Loss: 1.476195 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 123 [77/85 (91%)] Loss: 2.037388 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 123
+    loss           : 2.1220077626845417
+    accuracy       : 0.8842076150087582
+    val_loss       : 12.880587867543667
+    val_accuracy   : 0.3663
+Train Epoch: 124 [0/85 (0%)] Loss: 2.638380 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 124 [11/85 (13%)] Loss: 2.305195 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 124 [22/85 (26%)] Loss: 1.775431 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 124 [33/85 (39%)] Loss: 2.478646 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 124 [44/85 (52%)] Loss: 2.166105 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 124 [55/85 (65%)] Loss: 2.853005 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 124 [66/85 (78%)] Loss: 2.041913 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 124 [77/85 (91%)] Loss: 2.047086 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 124
+    loss           : 2.117358263801126
+    accuracy       : 0.8852217202913248
+    val_loss       : 12.795182566099529
+    val_accuracy   : 0.369
+Train Epoch: 125 [0/85 (0%)] Loss: 2.181658 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 125 [11/85 (13%)] Loss: 1.665228 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 125 [22/85 (26%)] Loss: 1.665067 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 125 [33/85 (39%)] Loss: 2.007615 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 125 [44/85 (52%)] Loss: 2.592708 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 125 [55/85 (65%)] Loss: 2.128317 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 125 [66/85 (78%)] Loss: 2.469830 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 125 [77/85 (91%)] Loss: 1.611451 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 125
+    loss           : 2.1242654786390416
+    accuracy       : 0.8811652991610583
+    val_loss       : 12.518545331834238
+    val_accuracy   : 0.3781
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 126 [0/85 (0%)] Loss: 1.959126 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 126 [11/85 (13%)] Loss: 1.817292 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 126 [22/85 (26%)] Loss: 1.721760 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 126 [33/85 (39%)] Loss: 1.986603 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 126 [44/85 (52%)] Loss: 2.719397 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 126 [55/85 (65%)] Loss: 2.290365 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 126 [66/85 (78%)] Loss: 2.052161 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 126 [77/85 (91%)] Loss: 1.623356 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 126
+    loss           : 2.0425546519896565
+    accuracy       : 0.8890937586429427
+    val_loss       : 12.920966377741173
+    val_accuracy   : 0.3726
+Train Epoch: 127 [0/85 (0%)] Loss: 1.932559 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 127 [11/85 (13%)] Loss: 1.588373 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 127 [22/85 (26%)] Loss: 1.867991 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 127 [33/85 (39%)] Loss: 2.027114 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 127 [44/85 (52%)] Loss: 1.818700 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 127 [55/85 (65%)] Loss: 1.938525 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 127 [66/85 (78%)] Loss: 2.334531 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 127 [77/85 (91%)] Loss: 2.808508 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 127
+    loss           : 2.073537658242618
+    accuracy       : 0.8868811652991611
+    val_loss       : 12.89240476149547
+    val_accuracy   : 0.3703
+Train Epoch: 128 [0/85 (0%)] Loss: 1.812093 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 128 [11/85 (13%)] Loss: 2.451839 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 128 [22/85 (26%)] Loss: 2.522285 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 128 [33/85 (39%)] Loss: 1.978754 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 128 [44/85 (52%)] Loss: 1.428245 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 128 [55/85 (65%)] Loss: 1.457463 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 128 [66/85 (78%)] Loss: 1.345975 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 128 [77/85 (91%)] Loss: 1.985834 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 128
+    loss           : 2.040996154616861
+    accuracy       : 0.8914907347653729
+    val_loss       : 13.047401440294482
+    val_accuracy   : 0.3714
+Train Epoch: 129 [0/85 (0%)] Loss: 2.370086 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 129 [11/85 (13%)] Loss: 1.579214 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 129 [22/85 (26%)] Loss: 1.552623 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 129 [33/85 (39%)] Loss: 2.461959 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 129 [44/85 (52%)] Loss: 1.946204 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 129 [55/85 (65%)] Loss: 1.587681 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 129 [66/85 (78%)] Loss: 2.761466 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 129 [77/85 (91%)] Loss: 1.819848 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 129
+    loss           : 1.9740687945309807
+    accuracy       : 0.8969300267355029
+    val_loss       : 12.835052224654186
+    val_accuracy   : 0.3762
+Train Epoch: 130 [0/85 (0%)] Loss: 2.218380 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 130 [11/85 (13%)] Loss: 1.804673 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 130 [22/85 (26%)] Loss: 2.550205 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 130 [33/85 (39%)] Loss: 2.197762 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 130 [44/85 (52%)] Loss: 1.959018 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 130 [55/85 (65%)] Loss: 2.695134 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 130 [66/85 (78%)] Loss: 1.932476 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 130 [77/85 (91%)] Loss: 1.860004 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 130
+    loss           : 2.0286046070211072
+    accuracy       : 0.8859592514059187
+    val_loss       : 12.941309723672987
+    val_accuracy   : 0.3723
+Train Epoch: 131 [0/85 (0%)] Loss: 1.636438 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 131 [11/85 (13%)] Loss: 2.002836 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 131 [22/85 (26%)] Loss: 2.072909 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 131 [33/85 (39%)] Loss: 1.960672 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 131 [44/85 (52%)] Loss: 1.775179 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 131 [55/85 (65%)] Loss: 2.502552 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 131 [66/85 (78%)] Loss: 2.165026 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 131 [77/85 (91%)] Loss: 2.050398 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 131
+    loss           : 1.9360172468073227
+    accuracy       : 0.896192495620909
+    val_loss       : 13.08646512333351
+    val_accuracy   : 0.3707
+Train Epoch: 132 [0/85 (0%)] Loss: 1.255652 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 132 [11/85 (13%)] Loss: 2.641679 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 132 [22/85 (26%)] Loss: 2.192512 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 132 [33/85 (39%)] Loss: 2.241834 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 132 [44/85 (52%)] Loss: 2.009285 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 132 [55/85 (65%)] Loss: 1.881546 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 132 [66/85 (78%)] Loss: 1.892930 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 132 [77/85 (91%)] Loss: 1.875847 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 132
+    loss           : 1.9626270911272834
+    accuracy       : 0.8940720936664516
+    val_loss       : 12.825138067897361
+    val_accuracy   : 0.3783
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 133 [0/85 (0%)] Loss: 2.370009 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 133 [11/85 (13%)] Loss: 1.563298 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 133 [22/85 (26%)] Loss: 2.386527 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 133 [33/85 (39%)] Loss: 2.008655 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 133 [44/85 (52%)] Loss: 1.787158 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 133 [55/85 (65%)] Loss: 2.211445 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 133 [66/85 (78%)] Loss: 2.112538 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 133 [77/85 (91%)] Loss: 1.814983 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 133
+    loss           : 1.929285484201768
+    accuracy       : 0.8992348114686088
+    val_loss       : 12.90934097917774
+    val_accuracy   : 0.3759
+Train Epoch: 134 [0/85 (0%)] Loss: 2.183394 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 134 [11/85 (13%)] Loss: 1.500691 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 134 [22/85 (26%)] Loss: 1.629317 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 134 [33/85 (39%)] Loss: 1.723023 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 134 [44/85 (52%)] Loss: 2.002920 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 134 [55/85 (65%)] Loss: 1.883421 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 134 [66/85 (78%)] Loss: 2.045707 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 134 [77/85 (91%)] Loss: 2.031779 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 134
+    loss           : 1.8767699564204496
+    accuracy       : 0.89969576841523
+    val_loss       : 13.07696728766719
+    val_accuracy   : 0.3715
+Train Epoch: 135 [0/85 (0%)] Loss: 1.512464 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 135 [11/85 (13%)] Loss: 2.325138 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 135 [22/85 (26%)] Loss: 1.337480 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 135 [33/85 (39%)] Loss: 1.770771 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 135 [44/85 (52%)] Loss: 1.557994 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 135 [55/85 (65%)] Loss: 2.132612 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 135 [66/85 (78%)] Loss: 1.841748 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 135 [77/85 (91%)] Loss: 1.784563 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 135
+    loss           : 1.8869751200956457
+    accuracy       : 0.9001567253618512
+    val_loss       : 13.146532010428514
+    val_accuracy   : 0.3656
+Train Epoch: 136 [0/85 (0%)] Loss: 2.243667 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 136 [11/85 (13%)] Loss: 1.913885 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 136 [22/85 (26%)] Loss: 1.964107 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 136 [33/85 (39%)] Loss: 1.471606 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 136 [44/85 (52%)] Loss: 2.053189 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 136 [55/85 (65%)] Loss: 1.497255 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 136 [66/85 (78%)] Loss: 1.809703 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 136 [77/85 (91%)] Loss: 2.062844 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 136
+    loss           : 1.8946447751101325
+    accuracy       : 0.8980363234073937
+    val_loss       : 13.219190549246873
+    val_accuracy   : 0.3709
+Train Epoch: 137 [0/85 (0%)] Loss: 1.863732 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 137 [11/85 (13%)] Loss: 1.956089 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 137 [22/85 (26%)] Loss: 1.646877 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 137 [33/85 (39%)] Loss: 1.922946 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 137 [44/85 (52%)] Loss: 1.834134 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 137 [55/85 (65%)] Loss: 2.375593 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 137 [66/85 (78%)] Loss: 1.872482 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 137 [77/85 (91%)] Loss: 2.264357 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 137
+    loss           : 1.8312010554706348
+    accuracy       : 0.9034756153775237
+    val_loss       : 13.22124461886249
+    val_accuracy   : 0.3719
+Train Epoch: 138 [0/85 (0%)] Loss: 1.639404 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 138 [11/85 (13%)] Loss: 1.934797 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 138 [22/85 (26%)] Loss: 1.095866 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 138 [33/85 (39%)] Loss: 1.305452 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 138 [44/85 (52%)] Loss: 1.929237 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 138 [55/85 (65%)] Loss: 1.798041 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 138 [66/85 (78%)] Loss: 1.927170 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 138 [77/85 (91%)] Loss: 1.320291 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 138
+    loss           : 1.829759431586546
+    accuracy       : 0.9034756153775237
+    val_loss       : 13.09703574603117
+    val_accuracy   : 0.3728
+Train Epoch: 139 [0/85 (0%)] Loss: 1.937186 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 139 [11/85 (13%)] Loss: 2.276841 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 139 [22/85 (26%)] Loss: 2.008799 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 139 [33/85 (39%)] Loss: 1.921814 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 139 [44/85 (52%)] Loss: 1.403194 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 139 [55/85 (65%)] Loss: 1.872618 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 139 [66/85 (78%)] Loss: 1.848545 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 139 [77/85 (91%)] Loss: 1.716251 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 139
+    loss           : 1.8331226601320154
+    accuracy       : 0.903567806766848
+    val_loss       : 13.54849955401843
+    val_accuracy   : 0.3677
+Train Epoch: 140 [0/85 (0%)] Loss: 2.420621 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 140 [11/85 (13%)] Loss: 2.167020 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 140 [22/85 (26%)] Loss: 1.615085 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 140 [33/85 (39%)] Loss: 1.732681 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 140 [44/85 (52%)] Loss: 1.430900 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 140 [55/85 (65%)] Loss: 1.451563 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 140 [66/85 (78%)] Loss: 1.447743 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 140 [77/85 (91%)] Loss: 1.536944 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 140
+    loss           : 1.799460196495056
+    accuracy       : 0.9071632709504932
+    val_loss       : 13.370240452923353
+    val_accuracy   : 0.3658
+Train Epoch: 141 [0/85 (0%)] Loss: 2.271528 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 141 [11/85 (13%)] Loss: 1.554731 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 141 [22/85 (26%)] Loss: 1.652733 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 141 [33/85 (39%)] Loss: 1.830126 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 141 [44/85 (52%)] Loss: 1.897177 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 141 [55/85 (65%)] Loss: 1.280568 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 141 [66/85 (78%)] Loss: 2.317743 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 141 [77/85 (91%)] Loss: 1.504734 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 141
+    loss           : 1.7778584466261023
+    accuracy       : 0.9077164192864386
+    val_loss       : 13.285939482193958
+    val_accuracy   : 0.3722
+Train Epoch: 142 [0/85 (0%)] Loss: 1.613733 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 142 [11/85 (13%)] Loss: 1.372395 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 142 [22/85 (26%)] Loss: 2.022146 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 142 [33/85 (39%)] Loss: 1.442861 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 142 [44/85 (52%)] Loss: 1.761563 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 142 [55/85 (65%)] Loss: 2.402785 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 142 [66/85 (78%)] Loss: 2.035308 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 142 [77/85 (91%)] Loss: 1.940519 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 142
+    loss           : 1.7738127273671767
+    accuracy       : 0.9080851848437356
+    val_loss       : 13.296721675727941
+    val_accuracy   : 0.37
+Train Epoch: 143 [0/85 (0%)] Loss: 1.979097 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 143 [11/85 (13%)] Loss: 1.471292 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 143 [22/85 (26%)] Loss: 2.284065 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 143 [33/85 (39%)] Loss: 1.283861 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 143 [44/85 (52%)] Loss: 1.527997 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 143 [55/85 (65%)] Loss: 1.861342 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 143 [66/85 (78%)] Loss: 1.253344 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 143 [77/85 (91%)] Loss: 2.045487 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 143
+    loss           : 1.7626435826806461
+    accuracy       : 0.9093758642942749
+    val_loss       : 13.388252294516262
+    val_accuracy   : 0.3715
+Train Epoch: 144 [0/85 (0%)] Loss: 1.678924 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 144 [11/85 (13%)] Loss: 1.247762 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 144 [22/85 (26%)] Loss: 2.089878 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 144 [33/85 (39%)] Loss: 1.811900 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 144 [44/85 (52%)] Loss: 1.812371 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 144 [55/85 (65%)] Loss: 1.962089 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 144 [66/85 (78%)] Loss: 1.977217 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 144 [77/85 (91%)] Loss: 1.705487 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 144
+    loss           : 1.7732832053128411
+    accuracy       : 0.9079008020650872
+    val_loss       : 13.317346681522418
+    val_accuracy   : 0.3697
+Train Epoch: 145 [0/85 (0%)] Loss: 2.027662 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 145 [11/85 (13%)] Loss: 1.397741 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 145 [22/85 (26%)] Loss: 1.422087 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 145 [33/85 (39%)] Loss: 1.602184 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 145 [44/85 (52%)] Loss: 1.208282 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 145 [55/85 (65%)] Loss: 1.939991 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 145 [66/85 (78%)] Loss: 1.893596 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 145 [77/85 (91%)] Loss: 1.537946 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 145
+    loss           : 1.7432956969036775
+    accuracy       : 0.9097446298515719
+    val_loss       : 13.543139240409754
+    val_accuracy   : 0.3698
+Train Epoch: 146 [0/85 (0%)] Loss: 1.827610 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 146 [11/85 (13%)] Loss: 1.686269 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 146 [22/85 (26%)] Loss: 1.523179 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 146 [33/85 (39%)] Loss: 1.673813 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 146 [44/85 (52%)] Loss: 1.319488 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 146 [55/85 (65%)] Loss: 1.975349 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 146 [66/85 (78%)] Loss: 1.228049 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 146 [77/85 (91%)] Loss: 1.769776 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 146
+    loss           : 1.7048170720829683
+    accuracy       : 0.914446390707108
+    val_loss       : 13.457306125496007
+    val_accuracy   : 0.3667
+Train Epoch: 147 [0/85 (0%)] Loss: 2.155403 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 147 [11/85 (13%)] Loss: 1.345062 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 147 [22/85 (26%)] Loss: 1.854970 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 147 [33/85 (39%)] Loss: 1.660965 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 147 [44/85 (52%)] Loss: 1.830546 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 147 [55/85 (65%)] Loss: 1.346292 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 147 [66/85 (78%)] Loss: 2.057286 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 147 [77/85 (91%)] Loss: 2.062577 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 147
+    loss           : 1.7046999959384694
+    accuracy       : 0.9119572231953536
+    val_loss       : 13.489744500268865
+    val_accuracy   : 0.3702
+Train Epoch: 148 [0/85 (0%)] Loss: 1.360344 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 148 [11/85 (13%)] Loss: 1.552527 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 148 [22/85 (26%)] Loss: 1.314017 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 148 [33/85 (39%)] Loss: 2.134516 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 148 [44/85 (52%)] Loss: 1.704848 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 148 [55/85 (65%)] Loss: 1.709015 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 148 [66/85 (78%)] Loss: 1.611643 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 148 [77/85 (91%)] Loss: 2.319299 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 148
+    loss           : 1.6871931069037494
+    accuracy       : 0.9134322854245414
+    val_loss       : 13.640833287299435
+    val_accuracy   : 0.3773
+Train Epoch: 149 [0/85 (0%)] Loss: 1.715140 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 149 [11/85 (13%)] Loss: 1.211413 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 149 [22/85 (26%)] Loss: 1.665836 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 149 [33/85 (39%)] Loss: 2.379382 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 149 [44/85 (52%)] Loss: 1.590203 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 149 [55/85 (65%)] Loss: 1.613794 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 149 [66/85 (78%)] Loss: 1.700248 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 149 [77/85 (91%)] Loss: 1.244379 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 149
+    loss           : 1.6408955013050752
+    accuracy       : 0.9189637687839955
+    val_loss       : 13.718809840045397
+    val_accuracy   : 0.3661
+Train Epoch: 150 [0/85 (0%)] Loss: 1.490386 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 150 [11/85 (13%)] Loss: 1.677262 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 150 [22/85 (26%)] Loss: 2.076672 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 150 [33/85 (39%)] Loss: 1.818788 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 150 [44/85 (52%)] Loss: 1.634102 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 150 [55/85 (65%)] Loss: 1.457937 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 150 [66/85 (78%)] Loss: 1.317901 max group LR: 0.0100 min group LR: 0.0100
+Train Epoch: 150 [77/85 (91%)] Loss: 1.822431 max group LR: 0.0100 min group LR: 0.0100
+    epoch          : 150
+    loss           : 1.6388060527689317
+    accuracy       : 0.9188715773946713
+    val_loss       : 13.522058450722996
+    val_accuracy   : 0.3746
+Train Epoch: 151 [0/85 (0%)] Loss: 1.744981 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 151 [11/85 (13%)] Loss: 0.991347 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 151 [22/85 (26%)] Loss: 1.487921 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 151 [33/85 (39%)] Loss: 1.226604 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 151 [44/85 (52%)] Loss: 1.666344 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 151 [55/85 (65%)] Loss: 1.046653 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 151 [66/85 (78%)] Loss: 1.840176 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 151 [77/85 (91%)] Loss: 1.082686 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 151
+    loss           : 1.465314324463115
+    accuracy       : 0.928090716327095
+    val_loss       : 13.376607218875161
+    val_accuracy   : 0.3821
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 152 [0/85 (0%)] Loss: 1.633592 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 152 [11/85 (13%)] Loss: 1.437340 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 152 [22/85 (26%)] Loss: 1.492880 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 152 [33/85 (39%)] Loss: 1.441903 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 152 [44/85 (52%)] Loss: 1.621580 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 152 [55/85 (65%)] Loss: 1.366169 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 152 [66/85 (78%)] Loss: 1.913544 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 152 [77/85 (91%)] Loss: 0.896980 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 152
+    loss           : 1.3766861340578864
+    accuracy       : 0.9339909652438462
+    val_loss       : 13.268503949612002
+    val_accuracy   : 0.3832
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 153 [0/85 (0%)] Loss: 1.850456 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 153 [11/85 (13%)] Loss: 1.118262 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 153 [22/85 (26%)] Loss: 1.352602 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 153 [33/85 (39%)] Loss: 1.168270 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 153 [44/85 (52%)] Loss: 1.478733 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 153 [55/85 (65%)] Loss: 1.554316 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 153 [66/85 (78%)] Loss: 1.120416 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 153 [77/85 (91%)] Loss: 1.344133 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 153
+    loss           : 1.345181558412664
+    accuracy       : 0.9380473863741127
+    val_loss       : 13.336925615238238
+    val_accuracy   : 0.3816
+Train Epoch: 154 [0/85 (0%)] Loss: 1.159260 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 154 [11/85 (13%)] Loss: 1.007510 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 154 [22/85 (26%)] Loss: 1.086603 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 154 [33/85 (39%)] Loss: 0.675085 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 154 [44/85 (52%)] Loss: 1.106153 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 154 [55/85 (65%)] Loss: 1.508644 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 154 [66/85 (78%)] Loss: 1.348331 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 154 [77/85 (91%)] Loss: 1.397342 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 154
+    loss           : 1.3090848733397091
+    accuracy       : 0.9415506591684337
+    val_loss       : 13.32145348078088
+    val_accuracy   : 0.383
+Train Epoch: 155 [0/85 (0%)] Loss: 1.348595 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 155 [11/85 (13%)] Loss: 1.459846 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 155 [22/85 (26%)] Loss: 1.002170 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 155 [33/85 (39%)] Loss: 1.197420 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 155 [44/85 (52%)] Loss: 1.338313 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 155 [55/85 (65%)] Loss: 1.659254 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 155 [66/85 (78%)] Loss: 1.270591 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 155 [77/85 (91%)] Loss: 1.227574 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 155
+    loss           : 1.319613094890819
+    accuracy       : 0.9388771088780308
+    val_loss       : 13.240721316277225
+    val_accuracy   : 0.3827
+Train Epoch: 156 [0/85 (0%)] Loss: 1.531141 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 156 [11/85 (13%)] Loss: 1.171889 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 156 [22/85 (26%)] Loss: 1.355917 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 156 [33/85 (39%)] Loss: 0.938387 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 156 [44/85 (52%)] Loss: 1.296452 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 156 [55/85 (65%)] Loss: 0.992668 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 156 [66/85 (78%)] Loss: 1.481520 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 156 [77/85 (91%)] Loss: 1.656635 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 156
+    loss           : 1.284781849384308
+    accuracy       : 0.9392458744353277
+    val_loss       : 13.209479947633382
+    val_accuracy   : 0.3831
+Train Epoch: 157 [0/85 (0%)] Loss: 1.057405 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 157 [11/85 (13%)] Loss: 0.534200 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 157 [22/85 (26%)] Loss: 1.580242 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 157 [33/85 (39%)] Loss: 1.076803 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 157 [44/85 (52%)] Loss: 1.756865 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 157 [55/85 (65%)] Loss: 1.457835 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 157 [66/85 (78%)] Loss: 1.758162 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 157 [77/85 (91%)] Loss: 1.498476 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 157
+    loss           : 1.2550096406656153
+    accuracy       : 0.9414584677791095
+    val_loss       : 13.225860643990432
+    val_accuracy   : 0.3829
+Train Epoch: 158 [0/85 (0%)] Loss: 1.469846 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 158 [11/85 (13%)] Loss: 1.498138 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 158 [22/85 (26%)] Loss: 1.621497 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 158 [33/85 (39%)] Loss: 1.365113 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 158 [44/85 (52%)] Loss: 1.285532 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 158 [55/85 (65%)] Loss: 0.956832 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 158 [66/85 (78%)] Loss: 1.234147 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 158 [77/85 (91%)] Loss: 1.224311 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 158
+    loss           : 1.2714646353441126
+    accuracy       : 0.941274085000461
+    val_loss       : 13.26814086527764
+    val_accuracy   : 0.3834
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 159 [0/85 (0%)] Loss: 1.031000 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 159 [11/85 (13%)] Loss: 0.954670 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 159 [22/85 (26%)] Loss: 1.213527 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 159 [33/85 (39%)] Loss: 1.453592 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 159 [44/85 (52%)] Loss: 1.124102 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 159 [55/85 (65%)] Loss: 1.228863 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 159 [66/85 (78%)] Loss: 1.018342 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 159 [77/85 (91%)] Loss: 1.440636 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 159
+    loss           : 1.2597513304037207
+    accuracy       : 0.9433944869549185
+    val_loss       : 13.272376253635068
+    val_accuracy   : 0.3859
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 160 [0/85 (0%)] Loss: 1.248531 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 160 [11/85 (13%)] Loss: 1.335665 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 160 [22/85 (26%)] Loss: 1.097112 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 160 [33/85 (39%)] Loss: 1.186177 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 160 [44/85 (52%)] Loss: 1.096470 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 160 [55/85 (65%)] Loss: 1.387090 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 160 [66/85 (78%)] Loss: 1.899965 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 160 [77/85 (91%)] Loss: 1.286729 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 160
+    loss           : 1.2387407204684089
+    accuracy       : 0.9437632525122154
+    val_loss       : 13.325278668463985
+    val_accuracy   : 0.3826
+Saving checkpoint: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/checkpoint-epoch160.pth ...
+Train Epoch: 161 [0/85 (0%)] Loss: 0.980547 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 161 [11/85 (13%)] Loss: 1.452939 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 161 [22/85 (26%)] Loss: 1.905468 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 161 [33/85 (39%)] Loss: 1.635737 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 161 [44/85 (52%)] Loss: 1.022104 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 161 [55/85 (65%)] Loss: 1.052955 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 161 [66/85 (78%)] Loss: 1.184482 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 161 [77/85 (91%)] Loss: 1.456933 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 161
+    loss           : 1.2210339665412904
+    accuracy       : 0.9456992716880244
+    val_loss       : 13.137351748309557
+    val_accuracy   : 0.384
+Train Epoch: 162 [0/85 (0%)] Loss: 1.219514 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 162 [11/85 (13%)] Loss: 1.104430 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 162 [22/85 (26%)] Loss: 1.126814 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 162 [33/85 (39%)] Loss: 1.203655 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 162 [44/85 (52%)] Loss: 1.332391 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 162 [55/85 (65%)] Loss: 1.308142 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 162 [66/85 (78%)] Loss: 1.324468 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 162 [77/85 (91%)] Loss: 0.655589 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 162
+    loss           : 1.2150363227900336
+    accuracy       : 0.9470821425278879
+    val_loss       : 13.187461768524557
+    val_accuracy   : 0.3801
+Train Epoch: 163 [0/85 (0%)] Loss: 1.495883 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 163 [11/85 (13%)] Loss: 0.922983 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 163 [22/85 (26%)] Loss: 1.068934 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 163 [33/85 (39%)] Loss: 1.030216 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 163 [44/85 (52%)] Loss: 1.269014 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 163 [55/85 (65%)] Loss: 1.123435 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 163 [66/85 (78%)] Loss: 1.386641 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 163 [77/85 (91%)] Loss: 1.226527 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 163
+    loss           : 1.2111705313710606
+    accuracy       : 0.9455148889093759
+    val_loss       : 13.20779266840295
+    val_accuracy   : 0.3836
+Train Epoch: 164 [0/85 (0%)] Loss: 1.005986 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 164 [11/85 (13%)] Loss: 1.133208 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 164 [22/85 (26%)] Loss: 0.903294 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 164 [33/85 (39%)] Loss: 1.078081 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 164 [44/85 (52%)] Loss: 1.013593 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 164 [55/85 (65%)] Loss: 1.136913 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 164 [66/85 (78%)] Loss: 1.581340 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 164 [77/85 (91%)] Loss: 1.371780 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 164
+    loss           : 1.194477276241078
+    accuracy       : 0.945975845855997
+    val_loss       : 13.307736348502244
+    val_accuracy   : 0.3806
+Train Epoch: 165 [0/85 (0%)] Loss: 1.590811 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 165 [11/85 (13%)] Loss: 1.803984 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 165 [22/85 (26%)] Loss: 0.928483 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 165 [33/85 (39%)] Loss: 1.006479 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 165 [44/85 (52%)] Loss: 1.127978 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 165 [55/85 (65%)] Loss: 1.047035 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 165 [66/85 (78%)] Loss: 1.383243 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 165 [77/85 (91%)] Loss: 1.339435 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 165
+    loss           : 1.2172804643126096
+    accuracy       : 0.9448695491841062
+    val_loss       : 13.271594940861569
+    val_accuracy   : 0.3816
+Train Epoch: 166 [0/85 (0%)] Loss: 1.008562 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 166 [11/85 (13%)] Loss: 1.365641 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 166 [22/85 (26%)] Loss: 1.745064 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 166 [33/85 (39%)] Loss: 0.910324 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 166 [44/85 (52%)] Loss: 1.508675 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 166 [55/85 (65%)] Loss: 0.972098 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 166 [66/85 (78%)] Loss: 1.393686 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 166 [77/85 (91%)] Loss: 1.497700 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 166
+    loss           : 1.211958477076362
+    accuracy       : 0.9473587166958606
+    val_loss       : 13.23832641070402
+    val_accuracy   : 0.3818
+Train Epoch: 167 [0/85 (0%)] Loss: 1.140388 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 167 [11/85 (13%)] Loss: 1.295061 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 167 [22/85 (26%)] Loss: 1.297807 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 167 [33/85 (39%)] Loss: 0.929443 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 167 [44/85 (52%)] Loss: 1.155843 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 167 [55/85 (65%)] Loss: 1.008219 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 167 [66/85 (78%)] Loss: 1.227408 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 167 [77/85 (91%)] Loss: 1.329449 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 167
+    loss           : 1.185270770858316
+    accuracy       : 0.9481884391997787
+    val_loss       : 13.295498328872874
+    val_accuracy   : 0.3828
+Train Epoch: 168 [0/85 (0%)] Loss: 1.230933 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 168 [11/85 (13%)] Loss: 1.342706 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 168 [22/85 (26%)] Loss: 1.422497 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 168 [33/85 (39%)] Loss: 1.300078 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 168 [44/85 (52%)] Loss: 1.183235 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 168 [55/85 (65%)] Loss: 1.079713 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 168 [66/85 (78%)] Loss: 0.937330 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 168 [77/85 (91%)] Loss: 1.352085 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 168
+    loss           : 1.19863679970012
+    accuracy       : 0.9465289941919425
+    val_loss       : 13.138464136968684
+    val_accuracy   : 0.3814
+Train Epoch: 169 [0/85 (0%)] Loss: 1.155853 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 169 [11/85 (13%)] Loss: 0.836205 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 169 [22/85 (26%)] Loss: 1.386316 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 169 [33/85 (39%)] Loss: 0.917551 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 169 [44/85 (52%)] Loss: 1.035522 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 169 [55/85 (65%)] Loss: 1.536512 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 169 [66/85 (78%)] Loss: 1.069647 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 169 [77/85 (91%)] Loss: 1.072334 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 169
+    loss           : 1.2166206493097194
+    accuracy       : 0.946344611413294
+    val_loss       : 13.262374093260947
+    val_accuracy   : 0.3807
+Train Epoch: 170 [0/85 (0%)] Loss: 1.004183 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 170 [11/85 (13%)] Loss: 1.152607 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 170 [22/85 (26%)] Loss: 0.623895 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 170 [33/85 (39%)] Loss: 1.466996 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 170 [44/85 (52%)] Loss: 0.916412 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 170 [55/85 (65%)] Loss: 1.288523 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 170 [66/85 (78%)] Loss: 1.053861 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 170 [77/85 (91%)] Loss: 1.742642 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 170
+    loss           : 1.1701386823373683
+    accuracy       : 0.9464368028026182
+    val_loss       : 13.239674869971939
+    val_accuracy   : 0.3821
+Train Epoch: 171 [0/85 (0%)] Loss: 1.117799 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 171 [11/85 (13%)] Loss: 1.731639 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 171 [22/85 (26%)] Loss: 1.613205 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 171 [33/85 (39%)] Loss: 1.383795 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 171 [44/85 (52%)] Loss: 1.146510 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 171 [55/85 (65%)] Loss: 1.210464 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 171 [66/85 (78%)] Loss: 1.642235 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 171 [77/85 (91%)] Loss: 1.331782 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 171
+    loss           : 1.181882936814252
+    accuracy       : 0.9486493961464
+    val_loss       : 13.28267231470422
+    val_accuracy   : 0.3838
+Train Epoch: 172 [0/85 (0%)] Loss: 1.104493 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 172 [11/85 (13%)] Loss: 1.303058 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 172 [22/85 (26%)] Loss: 1.130576 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 172 [33/85 (39%)] Loss: 0.780263 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 172 [44/85 (52%)] Loss: 0.830568 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 172 [55/85 (65%)] Loss: 1.391844 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 172 [66/85 (78%)] Loss: 1.177186 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 172 [77/85 (91%)] Loss: 1.381921 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 172
+    loss           : 1.1690727770328522
+    accuracy       : 0.9490181617036969
+    val_loss       : 13.194780567024328
+    val_accuracy   : 0.3841
+Train Epoch: 173 [0/85 (0%)] Loss: 1.197743 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 173 [11/85 (13%)] Loss: 0.889116 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 173 [22/85 (26%)] Loss: 0.807182 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 173 [33/85 (39%)] Loss: 1.495406 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 173 [44/85 (52%)] Loss: 1.519316 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 173 [55/85 (65%)] Loss: 1.376827 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 173 [66/85 (78%)] Loss: 1.412310 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 173 [77/85 (91%)] Loss: 1.024582 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 173
+    loss           : 1.1593617365640752
+    accuracy       : 0.9491103530930212
+    val_loss       : 13.27008094063288
+    val_accuracy   : 0.3866
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 174 [0/85 (0%)] Loss: 0.857598 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 174 [11/85 (13%)] Loss: 1.146976 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 174 [22/85 (26%)] Loss: 1.451074 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 174 [33/85 (39%)] Loss: 0.894189 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 174 [44/85 (52%)] Loss: 1.603995 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 174 [55/85 (65%)] Loss: 1.248677 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 174 [66/85 (78%)] Loss: 0.819536 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 174 [77/85 (91%)] Loss: 0.715221 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 174
+    loss           : 1.1540711655336269
+    accuracy       : 0.9511385636581543
+    val_loss       : 13.240193934380253
+    val_accuracy   : 0.3824
+Train Epoch: 175 [0/85 (0%)] Loss: 1.192440 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 175 [11/85 (13%)] Loss: 1.173131 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 175 [22/85 (26%)] Loss: 0.974982 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 175 [33/85 (39%)] Loss: 1.390693 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 175 [44/85 (52%)] Loss: 0.902888 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 175 [55/85 (65%)] Loss: 0.870268 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 175 [66/85 (78%)] Loss: 1.172965 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 175 [77/85 (91%)] Loss: 1.192364 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 175
+    loss           : 1.1455115577753852
+    accuracy       : 0.9516917119940997
+    val_loss       : 13.2793975419636
+    val_accuracy   : 0.3824
+Train Epoch: 176 [0/85 (0%)] Loss: 1.047840 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 176 [11/85 (13%)] Loss: 1.483139 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 176 [22/85 (26%)] Loss: 1.701831 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 176 [33/85 (39%)] Loss: 1.510628 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 176 [44/85 (52%)] Loss: 1.558630 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 176 [55/85 (65%)] Loss: 1.195632 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 176 [66/85 (78%)] Loss: 0.892161 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 176 [77/85 (91%)] Loss: 1.028165 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 176
+    loss           : 1.1580306845552781
+    accuracy       : 0.9500322669862635
+    val_loss       : 13.367991580238826
+    val_accuracy   : 0.3832
+Train Epoch: 177 [0/85 (0%)] Loss: 0.930116 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 177 [11/85 (13%)] Loss: 1.670035 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 177 [22/85 (26%)] Loss: 1.898366 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 177 [33/85 (39%)] Loss: 1.290173 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 177 [44/85 (52%)] Loss: 1.071888 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 177 [55/85 (65%)] Loss: 0.938372 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 177 [66/85 (78%)] Loss: 1.048250 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 177 [77/85 (91%)] Loss: 1.380083 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 177
+    loss           : 1.1435708501759698
+    accuracy       : 0.9492947358716696
+    val_loss       : 13.21268607996687
+    val_accuracy   : 0.3845
+Train Epoch: 178 [0/85 (0%)] Loss: 0.858797 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 178 [11/85 (13%)] Loss: 1.005384 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 178 [22/85 (26%)] Loss: 1.271669 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 178 [33/85 (39%)] Loss: 0.841566 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 178 [44/85 (52%)] Loss: 0.805115 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 178 [55/85 (65%)] Loss: 1.323153 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 178 [66/85 (78%)] Loss: 1.001583 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 178 [77/85 (91%)] Loss: 0.491671 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 178
+    loss           : 1.1468015555073232
+    accuracy       : 0.9511385636581543
+    val_loss       : 13.252436493016496
+    val_accuracy   : 0.3878
+Saving current best: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/model_best.pth ...
+Train Epoch: 179 [0/85 (0%)] Loss: 0.658922 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 179 [11/85 (13%)] Loss: 1.151595 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 179 [22/85 (26%)] Loss: 1.059207 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 179 [33/85 (39%)] Loss: 0.919810 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 179 [44/85 (52%)] Loss: 1.042580 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 179 [55/85 (65%)] Loss: 1.255303 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 179 [66/85 (78%)] Loss: 1.134899 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 179 [77/85 (91%)] Loss: 1.187762 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 179
+    loss           : 1.1615611160502715
+    accuracy       : 0.9477274822531575
+    val_loss       : 13.277487199517745
+    val_accuracy   : 0.3859
+Train Epoch: 180 [0/85 (0%)] Loss: 1.242867 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 180 [11/85 (13%)] Loss: 1.088354 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 180 [22/85 (26%)] Loss: 0.976467 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 180 [33/85 (39%)] Loss: 1.207939 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 180 [44/85 (52%)] Loss: 1.209637 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 180 [55/85 (65%)] Loss: 0.982833 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 180 [66/85 (78%)] Loss: 0.639594 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 180 [77/85 (91%)] Loss: 1.329312 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 180
+    loss           : 1.1287128679892595
+    accuracy       : 0.9508619894901816
+    val_loss       : 13.34415580652937
+    val_accuracy   : 0.3845
+Train Epoch: 181 [0/85 (0%)] Loss: 0.997527 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 181 [11/85 (13%)] Loss: 1.001694 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 181 [22/85 (26%)] Loss: 0.853798 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 181 [33/85 (39%)] Loss: 1.414474 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 181 [44/85 (52%)] Loss: 0.798791 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 181 [55/85 (65%)] Loss: 1.393893 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 181 [66/85 (78%)] Loss: 1.116480 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 181 [77/85 (91%)] Loss: 1.416375 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 181
+    loss           : 1.133228112669552
+    accuracy       : 0.9507697981008574
+    val_loss       : 13.411557825305794
+    val_accuracy   : 0.3838
+Train Epoch: 182 [0/85 (0%)] Loss: 1.082295 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 182 [11/85 (13%)] Loss: 0.936988 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 182 [22/85 (26%)] Loss: 1.121723 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 182 [33/85 (39%)] Loss: 0.929981 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 182 [44/85 (52%)] Loss: 0.844519 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 182 [55/85 (65%)] Loss: 0.777893 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 182 [66/85 (78%)] Loss: 1.874713 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 182 [77/85 (91%)] Loss: 0.989130 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 182
+    loss           : 1.1325985501794253
+    accuracy       : 0.9526136258873421
+    val_loss       : 13.292682442484022
+    val_accuracy   : 0.385
+Train Epoch: 183 [0/85 (0%)] Loss: 1.006378 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 183 [11/85 (13%)] Loss: 1.173344 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 183 [22/85 (26%)] Loss: 1.574500 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 183 [33/85 (39%)] Loss: 1.024845 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 183 [44/85 (52%)] Loss: 0.788176 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 183 [55/85 (65%)] Loss: 1.813356 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 183 [66/85 (78%)] Loss: 0.946958 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 183 [77/85 (91%)] Loss: 1.121699 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 183
+    loss           : 1.1348085305270026
+    accuracy       : 0.9493869272609938
+    val_loss       : 13.197936830641348
+    val_accuracy   : 0.3828
+Train Epoch: 184 [0/85 (0%)] Loss: 1.383350 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 184 [11/85 (13%)] Loss: 1.216849 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 184 [22/85 (26%)] Loss: 0.897676 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 184 [33/85 (39%)] Loss: 1.179400 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 184 [44/85 (52%)] Loss: 0.504868 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 184 [55/85 (65%)] Loss: 0.969209 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 184 [66/85 (78%)] Loss: 0.927192 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 184 [77/85 (91%)] Loss: 0.766113 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 184
+    loss           : 1.1027257351314321
+    accuracy       : 0.9551949847884208
+    val_loss       : 13.268021233474151
+    val_accuracy   : 0.3845
+Train Epoch: 185 [0/85 (0%)] Loss: 1.260394 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 185 [11/85 (13%)] Loss: 1.536855 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 185 [22/85 (26%)] Loss: 1.162508 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 185 [33/85 (39%)] Loss: 1.282232 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 185 [44/85 (52%)] Loss: 1.071431 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 185 [55/85 (65%)] Loss: 1.358124 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 185 [66/85 (78%)] Loss: 1.102338 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 185 [77/85 (91%)] Loss: 1.518476 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 185
+    loss           : 1.103442621231079
+    accuracy       : 0.9530745828339633
+    val_loss       : 13.27439153647121
+    val_accuracy   : 0.3844
+Train Epoch: 186 [0/85 (0%)] Loss: 0.547208 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 186 [11/85 (13%)] Loss: 0.787531 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 186 [22/85 (26%)] Loss: 0.855092 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 186 [33/85 (39%)] Loss: 1.815873 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 186 [44/85 (52%)] Loss: 1.167189 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 186 [55/85 (65%)] Loss: 1.264379 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 186 [66/85 (78%)] Loss: 1.037037 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 186 [77/85 (91%)] Loss: 1.407912 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 186
+    loss           : 1.1254511479069205
+    accuracy       : 0.9509541808795059
+    val_loss       : 13.277267528485648
+    val_accuracy   : 0.3813
+Train Epoch: 187 [0/85 (0%)] Loss: 0.749436 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 187 [11/85 (13%)] Loss: 1.452498 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 187 [22/85 (26%)] Loss: 0.811103 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 187 [33/85 (39%)] Loss: 2.261359 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 187 [44/85 (52%)] Loss: 1.170591 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 187 [55/85 (65%)] Loss: 1.442181 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 187 [66/85 (78%)] Loss: 0.836826 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 187 [77/85 (91%)] Loss: 1.186277 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 187
+    loss           : 1.1095731868463403
+    accuracy       : 0.9519682861620724
+    val_loss       : 13.261988482897795
+    val_accuracy   : 0.3847
+Train Epoch: 188 [0/85 (0%)] Loss: 1.201884 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 188 [11/85 (13%)] Loss: 0.558044 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 188 [22/85 (26%)] Loss: 1.512788 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 188 [33/85 (39%)] Loss: 1.108097 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 188 [44/85 (52%)] Loss: 1.075606 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 188 [55/85 (65%)] Loss: 1.428312 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 188 [66/85 (78%)] Loss: 0.995466 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 188 [77/85 (91%)] Loss: 1.445721 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 188
+    loss           : 1.1052425643976997
+    accuracy       : 0.9541808795058542
+    val_loss       : 13.282204422769667
+    val_accuracy   : 0.3828
+Train Epoch: 189 [0/85 (0%)] Loss: 1.550190 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 189 [11/85 (13%)] Loss: 1.354684 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 189 [22/85 (26%)] Loss: 1.178541 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 189 [33/85 (39%)] Loss: 0.886209 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 189 [44/85 (52%)] Loss: 1.591390 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 189 [55/85 (65%)] Loss: 0.939273 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 189 [66/85 (78%)] Loss: 0.873399 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 189 [77/85 (91%)] Loss: 1.247798 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 189
+    loss           : 1.1112900593701531
+    accuracy       : 0.9532589656126118
+    val_loss       : 13.322443756876112
+    val_accuracy   : 0.3813
+Train Epoch: 190 [0/85 (0%)] Loss: 0.752262 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 190 [11/85 (13%)] Loss: 0.967654 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 190 [22/85 (26%)] Loss: 1.310598 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 190 [33/85 (39%)] Loss: 0.931691 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 190 [44/85 (52%)] Loss: 1.052885 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 190 [55/85 (65%)] Loss: 1.264039 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 190 [66/85 (78%)] Loss: 0.807725 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 190 [77/85 (91%)] Loss: 0.672480 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 190
+    loss           : 1.1024925442302929
+    accuracy       : 0.9527058172766664
+    val_loss       : 13.246988972531089
+    val_accuracy   : 0.3815
+Train Epoch: 191 [0/85 (0%)] Loss: 1.379491 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 191 [11/85 (13%)] Loss: 1.087520 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 191 [22/85 (26%)] Loss: 1.669061 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 191 [33/85 (39%)] Loss: 1.357122 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 191 [44/85 (52%)] Loss: 1.327557 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 191 [55/85 (65%)] Loss: 0.794421 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 191 [66/85 (78%)] Loss: 1.212474 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 191 [77/85 (91%)] Loss: 0.782411 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 191
+    loss           : 1.0958930860547458
+    accuracy       : 0.9545496450631511
+    val_loss       : 13.306187810777109
+    val_accuracy   : 0.3816
+Train Epoch: 192 [0/85 (0%)] Loss: 1.425141 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 192 [11/85 (13%)] Loss: 1.194551 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 192 [22/85 (26%)] Loss: 1.212134 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 192 [33/85 (39%)] Loss: 1.128976 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 192 [44/85 (52%)] Loss: 1.053796 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 192 [55/85 (65%)] Loss: 0.986594 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 192 [66/85 (78%)] Loss: 1.290883 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 192 [77/85 (91%)] Loss: 1.055641 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 192
+    loss           : 1.089695034307592
+    accuracy       : 0.9557481331243662
+    val_loss       : 13.24988710427586
+    val_accuracy   : 0.3823
+Train Epoch: 193 [0/85 (0%)] Loss: 0.567653 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 193 [11/85 (13%)] Loss: 0.971769 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 193 [22/85 (26%)] Loss: 0.721451 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 193 [33/85 (39%)] Loss: 1.561418 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 193 [44/85 (52%)] Loss: 0.859819 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 193 [55/85 (65%)] Loss: 1.250694 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 193 [66/85 (78%)] Loss: 0.640391 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 193 [77/85 (91%)] Loss: 1.500113 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 193
+    loss           : 1.0782192647457123
+    accuracy       : 0.9535355397805845
+    val_loss       : 13.294406709791739
+    val_accuracy   : 0.3836
+Train Epoch: 194 [0/85 (0%)] Loss: 1.150934 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 194 [11/85 (13%)] Loss: 1.171281 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 194 [22/85 (26%)] Loss: 0.845267 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 194 [33/85 (39%)] Loss: 0.953920 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 194 [44/85 (52%)] Loss: 0.826380 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 194 [55/85 (65%)] Loss: 1.136639 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 194 [66/85 (78%)] Loss: 1.065979 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 194 [77/85 (91%)] Loss: 0.810142 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 194
+    loss           : 1.077956632305594
+    accuracy       : 0.9547340278417996
+    val_loss       : 13.245286591445343
+    val_accuracy   : 0.3824
+Train Epoch: 195 [0/85 (0%)] Loss: 1.208827 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 195 [11/85 (13%)] Loss: 1.447180 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 195 [22/85 (26%)] Loss: 0.583034 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 195 [33/85 (39%)] Loss: 1.117396 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 195 [44/85 (52%)] Loss: 1.427052 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 195 [55/85 (65%)] Loss: 0.739819 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 195 [66/85 (78%)] Loss: 0.972215 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 195 [77/85 (91%)] Loss: 1.082991 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 195
+    loss           : 1.0970580984564389
+    accuracy       : 0.9526136258873421
+    val_loss       : 13.34015776235846
+    val_accuracy   : 0.3838
+Train Epoch: 196 [0/85 (0%)] Loss: 0.899435 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 196 [11/85 (13%)] Loss: 1.460427 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 196 [22/85 (26%)] Loss: 1.497434 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 196 [33/85 (39%)] Loss: 1.512509 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 196 [44/85 (52%)] Loss: 1.002032 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 196 [55/85 (65%)] Loss: 1.005233 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 196 [66/85 (78%)] Loss: 1.042241 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 196 [77/85 (91%)] Loss: 1.012080 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 196
+    loss           : 1.0651135381530312
+    accuracy       : 0.956854429796257
+    val_loss       : 13.355811263941511
+    val_accuracy   : 0.3827
+Train Epoch: 197 [0/85 (0%)] Loss: 0.968734 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 197 [11/85 (13%)] Loss: 0.632874 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 197 [22/85 (26%)] Loss: 0.784358 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 197 [33/85 (39%)] Loss: 1.772081 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 197 [44/85 (52%)] Loss: 1.488694 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 197 [55/85 (65%)] Loss: 0.956882 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 197 [66/85 (78%)] Loss: 1.226705 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 197 [77/85 (91%)] Loss: 0.760794 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 197
+    loss           : 1.0776718118611504
+    accuracy       : 0.9565778556282843
+    val_loss       : 13.405836696866192
+    val_accuracy   : 0.3824
+Train Epoch: 198 [0/85 (0%)] Loss: 1.771449 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 198 [11/85 (13%)] Loss: 0.976672 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 198 [22/85 (26%)] Loss: 1.227820 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 198 [33/85 (39%)] Loss: 1.700879 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 198 [44/85 (52%)] Loss: 0.725583 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 198 [55/85 (65%)] Loss: 1.171722 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 198 [66/85 (78%)] Loss: 1.043511 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 198 [77/85 (91%)] Loss: 1.070994 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 198
+    loss           : 1.081837843095555
+    accuracy       : 0.9553793675670692
+    val_loss       : 13.213278100460391
+    val_accuracy   : 0.3845
+Train Epoch: 199 [0/85 (0%)] Loss: 0.525463 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 199 [11/85 (13%)] Loss: 1.158114 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 199 [22/85 (26%)] Loss: 0.943133 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 199 [33/85 (39%)] Loss: 1.075180 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 199 [44/85 (52%)] Loss: 1.129299 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 199 [55/85 (65%)] Loss: 0.922745 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 199 [66/85 (78%)] Loss: 1.534489 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 199 [77/85 (91%)] Loss: 1.140717 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 199
+    loss           : 1.0535707536865684
+    accuracy       : 0.9574997695215267
+    val_loss       : 13.258432509023931
+    val_accuracy   : 0.383
+Train Epoch: 200 [0/85 (0%)] Loss: 1.334860 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 200 [11/85 (13%)] Loss: 1.004612 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 200 [22/85 (26%)] Loss: 0.973256 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 200 [33/85 (39%)] Loss: 1.457084 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 200 [44/85 (52%)] Loss: 0.887769 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 200 [55/85 (65%)] Loss: 1.673014 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 200 [66/85 (78%)] Loss: 0.764354 max group LR: 0.0010 min group LR: 0.0010
+Train Epoch: 200 [77/85 (91%)] Loss: 0.888551 max group LR: 0.0010 min group LR: 0.0010
+    epoch          : 200
+    loss           : 1.0657227470594295
+    accuracy       : 0.954918410620448
+    val_loss       : 13.356078848054137
+    val_accuracy   : 0.3851
+Saving checkpoint: /datapool/workspace/3024hlh/saved/models/Imbalance_CIFAR100_LT_ResNet32MoE/0826_211418/checkpoint-epoch200.pth ...
