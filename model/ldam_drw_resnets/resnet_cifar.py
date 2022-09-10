@@ -121,7 +121,7 @@ class CustomizedMoEBasicBlock(FMoEResNetConv):
         # use_1x1conv=False,
         strides=1,
         option='A'
-        ):
+    ):
 
         # FMoEResNetConv only takes care of one convolutional layer
         super().__init__(
@@ -347,7 +347,7 @@ class ResNet_s_MoE(nn.Module):
                 (self.h, self.w),
                 num_expert,
                 moe_top_k
-                )
+            )
         else:
             self.layer3 = self._make_layer(block, layer3_output_dim, num_blocks[2], stride=2)
 
@@ -395,8 +395,8 @@ class ResNet_s_MoE(nn.Module):
                         moe_top_k=moe_top_k,
                         strides=1,
                         option='A'
-                        )
                     )
+                )
             else:
                 layers.append(block(self.in_planes, planes, stride))
             
