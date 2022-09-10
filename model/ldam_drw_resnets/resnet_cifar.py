@@ -122,8 +122,9 @@ class CustomizedMoEBasicBlock(FMoEResNetConv):
         strides=1,
         option='A'
     ):
+        self.log_selected_experts=False
 
-        # FMoEResNetConv only takes care of one convolutional layer
+        # FMoEResNetConv only takes care of one convolutional layer.
         super().__init__(
             num_expert=moe_num_expert,
             num_channels=num_channels,
@@ -183,9 +184,17 @@ class CustomizedMoEBasicBlock(FMoEResNetConv):
 
         # self.bn3 = nn.BatchNorm2d(num_channels)
 
-    def forward(self, X):
+    def enable_logging_experts(self):
+        self.log_selected_experts = True
+        self.selected_experts_log = []
+
+    def disable_logging_experts(self):
+        self.log_selected_experts = False
+        self.selected_experts_log = None
+
+    def forward(self, X, selected_experts_log=None):
         Y = F.relu(self.bn1(self.conv1(X)))
-        Y = self.bn2(super().forward(Y))
+        Y = self.bn2(super().forward(Y, selected_experts_log))
         # if self.conv3:
         #     X = self.bn3(self.conv3(X))
         Y += self.shortcut(X)
@@ -222,7 +231,7 @@ class ResNet_s(nn.Module):
         else:
             s = 1
             self.linear = nn.Linear(layer3_output_dim, num_classes)
-        
+
         self.s = s
 
         self.apply(_weights_init)
@@ -279,11 +288,14 @@ class ResNet_s_MoE(nn.Module):
         layer3_output_dim=None,
         use_norm=False,
         s=30,
-        hw=[32, 32]
+        hw=[32, 32],
         ):
         super(ResNet_s_MoE, self).__init__()
         self.in_planes = 16
         self.h, self.w = hw
+        self.log_selected_experts = False
+        self.layer_moe_idx = layer_moe_idx
+        self.basic_block_moe_idx = basic_block_moe_idx
 
         self.conv1 = nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False)
         # (32, 32)
@@ -299,7 +311,7 @@ class ResNet_s_MoE(nn.Module):
                 (self.h, self.w),
                 num_expert,
                 moe_top_k
-                )
+            )
         else:
             self.layer1 = self._make_layer(block, 16, num_blocks[0], stride=1)
         # (32, 32)
@@ -374,7 +386,7 @@ class ResNet_s_MoE(nn.Module):
 
         return nn.Sequential(*layers)
 
-    def _make_layer_moe(self, block, moe_block, planes, num_blocks, stride, basic_block_moe_idx, hw, num_expert, moe_top_k):
+    def _make_layer_moe(self, block, moe_block, planes, num_blocks, stride, basic_block_moe_idx, hw, num_expert, moe_top_k, log_selected_experts):
         h, w = hw
         strides = [stride] + [1]*(num_blocks-1)
         layers = []
@@ -394,7 +406,8 @@ class ResNet_s_MoE(nn.Module):
                         moe_num_expert=num_expert,
                         moe_top_k=moe_top_k,
                         strides=1,
-                        option='A'
+                        option='A',
+                        log_selected_experts=log_selected_experts
                     )
                 )
             else:

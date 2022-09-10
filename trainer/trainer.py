@@ -1,9 +1,11 @@
+from xml.dom import ValidationErr
 import numpy as np
 import torch
 from torchvision.utils import make_grid
 from base import BaseTrainer
 from utils import inf_loop, MetricTracker, load_state_dict, rename_parallel_state_dict, autocast, use_fp16
 import model.model as module_arch
+from pathlib import Path
 
 class Trainer(BaseTrainer):
     """
@@ -191,6 +193,8 @@ class Trainer(BaseTrainer):
         """
         self.model.eval()
         self.valid_metrics.reset()
+        self.model.enable_logging_experts()
+
         with torch.no_grad():
             if hasattr(self.model, "confidence_model") and self.model.confidence_model:
                 cumulative_sample_num_experts = torch.zeros((self.model.backbone.num_experts, ), device=self.device)
@@ -198,9 +202,11 @@ class Trainer(BaseTrainer):
                 confidence_model = True
             else:
                 confidence_model = False
+
+            valid_data = []
             for batch_idx, (data, target) in enumerate(self.valid_data_loader):
                 data, target = data.to(self.device), target.to(self.device)
-
+                valid_data.append(target)
                 if confidence_model:
                     output, sample_num_experts = self.model(data)
                     num, count = torch.unique(sample_num_experts, return_counts=True)
@@ -224,6 +230,31 @@ class Trainer(BaseTrainer):
         # add histogram of model parameters to the tensorboard
         for name, p in self.model.named_parameters():
             self.writer.add_histogram(name, p, bins='auto')
+
+        # save_dir = Path(self.config['experts_log']['save_dir'])
+        # torch.save(self.model.backbone[4][3].selected_experts_log, save_dir / f'selected_experts_log1_epoch_{epoch}.pt')
+        # torch.save(self.model.backbone[4][4].selected_experts_log, save_dir / f'selected_experts_log2_epoch_{epoch}.pt')
+
+        if epoch > 195:
+            valid_data = valid_data.view(-1, self.model.num_classes)
+            selected_experts_log_list = []
+            selected_experts_log_list.append(self.model.backbone[4][3].selected_experts_log.view(-1, self.model.top_k))
+            selected_experts_log_list.append(self.model.backbone[4][4].selected_experts_log.view(-1, self.model.top_k))
+
+            all_freq_from_experts_to_classes = np.array()
+            for idx, selected_experts_log in enumerate(selected_experts_log_list):
+                freq_from_experts_to_classes = np.zeros((self.model.num_expert, self.model.num_classes))
+                for target, list_experts in zip(valid_data, selected_experts_log):
+                    for expert in list_experts:
+                        freq_from_experts_to_classes[expert][target] += 1
+                all_freq_from_experts_to_classes.append(freq_from_experts_to_classes)
+                np.save(all_freq_from_experts_to_classes, Path(self.config.log_dir) / f'selected_experts_log_part_{idx}_epoch_{epoch}')
+            
+            # torch.save(self.model.backbone[4][3].selected_experts_log, Path(self.config.log_dir) / f'selected_experts_log1_epoch_{epoch}.pt')
+            # torch.save(self.model.backbone[4][4].selected_experts_log, Path(self.config.log_dir) / f'selected_experts_log2_epoch_{epoch}.pt')
+            #! Try to use the same path as the checking point.
+            self.model.disable_logging_experts()
+
         return self.valid_metrics.result()
 
     def _progress(self, batch_idx):

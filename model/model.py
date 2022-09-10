@@ -80,6 +80,10 @@ class ResNet32MoEModel(Model):
         **kwargs
         ):
         super().__init__(num_classes, None)
+        self.log_selected_experts = False
+        self.num_classes = num_classes
+        self.num_expert = num_expert
+        self.top_k = moe_top_k
         self.backbone = resnet_cifar.ResNet_s_MoE(
             resnet_cifar.BasicBlock,
             resnet_cifar.CustomizedMoEBasicBlock,
@@ -94,7 +98,17 @@ class ResNet32MoEModel(Model):
             layer3_output_dim=layer3_output_dim,
             use_norm=use_norm,
             **kwargs
-            )
+        )
+
+    def enable_logging_experts(self):
+        self.log_selected_experts = True
+        self.backbone[4][3].enable_logging_experts()
+        self.backbone[4][4].enable_logging_experts()
+
+    def disable_logging_experts(self):
+        self.log_selected_experts = False
+        self.backbone[4][3].disable_logging_experts()
+        self.backbone[4][4].disable_logging_experts()
 
 class ResNet10Model(Model):
     def __init__(self, num_classes, reduce_dimension=False, layer3_output_dim=None, layer4_output_dim=None, use_norm=False, num_experts=1, **kwargs):

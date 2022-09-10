@@ -59,6 +59,9 @@
         "tensorboard": false
     },
     "config_zoo": {
-        "save_dir": "/home/3024hlh/RIDE"
+        "save_dir": "/home/3024hlh/RIDE/saved"
+    },
+    "experts_log": {
+        "save_dir": "/home/3024hlh/RIDE/saved"
     }
 }
