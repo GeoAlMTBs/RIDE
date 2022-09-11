@@ -140,7 +140,7 @@ class CustomizedMoEBasicBlock(FMoEResNetConv):
             kernel_size=3,
             padding=1,
             stride=strides
-            )
+        )
 
         self.shortcut = nn.Sequential()
         if strides != 1 or input_channels != num_channels:
