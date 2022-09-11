@@ -1,15 +1,15 @@
 {
-    "name": "Imbalance_CIFAR100_LT_ResNet32MoE",
+    "name": "Imbalance_CIFAR100_LT_ResNet32",
     "n_gpu": 1,
 
     "arch": {
         "type": "ResNet32MoEModel",
         "args": {
-            "num_expert": 4,
+            "num_expert": 64,
 	        "moe_top_k": 2,
             "num_classes": 100,
-            "layer_moe_idx": [0, 0, 1, 0],
-            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "layer_moe_idx": [0, 0, 0, 0],
+            "basic_block_moe_idx": [0, 0, 0, 0, 0],
             "reduce_dimension": false,
 	        "use_norm": false
         }
@@ -59,9 +59,6 @@
         "tensorboard": false
     },
     "config_zoo": {
-        "save_dir": "/home/3024hlh/RIDE/saved"
-    },
-    "experts_log": {
-        "save_dir": "/home/3024hlh/RIDE/saved"
+        "save_dir": "/home/3024hlh/RIDE"
     }
 }

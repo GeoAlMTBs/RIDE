@@ -102,13 +102,13 @@ class ResNet32MoEModel(Model):
 
     def enable_logging_experts(self):
         self.log_selected_experts = True
-        self.backbone[4][3].enable_logging_experts()
-        self.backbone[4][4].enable_logging_experts()
+        self.backbone.sequential[4].sequential[3].enable_logging_experts()
+        self.backbone.sequential[4].sequential[4].enable_logging_experts()
 
     def disable_logging_experts(self):
         self.log_selected_experts = False
-        self.backbone[4][3].disable_logging_experts()
-        self.backbone[4][4].disable_logging_experts()
+        self.backbone.sequential[4].sequential[3].disable_logging_experts()
+        self.backbone.sequential[4].sequential[4].disable_logging_experts()
 
 class ResNet10Model(Model):
     def __init__(self, num_classes, reduce_dimension=False, layer3_output_dim=None, layer4_output_dim=None, use_norm=False, num_experts=1, **kwargs):

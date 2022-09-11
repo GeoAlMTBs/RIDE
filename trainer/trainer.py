@@ -193,7 +193,9 @@ class Trainer(BaseTrainer):
         """
         self.model.eval()
         self.valid_metrics.reset()
-        self.model.enable_logging_experts()
+
+        if epoch > 0:
+            self.model.enable_logging_experts()
 
         with torch.no_grad():
             if hasattr(self.model, "confidence_model") and self.model.confidence_model:
@@ -206,6 +208,8 @@ class Trainer(BaseTrainer):
             valid_data = []
             for batch_idx, (data, target) in enumerate(self.valid_data_loader):
                 data, target = data.to(self.device), target.to(self.device)
+                #debug
+                # print(target)
                 valid_data.append(target)
                 if confidence_model:
                     output, sample_num_experts = self.model(data)
@@ -235,20 +239,31 @@ class Trainer(BaseTrainer):
         # torch.save(self.model.backbone[4][3].selected_experts_log, save_dir / f'selected_experts_log1_epoch_{epoch}.pt')
         # torch.save(self.model.backbone[4][4].selected_experts_log, save_dir / f'selected_experts_log2_epoch_{epoch}.pt')
 
-        if epoch > 195:
-            valid_data = valid_data.view(-1, self.model.num_classes)
+        if epoch > 0:
+            # valid_data = torch.Tensor(valid_data).cpu().numpy()
+            #debug
+            # print(valid_data)
+            # valid_data = np.array([tensor.cpu().numpy() for tensor in valid_data])
+            valid_data = torch.cat(valid_data, 0).cpu().numpy()
+            valid_data = valid_data.reshape(-1)
+            #debug
+            # print(valid_data.shape)
+            #debug
+            # print(valide_data[:10])
             selected_experts_log_list = []
-            selected_experts_log_list.append(self.model.backbone[4][3].selected_experts_log.view(-1, self.model.top_k))
-            selected_experts_log_list.append(self.model.backbone[4][4].selected_experts_log.view(-1, self.model.top_k))
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[3].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k))
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[4].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k))       
+            # selected_experts_log_list.append(np.array(self.model.backbone[4][3].selected_experts_log.cpu()).view(-1, self.model.top_k))
+            # selected_experts_log_list.append(np.array(self.model.backbone[4][4].selected_experts_log.cpu()).view(-1, self.model.top_k))
 
-            all_freq_from_experts_to_classes = np.array()
+            all_freq_from_experts_to_classes = []
             for idx, selected_experts_log in enumerate(selected_experts_log_list):
                 freq_from_experts_to_classes = np.zeros((self.model.num_expert, self.model.num_classes))
                 for target, list_experts in zip(valid_data, selected_experts_log):
                     for expert in list_experts:
                         freq_from_experts_to_classes[expert][target] += 1
                 all_freq_from_experts_to_classes.append(freq_from_experts_to_classes)
-                np.save(all_freq_from_experts_to_classes, Path(self.config.log_dir) / f'selected_experts_log_part_{idx}_epoch_{epoch}')
+            np.save(Path(self.config.log_dir) / f'selected_experts_log_epoch_{epoch}', all_freq_from_experts_to_classes)
             
             # torch.save(self.model.backbone[4][3].selected_experts_log, Path(self.config.log_dir) / f'selected_experts_log1_epoch_{epoch}.pt')
             # torch.save(self.model.backbone[4][4].selected_experts_log, Path(self.config.log_dir) / f'selected_experts_log2_epoch_{epoch}.pt')

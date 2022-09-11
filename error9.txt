@@ -1,5 +1,0 @@
-nohup: ignoring input
-planes 32
-planes 32
-planes 64
-planes 64
