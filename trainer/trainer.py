@@ -251,19 +251,26 @@ class Trainer(BaseTrainer):
             #debug
             # print(valide_data[:10])
             selected_experts_log_list = []
-            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[3].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k))
-            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[4].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k))       
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[3].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[4].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))       
             # selected_experts_log_list.append(np.array(self.model.backbone[4][3].selected_experts_log.cpu()).view(-1, self.model.top_k))
             # selected_experts_log_list.append(np.array(self.model.backbone[4][4].selected_experts_log.cpu()).view(-1, self.model.top_k))
 
             all_freq_from_experts_to_classes = []
+            all_avg_weight_from_experts_to_classes = []
+            # Correspond to outermost layers in the network.
             for idx, selected_experts_log in enumerate(selected_experts_log_list):
                 freq_from_experts_to_classes = np.zeros((self.model.num_expert, self.model.num_classes))
+                acc_weight_from_experts_to_classes = np.zeros((self.model.num_expert, self.model.num_classes))
                 for target, list_experts in zip(valid_data, selected_experts_log):
-                    for expert in list_experts:
-                        freq_from_experts_to_classes[expert][target] += 1
+                    for expert_log in list_experts:
+                        freq_from_experts_to_classes[expert_log[0]][target] += 1
+                        acc_weight_from_experts_to_classes[expert_log[0]][target] += expert_log[1] 
                 all_freq_from_experts_to_classes.append(freq_from_experts_to_classes)
-            np.save(Path(self.config.log_dir) / f'selected_experts_log_epoch_{epoch}', all_freq_from_experts_to_classes)
+                all_avg_weight_from_experts_to_classes.append(acc_weight_from_experts_to_classes / freq_from_experts_to_classes)
+                
+            np.save(Path(self.config.log_dir) / f'all_freq_from_experts_to_classes_epoch_{epoch}', all_freq_from_experts_to_classes)
+            np.save(Path(self.config.log_dir) / f'all_avg_weight_from_experts_to_classes_epoch_{epoch}', all_avg_weight_from_experts_to_classes)
             
             # torch.save(self.model.backbone[4][3].selected_experts_log, Path(self.config.log_dir) / f'selected_experts_log1_epoch_{epoch}.pt')
             # torch.save(self.model.backbone[4][4].selected_experts_log, Path(self.config.log_dir) / f'selected_experts_log2_epoch_{epoch}.pt')
