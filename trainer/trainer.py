@@ -260,14 +260,15 @@ class Trainer(BaseTrainer):
             all_avg_weight_from_experts_to_classes = []
             # Correspond to outermost layers in the network.
             for idx, selected_experts_log in enumerate(selected_experts_log_list):
-                freq_from_experts_to_classes = np.zeros((self.model.num_expert, self.model.num_classes))
+                freq_from_experts_to_classes = np.zeros((self.model.num_expert, self.model.num_classes), dtype=int)
                 acc_weight_from_experts_to_classes = np.zeros((self.model.num_expert, self.model.num_classes))
                 for target, list_experts in zip(valid_data, selected_experts_log):
+                    # print(list_experts)
                     for expert_log in list_experts:
-                        freq_from_experts_to_classes[expert_log[0]][target] += 1
-                        acc_weight_from_experts_to_classes[expert_log[0]][target] += expert_log[1] 
+                        freq_from_experts_to_classes[int(expert_log[0])][target] += 1
+                        acc_weight_from_experts_to_classes[int(expert_log[0])][target] += expert_log[1] 
                 all_freq_from_experts_to_classes.append(freq_from_experts_to_classes)
-                all_avg_weight_from_experts_to_classes.append(acc_weight_from_experts_to_classes / freq_from_experts_to_classes)
+                all_avg_weight_from_experts_to_classes.append(acc_weight_from_experts_to_classes / (freq_from_experts_to_classes+1e-5))
                 
             np.save(Path(self.config.log_dir) / f'all_freq_from_experts_to_classes_epoch_{epoch}', all_freq_from_experts_to_classes)
             np.save(Path(self.config.log_dir) / f'all_avg_weight_from_experts_to_classes_epoch_{epoch}', all_avg_weight_from_experts_to_classes)
