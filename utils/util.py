@@ -96,7 +96,10 @@ class MetricTracker:
             self.writer.add_scalar(key, value)
         self._data.total[key] += value * n
         self._data.counts[key] += n
-        self._data.average[key] = self._data.total[key] / self._data.counts[key]
+        if self._data.counts[key] == 0:
+            self._data.average[key] = 0
+        else:
+            self._data.average[key] = self._data.total[key] / self._data.counts[key]
 
     def avg(self, key):
         return self._data.average[key]

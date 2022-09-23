@@ -1,0 +1,70 @@
+{
+    "name": "Imbalance_CIFAR100_LT_ResNet20MoE",
+    "n_gpu": 1,
+
+    "arch": {
+        "type": "ResNet20MoEModel",
+        "args": {
+            "num_expert": 4,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+        }
+    },
+    "data_loader": {
+        "type": "ImbalanceCIFAR100DataLoader",
+        "args":{
+            "data_dir": "data",
+            "batch_size": 128,
+            "shuffle": true,
+            "num_workers": 2
+        }
+    },
+    "optimizer": {
+        "type": "SGD",
+        "args":{
+            "lr": 0.1,
+            "weight_decay": 5e-4,
+            "momentum": 0.9,
+            "nesterov": true
+        }
+    },
+    "add_extra_info": true,
+    "loss": {
+        "type": "LDAMLoss",
+        "args": {
+        }
+    },
+    "metrics": [
+        "accuracy",
+        "head_acc",
+        "middle_acc",
+        "tail_acc"
+    ],
+    "lr_scheduler": {
+        "type": "MultiStepLR",
+        "args": {
+            "milestones": [100, 150],
+            "gamma": 0.1
+        }
+    },
+    "trainer": {
+        "epochs": 200,
+
+        "save_dir": "/datapool/workspace/3024hlh/saved",
+        "save_period": 40,
+        "verbosity": 2,
+        
+        "monitor": "max val_accuracy",
+        "tensorboard": false
+    },
+    "config_zoo": {
+        "save_dir": "/home/3024hlh/RIDE/saved"
+    },
+    "experts_log": {
+        "save_dir": "/home/3024hlh/RIDE/saved"
+    }
+}

@@ -195,7 +195,8 @@ class Trainer(BaseTrainer):
         self.model.eval()
         self.valid_metrics.reset()
 
-        if epoch > 0:
+        log_experts_condition = bool((epoch > 0) and ((sum(self.model.backbone.layer_moe_idx)) > 0))
+        if log_experts_condition:
             self.model.enable_logging_experts()
 
         with torch.no_grad():
@@ -240,7 +241,7 @@ class Trainer(BaseTrainer):
         # torch.save(self.model.backbone[4][3].selected_experts_log, save_dir / f'selected_experts_log1_epoch_{epoch}.pt')
         # torch.save(self.model.backbone[4][4].selected_experts_log, save_dir / f'selected_experts_log2_epoch_{epoch}.pt')
 
-        if epoch > 0:
+        if log_experts_condition:
             # valid_data = torch.Tensor(valid_data).cpu().numpy()
             #debug
             # print(valid_data)
@@ -252,8 +253,8 @@ class Trainer(BaseTrainer):
             #debug
             # print(valide_data[:10])
             selected_experts_log_list = []
-            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[3].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))
-            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[4].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))       
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[1].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[2].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))       
             # selected_experts_log_list.append(np.array(self.model.backbone[4][3].selected_experts_log.cpu()).view(-1, self.model.top_k))
             # selected_experts_log_list.append(np.array(self.model.backbone[4][4].selected_experts_log.cpu()).view(-1, self.model.top_k))
 
