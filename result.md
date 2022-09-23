@@ -1,3 +1,4 @@
+[TOC]
 # Experimental Notes
 ## RIDE
 ### CIFAR100-LT
@@ -44,7 +45,7 @@
 	* num_expert 128
 	* moe_top_k 8
 	* LDAMLoss 
-	* accuracy 43.18%
+	* accuracy **43.18%**
 ### CIFAR10-LT
 * 1
 	* num_expert 8
@@ -159,7 +160,7 @@
 	        "use_norm": false
 	* accuracy 39.58%
 * 12
-	*       "num_expert": 32,
+	*       "num_expert":32,
 	        "moe_top_k": 2,
             "num_classes": 100,
             "layer_moe_idx": [0, 1, 1, 0],
@@ -248,7 +249,7 @@
             "reduce_dimension": false,
 	        "use_norm": false
 	* accuracy 40.04%
-* 22 out4	
+* 22
 	*       "num_expert": 1024,
 	        "moe_top_k": 4,
             "num_classes": 100,
@@ -256,7 +257,154 @@
             "basic_block_moe_idx": [0, 0, 0, 1, 1],
             "reduce_dimension": false,
 	        "use_norm": false
+	* accuracy 40.19%
 	* Training takes too much time :( .
+* 23
+	* **Given a fixed number of experts, change the number of selected experts.**
+	*       "num_expert": 8,
+	        "moe_top_k": 1,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.91%
+* 24
+	*       "num_expert": 8,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 38.51%
+* 25
+	*       "num_expert": 8,
+	        "moe_top_k": 3,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.14%
+* 26
+	*       "num_expert": 8,
+	        "moe_top_k": 4,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.64%
+* 27
+	*       "num_expert": 8,
+	        "moe_top_k": 5,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.30%
+* 28
+	*       "num_expert": 8,
+	        "moe_top_k": 6,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.46%
+* 29
+	*       "num_expert": 8,
+	        "moe_top_k": 7,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.28%
+* 30
+	*       "num_expert": 8,
+	        "moe_top_k": 8,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 41.10%
+* 31
+	* **Given moe_top_k, change num_expert**
+	*       "num_expert": 2,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.59%
+* 32
+	*       "num_expert": 4,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.68%
+* 33
+	*       "num_expert": 16,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 38.28%
+* 34
+	*       "num_expert": 32,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 39.16%
+* 35
+	*       "num_expert": 64,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.11%
+* 36
+	*       "num_expert": 4,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.68%
+* 36
+	*       "num_expert": 4,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy 40.15%
+* 37
+	*       "num_expert": 4,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy **41.15%**
 ### CIFAR10-LT
 * 1
 	*      "num_expert": 8,
@@ -276,6 +424,62 @@
             "reduce_dimension": true,
 	        "use_norm": true
 	* accuracy 72.99%
+## ResNet32
+### CIFAR100-LT
+* 1
+	* accuracy 40.27%
+## ResNet20MoE
+### CIFAR100-LT
+* 1
+	* 	    "num_expert": 8,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy
+		* overall **39.98%**
+		* head 67.89%
+		* middle 42.15%
+		* tail 10.79%
+* 2
+	*      "num_expert": 16,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy
+		* overall 39.01%
+		* head 67.91%
+		* middle 41.48%
+		* tail 8.56%
+* 3
+	*      "num_expert": 4,
+	        "moe_top_k": 2,
+            "num_classes": 100,
+            "layer_moe_idx": [0, 0, 1, 0],
+            "basic_block_moe_idx": [0, 1, 1],
+            "reduce_dimension": false,
+	        "use_norm": false
+	* accuracy
+		* overall 38.98%
+		* head 66.70%
+		* middle 41.52%
+		* tail 9.62%
+### CIFAR10-LT
+## ResNet20
+### CIFAR100-LT
+* 1
+	* accuracy 39.09%
+* 2
+	* accuracy 39.11%
+		* head 67.85%
+		* middle 42.03%
+		* tail 8.38%
+	* Compared to run No.1 of MoE, this model performs poorly on tail classes.
 ## Try to Do
 - [ ] Add a meta json file describing all runs in the same arch for convenience
 - [x] add `logits`
