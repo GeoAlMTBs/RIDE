@@ -1,15 +1,15 @@
 {
-    "name": "Imbalance_CIFAR100_LT_ResNet18MoE",
+    "name": "Imbalance_CIFAR100_LT_ResNet18MoETemplate",
     "n_gpu": 1,
 
     "arch": {
-        "type": "ResNet18MoEModel",
+        "type": "ResNet18MoEModelTemplate",
         "args": {
-            "num_expert": 4,
+            "num_expert": 8,
 	        "moe_top_k": 2,
             "num_classes": 100,
-            "layer_moe_idx": [0, 0, 1, 0],
-            "basic_block_moe_idx": [0, 0, 0, 1, 1],
+            "layer_moe_idx": [0, 0, 1, 1, 0],
+            "basic_block_moe_idx": [0, 1],
             "reduce_dimension": false,
 	        "use_norm": false
         }
@@ -39,7 +39,10 @@
         }
     },
     "metrics": [
-        "accuracy"
+        "accuracy",
+        "head_acc",
+        "middle_acc",
+        "tail_acc"
     ],
     "lr_scheduler": {
         "type": "MultiStepLR",

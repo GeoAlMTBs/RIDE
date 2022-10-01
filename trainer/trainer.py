@@ -254,7 +254,7 @@ class Trainer(BaseTrainer):
             # print(valide_data[:10])
             selected_experts_log_list = []
             selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[1].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))
-            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[2].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))       
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[5].sequential[1].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))       
             # selected_experts_log_list.append(np.array(self.model.backbone[4][3].selected_experts_log.cpu()).view(-1, self.model.top_k))
             # selected_experts_log_list.append(np.array(self.model.backbone[4][4].selected_experts_log.cpu()).view(-1, self.model.top_k))
 
