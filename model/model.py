@@ -112,6 +112,50 @@ class ResNet18MoEModelTemplate(Model):
         self.backbone.sequential[4].sequential[1].disable_logging_experts()
         self.backbone.sequential[5].sequential[1].disable_logging_experts()
 
+class ResNet18MoEModelLayerLevel(Model):
+    def __init__(
+        self,
+        num_expert,
+        moe_top_k,
+        num_classes,
+        layer_moe_idx,
+        reduce_dimension=False,
+        layer2_output_dim=None,
+        layer3_output_dim=None,
+        layer4_output_dim=None,
+        use_norm=False,
+        **kwargs
+        ):
+        super().__init__(num_classes, None)
+        self.log_selected_experts = False
+        self.num_classes = num_classes
+        self.num_expert = num_expert
+        self.top_k = moe_top_k
+        self.backbone = resnet_cifar.ResNetMoELayerLevel(
+            resnet_cifar.BasicBlock,
+            [2, 2, 2, 2],
+            num_expert,
+            moe_top_k,
+            num_classes=num_classes,
+            layer_moe_idx=layer_moe_idx,
+            reduce_dimension=reduce_dimension,
+            layer2_output_dim=layer2_output_dim,
+            layer3_output_dim=layer3_output_dim,
+            layer4_output_dim=layer4_output_dim,
+            use_norm=use_norm,
+            **kwargs
+        )
+
+    def enable_logging_experts(self):
+        self.log_selected_experts = True
+        self.backbone.sequential[4].enable_logging_experts()
+        self.backbone.sequential[5].enable_logging_experts()
+
+    def disable_logging_experts(self):
+        self.log_selected_experts = False
+        self.backbone.sequential[4].disable_logging_experts()
+        self.backbone.sequential[5].disable_logging_experts()
+
 class ResNet20MoEModel(Model):
     def __init__(
         self,

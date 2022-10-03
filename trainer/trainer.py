@@ -146,7 +146,10 @@ class Trainer(BaseTrainer):
                     if self.distill:
                         loss = self.criterion(student=output, target=target, teacher=teacher, extra_info=extra_info)
                     elif self.add_extra_info:
-                        loss = self.criterion(output_logits=output, target=target, extra_info=extra_info)
+                        balance_loss = 1e-3 * (self.model.backbone.sequential[4].gate.get_loss() + self.model.backbone.sequential[5].gate.get_loss())
+                        loss = self.criterion(output_logits=output, target=target, extra_info=extra_info) + balance_loss
+                        print('balance_loss: ', balance_loss)
+                        # loss = self.criterion(output_logits=output, target=target, extra_info=extra_info)
                     else:
                         loss = self.criterion(output_logits=output, target=target)
 
@@ -253,8 +256,8 @@ class Trainer(BaseTrainer):
             #debug
             # print(valide_data[:10])
             selected_experts_log_list = []
-            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].sequential[1].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))
-            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[5].sequential[1].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))       
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[4].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))
+            selected_experts_log_list.append(np.array(torch.cat(self.model.backbone.sequential[5].selected_experts_log, 0).cpu()).reshape(-1, self.model.top_k, 2))       
             # selected_experts_log_list.append(np.array(self.model.backbone[4][3].selected_experts_log.cpu()).view(-1, self.model.top_k))
             # selected_experts_log_list.append(np.array(self.model.backbone[4][4].selected_experts_log.cpu()).view(-1, self.model.top_k))
 

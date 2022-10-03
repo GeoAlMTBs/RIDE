@@ -36,6 +36,12 @@ sys.path.append(basedir + 'fastmoe/examples/resnet')
 
 import logging
 
+sys.path.append(basedir + 'fastmoe/fmoe')
+from resnetff import FMoEResNetFF
+from resnetconv import FMoEResNetConv
+from layers import FMoE
+from fmoe.gates import NoisyGate, NoisyConvGate
+
 logger = logging.getLogger(__name__)
 c_handler = logging.StreamHandler()
 c_handler.setLevel(logging.DEBUG)
@@ -111,9 +117,6 @@ class BasicBlock(nn.Module):
         out = F.relu(out)
         return out
 
-sys.path.append(basedir + 'fastmoe/fmoe')
-from resnetff import FMoEResNetFF
-from resnetconv import FMoEResNetConv
 
 class CustomizedMoEBasicBlock(FMoEResNetConv):
     """The Residual block of ResNet."""
@@ -138,7 +141,7 @@ class CustomizedMoEBasicBlock(FMoEResNetConv):
             num_channels=num_channels,
             d_model=d_model,
             top_k=moe_top_k
-            )
+        )
 
         self.conv1 = nn.Conv2d(
             input_channels,
@@ -554,14 +557,12 @@ class ResNet_MoE(nn.Module):
         # (32, 32)
         self.bn1 = nn.BatchNorm2d(self.in_planes)
         if layer_moe_idx[0] == True:
-            self.layer1 = ResNetMoELayer(
+            self.layer1 = _make_layer_moe_whole(
                 self,
                 block,
-                moe_block,
                 self.in_planes,
                 num_blocks[0],
                 1,
-                basic_block_moe_idx,
                 (self.h, self.w),
                 num_expert,
                 moe_top_k
@@ -589,14 +590,12 @@ class ResNet_MoE(nn.Module):
                 layer4_output_dim = 512
 
         if layer_moe_idx[1] == True:
-            self.layer2 = ResNetMoELayer(
+            self.layer2 = _make_layer_moe_whole(
                 self,
                 block,
-                moe_block,
                 layer2_output_dim,
                 num_blocks[1],
                 2,
-                basic_block_moe_idx,
                 (self.h, self.w),
                 num_expert,
                 moe_top_k
@@ -610,14 +609,12 @@ class ResNet_MoE(nn.Module):
         logger.debug(f'(self.h, self.w) ({self.h}, {self.w})')
 
         if layer_moe_idx[2] == True:
-            self.layer3 = ResNetMoELayer(
+            self.layer3 = _make_layer_moe_whole(
                 self,
                 block,
-                moe_block,
                 layer3_output_dim,
                 num_blocks[2],
                 2,
-                basic_block_moe_idx,
                 (self.h, self.w),
                 num_expert,
                 moe_top_k
@@ -630,14 +627,12 @@ class ResNet_MoE(nn.Module):
         # ? Strange huh. float h, w will cause the TypeError: new(): argument 'size' must be tuple of ints, but found element of type float at pos 2 error
 
         if layer_moe_idx[3] == True:
-            self.layer4 = ResNetMoELayer(
+            self.layer4 = _make_layer_moe_whole(
                 self,
                 block,
-                moe_block,
                 layer4_output_dim,
                 num_blocks[3],
                 2,
-                basic_block_moe_idx,
                 (self.h, self.w),
                 num_expert,
                 moe_top_k
@@ -702,6 +697,199 @@ class ResNet_MoE(nn.Module):
             self.in_planes = planes * block.expansion
 
         return nn.Sequential(*layers)
+
+
+    def _hook_before_iter(self):
+        assert self.training, "_hook_before_iter should be called at training time only, after train() is called"
+        count = 0
+        for module in self.modules():
+            if isinstance(module, nn.BatchNorm2d):
+                if module.weight.requires_grad == False:
+                    module.eval()
+                    count += 1
+
+        if count > 0:
+            print("Warning: detected at least one frozen BN, set them to eval state. Count:", count)
+    # ? What does this function do?
+
+    def forward(self, x):
+        out = F.relu(self.bn1(self.conv1(x)))
+        out = self.layer1(out)
+        out = self.layer2(out)
+        out = self.layer3(out)
+        out = self.layer4(out)
+        self.feat_before_GAP = out
+        out = F.avg_pool2d(out, out.size()[3])
+        out = out.view(out.size(0), -1)
+        self.feat = out
+
+        out = self.linear(out)
+
+        self.logits = out
+
+        out = out * self.s # This hyperparam s is originally in the loss function, but we moved it here to prevent using s multiple times in distillation.
+        # ?
+        return out
+
+class ResNetMoELayerLevel(nn.Module):
+
+    def __init__(
+        self,
+        block,
+        num_blocks,
+        num_expert,
+        moe_top_k,
+        num_classes=10,
+        layer_moe_idx=[True, True, True, True, False],
+        reduce_dimension=False,
+        layer2_output_dim=None,
+        layer3_output_dim=None,
+        layer4_output_dim=None,
+        use_norm=False,
+        s=30,
+        hw=[32, 32],
+        ):
+        super(ResNetMoELayerLevel, self).__init__()
+        self.in_planes = 64
+        self.h, self.w = hw
+        self.log_selected_experts = False
+        self.layer_moe_idx = layer_moe_idx
+
+        self.conv1 = nn.Conv2d(3, self.in_planes, kernel_size=3, stride=1, padding=1, bias=False)
+        # (32, 32)
+        self.bn1 = nn.BatchNorm2d(self.in_planes)
+        if layer_moe_idx[0] == True:
+            self.layer1 = self._make_layer_moe_whole(
+                block,
+                self.in_planes,
+                num_blocks[0],
+                1,
+                (self.in_planes, self.h, self.w),
+                num_expert,
+                moe_top_k
+            )
+        else:
+            self.layer1 = self._make_layer(block, self.in_planes, num_blocks[0], stride=1)
+        # (32, 32)
+
+        if layer2_output_dim is None:
+            if reduce_dimension:
+                layer2_output_dim = 24
+            else:
+                layer2_output_dim = 128
+
+        if layer3_output_dim is None:
+            if reduce_dimension:
+                layer3_output_dim = 48
+            else:
+                layer3_output_dim = 256
+
+        if layer4_output_dim is None:
+            if reduce_dimension:
+                layer4_output_dim = 48
+            else:
+                layer4_output_dim = 512
+
+        if layer_moe_idx[1] == True:
+            self.layer2 = self._make_layer_moe_whole(
+                block,
+                layer2_output_dim,
+                num_blocks[1],
+                2,
+                (self.in_planes, self.h, self.w),
+                num_expert,
+                moe_top_k
+                )
+        else:
+            self.layer2 = self._make_layer(block, layer2_output_dim, num_blocks[1], stride=2)
+
+        self.h = int(self.h / 2)
+        self.w = int(self.w / 2)
+
+        logger.debug(f'(self.in_planes, self.h, self.w) ({self.h}, {self.w})')
+
+        if layer_moe_idx[2] == True:
+            self.layer3 = self._make_layer_moe_whole(
+                block,
+                layer3_output_dim,
+                num_blocks[2],
+                2,
+                (self.in_planes, self.h, self.w),
+                num_expert,
+                moe_top_k
+            )
+        else:
+            self.layer3 = self._make_layer(block, layer3_output_dim, num_blocks[2], stride=2)
+
+        self.h = int(self.h / 2)
+        self.w = int(self.w / 2)
+        # ? Strange huh. float h, w will cause the TypeError: new(): argument 'size' must be tuple of ints, but found element of type float at pos 2 error
+
+        if layer_moe_idx[3] == True:
+            self.layer4 = self._make_layer_moe_whole(
+                block,
+                layer4_output_dim,
+                num_blocks[3],
+                2,
+                (self.in_planes, self.h, self.w),
+                num_expert,
+                moe_top_k
+            )
+        else:
+            self.layer4 = self._make_layer(block, layer4_output_dim, num_blocks[3], stride=2)
+
+        self.h = int(self.h / 2)
+        self.w = int(self.w / 2)
+
+        if use_norm:
+            self.linear = NormedLinear(layer4_output_dim, num_classes)
+        else:
+            s = 1
+            self.linear = nn.Linear(layer4_output_dim, num_classes)
+        
+        self.s = s
+
+        self.apply(_weights_init)
+
+        self.sequential = nn.Sequential(self.conv1, self.bn1, self.layer1, self.layer2, self.layer3, self.layer4, self.linear)
+
+    def _make_layer(self, block, planes, num_blocks, stride):
+        strides = [stride] + [1]*(num_blocks-1)
+        layers = []
+        for stride in strides:
+            layers.append(block(self.in_planes, planes, stride))
+            self.in_planes = planes * block.expansion
+
+        return nn.Sequential(*layers)
+
+    def _make_layer_moe_whole(
+        self,
+        block,
+        planes,
+        num_blocks,
+        stride,
+        d_model,
+        num_expert,
+        moe_top_k
+    ):
+        # h, w = hw
+        strides = [stride] + [1]*(num_blocks-1)
+        layers = []
+        input_planes = self.in_planes
+
+        for stride in strides:
+            layers.append(block(self.in_planes, planes, stride))
+            self.in_planes = planes * block.expansion
+
+        layer = nn.Sequential(*layers)
+
+        return FMoE(
+            num_expert=num_expert,
+            d_model=d_model,
+            top_k=moe_top_k,
+            gate=NoisyConvGate,
+            expert=layer
+        )
 
     def _hook_before_iter(self):
         assert self.training, "_hook_before_iter should be called at training time only, after train() is called"

@@ -3,3 +3,4 @@ nohup python train.py -c "./configs/config_imbalance_cifar100_resnet32moe.json" 
 nohup python train.py -c "./configs/config_imbalance_cifar100_resnet20moe.json" --device 1 1>saved/out.txt 2>saved/error.txt &
 nohup python train.py -c "./configs/config_imbalance_cifar100_resnet20.json" --device 1 1>saved/out4.txt 2>saved/error4.txt &
 nohup python train.py -c "./configs/config_imbalance_cifar100_resnet18moe_template.json" --device 1 1>saved/out38.txt 2>saved/error38.txt &
+nohup python train.py -c "./configs/config_imbalance_cifar100_resnet18moelayerlevel.json" --device 1 1>saved/out40.txt 2>saved/error40.txt &
